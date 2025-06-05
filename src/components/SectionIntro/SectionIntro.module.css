@@ -1,0 +1,137 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: fit-content;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.span {
+  font-family: var(--SuisseIntlMedium);
+  letter-spacing: 1px;
+}
+
+.blackii {
+  color: var(--blackii);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.span {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  /* letter-spacing: 1px; */
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.black {
+  color: var(--black);
+}
+
+.blackDot {
+  background-color: var(--black);
+}
+
+.blackDot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.tan {
+  color: var(--tan);
+}
+
+.tanDot {
+  background-color: var(--tan);
+}
+
+.tanDot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--tan);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.white {
+  color: var(--white);
+}
+
+.whiteDot {
+  background-color: var(--white);
+}
+
+.whiteDot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.blackDotii {
+  background-color: var(--blackii);
+}
+
+.blackDotii::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--blackii);
+  animation: pulse 1.5s infinite ease-in-out;
+}

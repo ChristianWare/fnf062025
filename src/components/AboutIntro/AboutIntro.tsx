@@ -1,10 +1,55 @@
+"use client";
+
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import Img1 from "../../../public/images/aboutIntro.jpg";
 import Image from "next/image";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutIntro() {
+  const copyRef = useRef<HTMLParagraphElement>(null);
+
+  useGSAP(() => {
+    if (!copyRef.current) return;
+
+    gsap.set(copyRef.current, { visibility: "visible" });
+
+    const split = new SplitType(copyRef.current, {
+      types: "lines",
+      lineClass: styles.line,
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: copyRef.current,
+        start: "top 80%",
+        end: "top 40%",
+        scrub: 3,
+        // markers: true,
+      },
+    });
+
+    tl.from(split.lines, {
+      y: 200,
+      x: -200,
+      opacity: 0,
+      stagger: 0.075,
+      ease: "power4.out",
+    });
+
+    return () => {
+      split.revert();
+      tl.kill();
+    };
+  });
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -14,7 +59,7 @@ export default function AboutIntro() {
               <div className={styles.sectionHeadingContainer}>
                 <SectionHeading2 title='About Us' />
               </div>
-              <p className={styles.heading}>
+              <p ref={copyRef} className={styles.heading}>
                 Founded by a team of e-commerce enthusiasts with backgrounds in
                 both design and development, Fonts & Footers was born from the
                 recognition that successful online stores require both beautiful

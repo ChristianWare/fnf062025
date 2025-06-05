@@ -1,11 +1,16 @@
+import styles from "./page.module.css";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import Hero from "@/components/Hero/Hero";
+import ProblemsWeSolve from "@/components/ProblemsWeSolve/ProblemsWeSolve";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <AboutIntro />
+      <div className={styles.scrollContainer}>
+        <Hero />
+        <AboutIntro />
+        <ProblemsWeSolve />
+      </div>
     </main>
   );
 }

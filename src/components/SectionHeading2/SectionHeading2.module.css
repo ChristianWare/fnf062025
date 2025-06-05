@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--tan);
-  border-bottom: 8px solid var(--black);
+  /* border-bottom: 8px solid var(--black); */
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
   padding-bottom: 5rem;
   background-image: repeating-linear-gradient(
     45deg,

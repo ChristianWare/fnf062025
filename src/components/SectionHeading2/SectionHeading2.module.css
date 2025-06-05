@@ -22,3 +22,14 @@
   color: var(--yellow);
   font-size: 4.5rem;
 }
+
+@media screen and (max-width: 568px) {
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* .title {
+    font-size: 3.5rem;
+  } */
+}

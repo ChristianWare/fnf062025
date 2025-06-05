@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import Focus from "@/components/Focus/Focus";
 import Hero from "@/components/Hero/Hero";
+import ListOfServices from "@/components/ListOfServices/ListOfServices";
 import ProblemsWeSolve from "@/components/ProblemsWeSolve/ProblemsWeSolve";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <AboutIntro />
         <ProblemsWeSolve />
         <Focus />
+        <ListOfServices />
       </div>
     </main>
   );

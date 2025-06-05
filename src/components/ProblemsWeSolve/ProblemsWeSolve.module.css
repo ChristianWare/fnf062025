@@ -179,16 +179,16 @@
     padding: 2rem;
   }
 
-  .title {
+  /* .title {
     font-size: 6rem;
-  }
+  } */
 }
 
-@media screen and (max-width: 568px) {
+/* @media screen and (max-width: 568px) {
   .span {
     font-size: 5rem;
   }
-}
+} */
 
 @media screen and (max-width: 480px) {
   .card {

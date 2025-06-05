@@ -14,6 +14,7 @@ export default function Home() {
         <ProblemsWeSolve />
         <Focus />
         <ListOfServices />
+        {/* How it works */}
       </div>
     </main>
   );

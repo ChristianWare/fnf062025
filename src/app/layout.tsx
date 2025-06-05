@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav/Nav";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
+import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
+import { ModalProvider } from "@/context/ModalContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
+
+const SuisseIntlCondensed = localFont({
+  src: "../../public/fonts/SuisseIntlCondBold.woff2",
+  variable: "--SuisseIntlCondensed",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const SuisseIntlMedium = localFont({
+  src: "../../public/fonts/SuisseIntlMedium.woff2",
+  variable: "--SuisseIntlMedium",
+  display: "swap",
+});
+
+const SuisseIntlMonoRegular = localFont({
+  src: "../../public/fonts/SuisseIntlMonoRegular.woff2",
+  variable: "--SuisseIntlMonoRegular",
+  display: "swap",
+});
+
+const FeatureDeckLight = localFont({
+  src: "../../public/fonts/FeatureDeckLight.woff2",
+  variable: "--FeatureDeckLight",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +43,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
+      <html lang='en'>
+        <body
+          className={` ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${FeatureDeckLight.variable}`}
+        >
+          <SmoothScroll>
+            <Toaster
+              position='top-right'
+              toastOptions={{
+                className: "toastFont",
+              }}
+            />
+            <ModalProvider>
+              <Nav />
+
+              {children}
+            </ModalProvider>
+            <CustomCursor />
+          </SmoothScroll>
+        </body>
+      </html>
   );
 }

@@ -14,7 +14,7 @@
 .heading {
   margin-right: auto;
   font-size: 10rem;
-  width: 75%;
+  width: 65%;
 
   text-align: center;
   margin-left: auto;
@@ -23,8 +23,8 @@
 }
 
 .revealText {
-  color: var(--lightGray);
-  filter: drop-shadow(0 0 0.10rem var(--black));
+  color: var(--white);
+  filter: drop-shadow(0 0 0.1rem var(--black));
   line-height: 1;
 }
 

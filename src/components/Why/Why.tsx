@@ -22,14 +22,14 @@ const data = [
     desc: "A confusing or lengthy checkout process causes potential buyers to abandon their carts, leaving revenue on the table.",
   },
   {
-    id: 7,
-    title: "Low Search",
-    desc: "Without proper optimization, your website fails to rank on search engines, making it hard for potential customers to find you online.",
-  },
-  {
     id: 8,
     title: "Poor Inventory",
     desc: "Managing products, stock levels, and updates can become overwhelming, leading to mistakes and unhappy customers.",
+  },
+  {
+    id: 7,
+    title: "Low Search",
+    desc: "Without proper optimization, your website fails to rank on search engines, making it hard for potential customers to find you online.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Why() {
                   src={Img1}
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
-                  color='lightGray'
+                  color='white'
                   border='grayBorder'
                 />
               </div>

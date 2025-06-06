@@ -58,23 +58,20 @@
   overflow: hidden;
   backface-visibility: hidden;
   visibility: hidden;
-  /* line-height: 0.95; */
   white-space: nowrap;
   font-family: var(--SuisseIntlCondensed);
 }
 
 .heading :global(.word),
 .heading :global(.line) {
-  /* line-height: 0.01; */
   font-family: inherit;
 }
 
 .copy {
   z-index: 2;
   font-size: 1.8rem;
-  /* line-height: 1.5; */
   letter-spacing: -0.5px;
-  width: 80%;
+  width: 60%;
   color: var(--black);
 }
 
@@ -106,7 +103,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1268px) {
   .container {
     height: 100%;
   }
@@ -150,7 +147,6 @@
   }
 
   .content {
-    /* margin-top: 0rem; */
     margin-left: auto;
     margin-right: auto;
   }

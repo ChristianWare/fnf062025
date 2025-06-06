@@ -29,6 +29,11 @@
   background-color: var(--yellow);
 }
 
+.white,
+.white::after {
+  background-color: var(--white);
+}
+
 .lightGray,
 .lightGray::after {
   background-color: var(--lightGray);

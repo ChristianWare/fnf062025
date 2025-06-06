@@ -1,0 +1,44 @@
+.container {
+  padding-top: 20rem;
+  padding-bottom: 10rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading {
+  margin-right: auto;
+  font-size: 8rem;
+  width: 80%;
+  margin-right: auto;
+}
+
+.revealText {
+  color: var(--yellow);
+  filter: drop-shadow(0 0 0.08rem var(--black));
+  line-height: 1;
+}
+
+.bottom {
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 11vw;
+    text-align: left;
+    line-height: 1.2;
+  }
+}

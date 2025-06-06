@@ -103,7 +103,7 @@ export default function ListOfServices() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Our Web Development Services' />
+        <SectionHeading2 title='Our Services' />
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>

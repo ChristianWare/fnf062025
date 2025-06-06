@@ -5,6 +5,7 @@ import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Focus from "@/components/Focus/Focus";
 import Contact2 from "@/components/Contact2/Contact2";
+import AboutIntro from "@/components/AboutIntro/AboutIntro";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <FontsandFooters />
         <ProjectSection />
         <Why />
+        <AboutIntro />
         <Focus />
         <Contact2 />
         {/* <Support /> */}

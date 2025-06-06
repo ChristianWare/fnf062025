@@ -3,6 +3,7 @@
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
+import Plus from '../../../public/icons/plus.svg'
 
 const data = [
   {
@@ -50,23 +51,27 @@ export default function Support() {
         className='End to end support •'
       />
       <LayoutWrapper>
-        <div className={styles.top}>
-          <h2 className={styles.heading}>End-to-end support</h2>
-          {/* <Explain /> */}
-        </div>
         <div className={styles.content}>
+          <div className={styles.left}></div>
           <div className={styles.right}>
-            {data.map((x) => (
-              <div className={styles.card} key={x.id}>
-                <div className={styles.cardTop}>
-                  <span className={styles.id}>0{x.id}.</span>
+            <h2 className={styles.heading}>
+              From discovery to launch.
+              <br />
+              <span className={styles.headingSpan}>
+                Every step of your website journey is covered by a single person
+              </span>
+            </h2>
+            <div className={styles.dataMapContainer}>
+              {data.map((x, index) => (
+                <div className={styles.card} key={x.id}>
+                  <h3 className={styles.title}>
+                    <span className={styles.index}>(0{index + 1}) </span>
+                    {x.feature}
+                  </h3>
+                  <Plus className={styles.icon} />
                 </div>
-                <div className={styles.cardBottom}>
-                  <h4 className={styles.feature}>{x.feature}</h4>
-                  <p className={styles.desc}>{x.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </LayoutWrapper>

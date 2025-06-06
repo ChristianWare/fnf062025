@@ -1,17 +1,9 @@
-"use client";
-
 import styles from "./Why.module.css";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Img1 from "../../../public/images/service.jpg";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useRef } from "react";
-import SplitType from "split-type";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import LayoutWrapper from "../LayoutWrapper";
-
-gsap.registerPlugin(ScrollTrigger);
+import Explain from "../Explain/Explain";
 
 const data = [
   {
@@ -42,61 +34,13 @@ const data = [
 ];
 
 export default function Why() {
-  const copyRef = useRef<HTMLParagraphElement>(null);
-
-  useGSAP(() => {
-    if (!copyRef.current) return;
-
-    gsap.set(copyRef.current, { visibility: "visible" });
-
-    const split = new SplitType(copyRef.current, {
-      types: "lines",
-      lineClass: styles.line,
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: copyRef.current,
-        start: "top 80%",
-        end: "top 40%",
-        scrub: 3,
-        // markers: true,
-      },
-    });
-
-    tl.from(split.lines, {
-      y: 200,
-      x: -200,
-      opacity: 0,
-      stagger: 0.075,
-      ease: "power4.out",
-    });
-
-    return () => {
-      split.revert();
-      tl.kill();
-    };
-  });
-
   return (
     <section className={styles.container} id='about'>
       <LayoutWrapper>
         <div className={styles.parent}>
-          <div className={styles.content}>
-            <div className={styles.left}>
-              <div className={styles.sectionHeadingContainer}>
-                <SectionHeading2 title='Why work with us' color='lightGray' />
-              </div>
-            </div>
-            {/* <div className={styles.right}>
-              <p ref={copyRef} className={styles.copy}>
-                Shoppers leave slow, cluttered storefronts in seconds. Generic
-                templates and bloated plugins cripple performance, frustrate
-                visitors, and drain ad budgets. You deserve a store engineered
-                for speed, stability, and storytelling without hiring an in
-                house tech team or wading through freelance uncertainty.
-              </p>
-            </div> */}
+          <div className={styles.sectionHeadingContainer}>
+            {/* <SectionHeading2 title='Why work with us' color='tan' /> */}
+            <Explain />
           </div>
           <div className={styles.bottom}>
             <div className={styles.bottomLeft}>
@@ -106,6 +50,7 @@ export default function Why() {
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
                   color='lightGray'
+                  border='grayBorder'
                 />
               </div>
             </div>

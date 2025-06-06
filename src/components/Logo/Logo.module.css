@@ -22,3 +22,9 @@
 .blackii {
   color: var(--blackii);
 }
+
+.icon {
+  color: var(--black);
+  width: 5rem;
+  height: 5rem;
+}

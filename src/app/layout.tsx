@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 import { ModalProvider } from "@/context/ModalContext";
 
-import CustomCursor from "@/components/CustomCursor/CustomCursor";
+// import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const SuisseIntlCondensed = localFont({
   src: "../../public/fonts/SuisseIntlCondBold.woff2",
@@ -43,25 +43,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang='en'>
-        <body
-          className={` ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${FeatureDeckLight.variable}`}
-        >
-          <SmoothScroll>
-            <Toaster
-              position='top-right'
-              toastOptions={{
-                className: "toastFont",
-              }}
-            />
-            <ModalProvider>
-              <Nav />
+    <html lang='en'>
+      <body
+        className={` ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${FeatureDeckLight.variable}`}
+      >
+        <SmoothScroll>
+          <Toaster
+            position='top-right'
+            toastOptions={{
+              className: "toastFont",
+            }}
+          />
+          <ModalProvider>
+            <Nav />
 
-              {children}
-            </ModalProvider>
-            <CustomCursor />
-          </SmoothScroll>
-        </body>
-      </html>
+            {children}
+          </ModalProvider>
+          {/* <CustomCursor /> */}
+        </SmoothScroll>
+      </body>
+    </html>
   );
 }

@@ -1,8 +1,6 @@
-"use client";
-
-// import SectionIntro from "../SectionIntro/SectionIntro";
 import styles from "./Logo.module.css";
 import Link from "next/link";
+import Thunder from "../../../public/icons/lightning.svg";
 
 interface Props {
   size?: string;
@@ -15,7 +13,7 @@ const Logo = ({ size = "", color = "" }: Props) => {
       href={"/"}
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      Fonts & Footers
+      <Thunder className={styles.icon} />
     </Link>
   );
 };

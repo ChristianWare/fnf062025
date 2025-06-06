@@ -20,8 +20,7 @@ export default function Explain() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const text =
-    "We craft custom, high-converting online stores for businesses of all sizes.";
+  const text = "Why Work with Fonts & Footers?";
 
   useEffect(() => {
     const tl = gsap.timeline({

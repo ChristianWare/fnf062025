@@ -107,7 +107,7 @@
   .navItems {
     bottom: -90vh;
     padding: 1.3rem;
-    border: 1px solid var(--white);
+    border: 1px solid var(--tan);
 
   }
 }

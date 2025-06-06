@@ -1,7 +1,4 @@
 .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* background-color: var(--tan); */
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
   padding-bottom: 5rem;
@@ -21,6 +18,7 @@
   font-family: var(--SuisseIntlCondensed);
   color: var(--yellow);
   font-size: 4.5rem;
+  width: fit-content;
 }
 
 .lightGray {
@@ -33,11 +31,27 @@
 
 @media screen and (max-width: 568px) {
   .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0rem;
+    padding: 2rem;
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    border: 1px solid var(--black);
   }
 
-  /* .title {
-    font-size: 3.5rem;
-  } */
+  .titleContainer {
+    border-radius: 500px;
+    background-color: var(--black);
+  }
+
+  .title {
+    border-radius: 500px;
+    text-align: center;
+    width: 100%;
+    padding: 3rem;
+    font-size: 8vw;
+    letter-spacing: 0px;
+  }
 }

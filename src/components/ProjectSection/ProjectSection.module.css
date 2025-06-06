@@ -6,6 +6,7 @@
   padding-top: 5rem;
   z-index: 1;
   background-color: var(--yellow);
+  padding-top: 5rem;
 }
 /* 
 .container::before {
@@ -23,10 +24,11 @@
 
 .copy {
   margin-top: 3rem;
-  width: 70%;
-  text-align: center;
-  margin-left: auto;
+  width: 50%;
+  /* text-align: center; */
+  /* margin-left: auto; */
   margin-right: auto;
+  font-size: 1.8rem;
 }
 
 .content {
@@ -133,6 +135,38 @@
   justify-content: flex-start;
 }
 
+/* progress */
+.progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--tan);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.card {
+  position: relative;
+}
+
+.active .title,
+.active .type {
+  color: var(--yellow);
+}
+.active .projectDetails {
+  background-color: var(--black);
+}
+
+.card:hover .title,
+.card:hover .description {
+  color: var(--yellow);
+}
+.card:hover .progress {
+  background-color: var(--yellow);
+}
+
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
@@ -141,6 +175,10 @@
   .projectPreview {
     width: 50%;
     height: 25%;
+  }
+
+  .copy {
+    width: 100%;
   }
 }
 

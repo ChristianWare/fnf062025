@@ -1,0 +1,170 @@
+.content {
+  border: 1px solid var(--tan);
+  border-top: none;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.left {
+  border-right: 1px solid var(--tan);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.left::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 1px;
+  width: 49%;
+  background-color: var(--tan);
+}
+
+.top {
+  border: 1px solid var(--tan);
+  border-bottom: none;
+  width: 51%;
+  padding: 1rem 2rem;
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: -37px;
+}
+
+.heading {
+  color: var(--tan);
+}
+
+.copy {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  width: 80%;
+  color: var(--tan);
+}
+
+.email {
+  border: 1px solid var(--tan);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  color: var(--black);
+}
+
+.span {
+  color: var(--tan);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--tan);
+  transform: rotate(90deg);
+}
+
+.privacy {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 3rem;
+  border-top: 1px solid var(--tan);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: var(--tan);
+}
+
+.optionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.option {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--tan);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.data2Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .left,
+  .right {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .top {
+    top: -33px;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid var(--black);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    top: -33px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .top {
+    top: -29px;
+    width: 51.3%;
+  }
+  
+  .right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .optionSection {
+    margin-bottom: 5rem;
+  }
+}

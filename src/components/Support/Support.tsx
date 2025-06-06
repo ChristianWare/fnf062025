@@ -2,7 +2,7 @@
 
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Explain from "../Explain/Explain";
+// import Explain from "../Explain/Explain";
 
 const data = [
   {
@@ -47,8 +47,8 @@ export default function Support() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          {/* <h2 className={styles.heading}>End-to-end support</h2> */}
-          <Explain />
+          <h2 className={styles.heading}>End-to-end support</h2>
+          {/* <Explain /> */}
         </div>
         <div className={styles.content}>
           <div className={styles.right}>

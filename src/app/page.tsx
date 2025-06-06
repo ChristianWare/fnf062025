@@ -1,12 +1,10 @@
 import FontsandFooters from "@/components/FontsandFooters/FontsandFooters";
 import styles from "./page.module.css";
-// import AboutIntro from "@/components/AboutIntro/AboutIntro";
-// import Focus from "@/components/Focus/Focus";
 import Hero from "@/components/Hero/Hero";
-// import ListOfServices from "@/components/ListOfServices/ListOfServices";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
-import Support from "@/components/Support/Support";
 import Why from "@/components/Why/Why";
+import Focus from "@/components/Focus/Focus";
+import Contact2 from "@/components/Contact2/Contact2";
 
 export default function Home() {
   return (
@@ -16,9 +14,10 @@ export default function Home() {
         <FontsandFooters />
         <ProjectSection />
         <Why />
-        <Support />
-        {/* <AboutIntro />
         <Focus />
+        <Contact2 />
+        {/* <Support /> */}
+        {/* <AboutIntro />
         <ListOfServices /> */}
         {/* How it works */}
       </div>

@@ -2,7 +2,7 @@
 
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-// import Explain from "../Explain/Explain";
+import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
 
 const data = [
   {
@@ -45,6 +45,10 @@ const data = [
 export default function Support() {
   return (
     <section className={styles.container}>
+      <ScrollVelocity
+        texts={["End to end support •", "End to end support •"]}
+        className='End to end support •'
+      />
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>End-to-end support</h2>

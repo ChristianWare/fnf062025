@@ -1,13 +1,6 @@
 .container {
-  background-color: var(--white);
-  padding-top: 10rem;
-  padding-bottom: 5rem;
-}
-
-.heading {
-  font-size: 8rem;
-  text-align: center;
-  margin-bottom: 5rem;
+  background-color: var(--black);
+  padding: 20rem 0rem;
 }
 
 .revealText {

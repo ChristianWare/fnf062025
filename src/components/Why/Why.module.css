@@ -1,8 +1,9 @@
 .container {
   position: relative;
-  padding: 15rem 0rem;
+  padding: 20rem 0rem;
   background-color: var(--lightGray);
 }
+
 
 .heading {
   margin-bottom: 1rem;

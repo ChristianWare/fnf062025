@@ -251,6 +251,7 @@ export default function ProjectSection() {
                 src={displayedImage}
                 alt=''
                 title='Project Preview:'
+                color='yellow'
               />
             </div>
           </div>
@@ -258,7 +259,7 @@ export default function ProjectSection() {
         <div className={styles.btnContainer}>
           <Button
             text='View All Projects'
-            btnType='outline'
+            btnType='black'
             href='/portfolio'
             showChevron={true}
           />

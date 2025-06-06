@@ -29,7 +29,7 @@ export default function AboutIntro() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: copyRef.current,
-        start: "top 80%",
+        start: "top 90%",
         end: "top 40%",
         scrub: 3,
         // markers: true,
@@ -57,7 +57,7 @@ export default function AboutIntro() {
           <LayoutWrapper>
             <div className={styles.leftContent}>
               <div className={styles.sectionHeadingContainer}>
-                <SectionHeading2 title='About Us' />
+                <SectionHeading2 title='About Us' color='tan' />
               </div>
               <p ref={copyRef} className={styles.heading}>
                 Founded by a team of e-commerce enthusiasts with backgrounds in

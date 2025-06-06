@@ -5,9 +5,9 @@
   padding: 15rem 0;
   padding-top: 5rem;
   z-index: 1;
-  background-color: var(--white);
+  background-color: var(--yellow);
 }
-
+/* 
 .container::before {
   position: absolute;
   content: "";
@@ -19,7 +19,7 @@
   background: url("/images/noise.gif") repeat;
   opacity: 0.08;
   z-index: -1;
-}
+} */
 
 .copy {
   margin-top: 3rem;

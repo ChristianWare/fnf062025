@@ -14,6 +14,7 @@ interface ParallaxImageProps {
   src: string | StaticImageData;
   alt: string;
   title: string;
+  color?: string;
 }
 
 interface BoundsRect {
@@ -21,7 +22,12 @@ interface BoundsRect {
   bottom: number;
 }
 
-export default function ParallaxImage({ src, alt, title }: ParallaxImageProps) {
+export default function ParallaxImage({
+  src,
+  alt,
+  title,
+  color = "",
+}: ParallaxImageProps) {
   const imageRef = useRef<HTMLImageElement>(null);
   const bounds = useRef<BoundsRect | null>(null);
   const currentTranslateY = useRef<number>(0);
@@ -79,10 +85,10 @@ export default function ParallaxImage({ src, alt, title }: ParallaxImageProps) {
 
   return (
     <div className={styles.parent}>
-      <div className={styles.top}>
+      <div className={`${styles.top} ${styles[color]}`}>
         <SectionIntro title={title} color='black' dotColor='blackDot' />
       </div>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles[color]}`}>
         <div className={styles.parallaxWrapper}>
           <div className={styles.imgContainer}>
             <img

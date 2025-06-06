@@ -85,7 +85,7 @@ export default function Why() {
           <div className={styles.content}>
             <div className={styles.left}>
               <div className={styles.sectionHeadingContainer}>
-                <SectionHeading2 title='Why work with us' />
+                <SectionHeading2 title='Why work with us' color='lightGray' />
               </div>
             </div>
             {/* <div className={styles.right}>
@@ -105,6 +105,7 @@ export default function Why() {
                   src={Img1}
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
+                  color='lightGray'
                 />
               </div>
             </div>

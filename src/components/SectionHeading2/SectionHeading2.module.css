@@ -1,14 +1,14 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: var(--tan);
+  /* background-color: var(--tan); */
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
   padding-bottom: 5rem;
   background-image: repeating-linear-gradient(
     45deg,
-    #0f0c0c,
-    #f1f1f1 1px,
+    var(--black),
+    var(--black) 1px,
     transparent 0,
     transparent 50%
   );
@@ -21,6 +21,14 @@
   font-family: var(--SuisseIntlCondensed);
   color: var(--yellow);
   font-size: 4.5rem;
+}
+
+.lightGray {
+  color: var(--lightGray);
+}
+
+.tan {
+  color: var(--tan);
 }
 
 @media screen and (max-width: 568px) {

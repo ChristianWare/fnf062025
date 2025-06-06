@@ -2,7 +2,7 @@
   background-color: var(--tan);
   width: fit-content;
   padding: 1rem 2rem;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--black);
   border-bottom: none;
   position: relative;
 }
@@ -18,10 +18,20 @@
 }
 
 .container {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--black);
   padding: 2rem;
   background-color: var(--tan);
   width: 100%;
+}
+
+.yellow,
+.yellow::after {
+  background-color: var(--yellow);
+}
+
+.lightGray,
+.lightGray::after {
+  background-color: var(--lightGray);
 }
 
 .img {

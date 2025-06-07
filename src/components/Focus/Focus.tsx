@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./Focus.module.css";
-import Circle from "../Circle/Circle";
+// import Circle from "../Circle/Circle";
 import LayoutWrapper from "../LayoutWrapper";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -51,6 +51,14 @@ export default function Focus() {
 
   return (
     <section className={styles.container}>
+      <div className={styles.top}>
+        <div className={styles.left}></div>
+        <div className={styles.right}>
+          <h2 className={styles.heading}>
+            Your Shortcut To Innovation Starts Here
+          </h2>
+        </div>
+      </div>
       <LayoutWrapper>
         <p ref={copyRef} className={styles.copy}>
           Fonts & Footers exists exclusively for small to mid-sized businesses
@@ -71,7 +79,7 @@ export default function Focus() {
                 title='Fonts & Footers'
               />
             </div> */}
-            <Circle />
+            {/* <Circle /> */}
           </div>
         </div>
       </LayoutWrapper>

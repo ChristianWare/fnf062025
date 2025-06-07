@@ -14,8 +14,8 @@
   background-image: repeating-linear-gradient(
     45deg,
     var(--tanii),
-    var(--tanii) 1px,
-    var(--black) 0 50%
+    var(--black) 1px,
+    var(--tan) 0 50%
   );
   background-size: 10px 10px;
   border-radius: 50%;

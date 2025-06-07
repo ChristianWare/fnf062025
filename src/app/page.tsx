@@ -4,6 +4,8 @@ import Hero from "@/components/Hero/Hero";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
+// import AboutIntro from "@/components/AboutIntro/AboutIntro";
+import Focus from "@/components/Focus/Focus";
 
 export default function Home() {
   return (
@@ -15,8 +17,8 @@ export default function Home() {
 
         <Why />
         <Support />
-
-        {/* Support to go here */}
+        <Focus />
+        {/* <AboutIntro /> */}
       </div>
     </main>
   );

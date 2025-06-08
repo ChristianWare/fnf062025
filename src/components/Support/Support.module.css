@@ -46,10 +46,11 @@
 
 .index {
   margin-right: 2rem;
+  color: var(--yellow);
 }
 
 .icon {
-  color: var(--white);
+  color: var(--yellow);
   width: 3rem;
   height: 3rem;
 }

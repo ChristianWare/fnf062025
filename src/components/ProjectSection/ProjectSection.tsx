@@ -155,13 +155,13 @@ export default function ProjectSection() {
     <section className={styles.container}>
       <LayoutWrapper>
         <SectionHeading2 title='Featured projects' />
-        <p className={styles.copy}>
+        {/* <p className={styles.copy}>
           Passion for mountain biking, outdoor adventure, and premium gear
           inspired the founders of Thundertrails to launch their specialized
           bike shop in 2019. What began as a local favorite for cycling
           enthusiasts has rapidly grown into one of the region’s premier
           destinations for high-performance mountain bikes and accessories.
-        </p>
+        </p> */}
 
         <div className={styles.content}>
           {/* left: cards */}

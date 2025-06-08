@@ -39,8 +39,17 @@
   background-color: var(--lightGray);
 }
 
+.tanii,
+.tanii::after {
+  background-color: var(--tanii);
+}
+
 .grayBorder {
   border: 1px solid var(--gray);
+}
+
+.taniiBorder {
+  border: 1px solid var(--tanii);
 }
 
 .img {

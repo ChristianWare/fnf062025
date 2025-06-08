@@ -41,6 +41,7 @@
   background-color: var(--black);
   padding: 1.3rem 4rem;
   border-radius: 50px;
+  border: 1px solid var(--tan);
 }
 
 .navItem {
@@ -48,7 +49,7 @@
   text-transform: capitalize;
   font-size: 1.4rem;
   line-height: 1;
-  color: var(--white);
+  color: var(--tan);
   user-select: none;
   z-index: 998;
 }
@@ -87,8 +88,7 @@
     background-color: var(--tan);
     /* border-bottom: 1px solid var(--tanii); */
 
-    background-image:
-      linear-gradient(var(--tanii) 1px, transparent 1px),
+    background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
       linear-gradient(to right, var(--tanii) 1px, transparent 1px);
     background-size: 100px 100px;
   }
@@ -106,9 +106,13 @@
   }
   .navItems {
     bottom: -90vh;
-    padding: 1.3rem;
-    border: 1px solid var(--tan);
+    padding: 1.3rem 1.5rem;
+    justify-content: space-between;
+    width: 93%;
+  }
 
+  .navItem {
+    font-size: 4vw;
   }
 }
 

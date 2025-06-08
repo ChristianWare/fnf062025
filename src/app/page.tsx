@@ -4,8 +4,10 @@ import Hero from "@/components/Hero/Hero";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
-// import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import Focus from "@/components/Focus/Focus";
+import Contact2 from "@/components/Contact2/Contact2";
+import ContactHero from "@/components/ContactHero/ContactHero";
+import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 
 export default function Home() {
   return (
@@ -14,11 +16,12 @@ export default function Home() {
         <Hero />
         <FontsandFooters />
         <ProjectSection />
-
         <Why />
         <Support />
         <Focus />
-        {/* <AboutIntro /> */}
+        <ServiceDetails />
+        <ContactHero />
+        <Contact2 />
       </div>
     </main>
   );

@@ -2,7 +2,6 @@
   position: relative;
   padding: 20rem 0rem;
   background-color: var(--white);
- 
 }
 
 .container::before {
@@ -86,11 +85,11 @@
 }
 
 .card {
-  border: 1px solid var(--gray);
-  border-radius: 7px;
-  border-top-right-radius: 500px;
-  border-bottom-right-radius: 500px;
-  background-color: var(--white);
+  /* border-radius: 7px; */
+  /* border-top-right-radius: 500px; */
+  /* border-bottom-right-radius: 500px; */
+  border: 1px solid var(--tanii);
+  background-color: var(--tan);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -122,14 +121,14 @@
 
 .title {
   color: var(--black);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
 }
 
 .desc {
   color: var(--gray);
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 90%;
 }
 

@@ -7,11 +7,12 @@ import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 
 const navItems = [
-  { text: "About", href: "/about" },
   { text: "Works", href: "/portfolio" },
   { text: "Services", href: "/pricing" },
+  { text: "About", href: "/about" },
+  { text: "faq", href: "/faq" },
   { text: "Blog", href: "/blog" },
-  { text: "Contact", href: "/contact" },
+  // { text: "Contact", href: "/contact" },
 ];
 
 const isMobile = () =>

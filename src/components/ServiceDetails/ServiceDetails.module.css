@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--tan);
+  background-color: var(--lightGray);
   padding-top: 15rem;
   padding-bottom: 15rem;
   position: relative;
@@ -24,7 +24,7 @@
   border: 1px solid var(--gray);
   border-bottom: none;
   padding: 1rem 2rem;
-  background-color: var(--yellow);
+  background-color: var(--tan);
   position: relative;
   top: 1px;
   transition: all 0.3s ease-in;
@@ -46,13 +46,13 @@
   gap: 5rem;
   padding: 3rem;
   border: 1px solid var(--gray);
-  background-color: var(--tan);
+  background-color: var(--lightGray);
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: var(--yellow);
+  background-color: var(--tan);
 }
 
 .card:nth-child(4) {
@@ -62,18 +62,17 @@
 
 /* when the container HAS a hovered first card, style .top */
 .container:has(.card:nth-child(1):hover) > .top {
-  background-color: var(--yellow);
+  background-color: var(--tan);
 }
 
-.card:nth-child(1),
-.card:last-child {
-  background-color: var(--yellow);
+.card:nth-child(1) {
+  background-color: var(--tan);
 }
 
-.card:nth-child(3),
+/* .card:nth-child(3),
 .card:last-child {
   background-color: var(--yellow);
-}
+} */
 
 .title,
 .dates,

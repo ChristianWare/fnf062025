@@ -49,8 +49,8 @@ export default function Why() {
                   src={Img1}
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
-                  color='white'
-                  border='grayBorder'
+                  color='tan'
+                  border='taniiBorder'
                 />
               </div>
             </div>
@@ -65,7 +65,6 @@ export default function Why() {
           </div>
         </div>
       </LayoutWrapper>
-      
     </section>
   );
 }

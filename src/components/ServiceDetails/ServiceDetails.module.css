@@ -1,7 +1,7 @@
 .container {
-  background-color: var(--lightGray);
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+  background-color: var(--tan);
+  padding-top: 20rem;
+  padding-bottom: 20rem;
   position: relative;
   z-index: 1;
 }
@@ -21,14 +21,14 @@
 
 .top {
   width: fit-content;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--black);
   border-bottom: none;
   padding: 1rem 2rem;
-  background-color: var(--tan);
+  background-color: var(--white);
   position: relative;
   top: 1px;
   transition: all 0.3s ease-in;
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 
 .bottom {
@@ -46,13 +46,13 @@
   gap: 5rem;
   padding: 3rem;
   border: 1px solid var(--gray);
-  background-color: var(--lightGray);
+  background-color: var(--tan);
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: var(--tan);
+  background-color: var(--white);
 }
 
 .card:nth-child(4) {
@@ -62,11 +62,11 @@
 
 /* when the container HAS a hovered first card, style .top */
 .container:has(.card:nth-child(1):hover) > .top {
-  background-color: var(--tan);
+  background-color: var(--white);
 }
 
 .card:nth-child(1) {
-  background-color: var(--tan);
+  background-color: var(--white);
 }
 
 /* .card:nth-child(3),

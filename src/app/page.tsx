@@ -17,8 +17,8 @@ export default function Home() {
         <FontsandFooters />
         <ProjectSection />
         <Why />
-        <Support />
         <Focus />
+        <Support />
         <ServiceDetails />
         <ContactHero />
         <Contact2 />

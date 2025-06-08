@@ -47,7 +47,7 @@ export default function ServiceDetails() {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Frequent Asked Questions' color='tan' />
+        <SectionHeading2 title='Frequent Asked Questions' color='white' />
         <div className={styles.top}>
           <SectionIntro title="faq's" color='black' dotColor='blackDot' />
         </div>

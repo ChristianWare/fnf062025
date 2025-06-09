@@ -30,7 +30,7 @@
 
 .copy {
   font-family: var(--SuisseIntlMedium);
-  font-size: 4.8rem;
+  font-size: 4rem;
   color: var(--black);
   margin-right: auto;
   width: 90%;
@@ -115,5 +115,4 @@
     background-color: var(--tan);
     padding: 3rem;
   }
-
 }

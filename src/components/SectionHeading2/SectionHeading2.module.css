@@ -4,15 +4,17 @@
   padding-bottom: 5rem;
   background-image: repeating-linear-gradient(
     45deg,
-    var(--black),
-    var(--black) 1px,
+    var(--taniii),
+    var(--taniii) 1px,
     transparent 0,
     transparent 50%
   );
   background-size: 10px 10px;
+  border-radius: 7px;
 }
 
 .title {
+  border-radius: 7px;
   background-color: var(--black);
   padding: 2rem;
   font-family: var(--SuisseIntlCondensed);

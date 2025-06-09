@@ -50,7 +50,7 @@ export default function Why() {
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
                   color='tan'
-                  border='taniiBorder'
+                  border='taniiiBorder'
                 />
               </div>
             </div>

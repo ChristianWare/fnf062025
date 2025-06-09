@@ -116,8 +116,8 @@ export default function Footer() {
           <div className={styles.top}>
             <SectionIntro
               title='Fonts & Footers'
-              color='tan'
-              dotColor='tanDot'
+              color='black'
+              dotColor='blackDot'
             />
           </div>
           <h3 className={styles.heading}>Your E-commerce Specialists</h3>

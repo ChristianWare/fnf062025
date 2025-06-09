@@ -5,7 +5,8 @@
   z-index: 1;
 }
 
-.overlay {
+
+/* .overlay {
   pointer-events: none;
   position: absolute;
   top: 0px;
@@ -20,7 +21,7 @@
 .img {
   object-fit: cover;
   z-index: 1;
-}
+} */
 
 .layoutWrapper {
   position: relative;

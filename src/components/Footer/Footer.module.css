@@ -1,12 +1,12 @@
 .content {
-  border: 1px solid var(--tan);
+  border: 1px solid var(--black);
   border-top: none;
   display: grid;
   grid-template-columns: 2fr 3fr;
 }
 
 .left {
-  border-right: 1px solid var(--tan);
+  border-right: 1px solid var(--black);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -23,11 +23,11 @@
   right: 0;
   height: 1px;
   width: 49%;
-  background-color: var(--tan);
+  background-color: var(--black);
 }
 
 .top {
-  border: 1px solid var(--tan);
+  border: 1px solid var(--black);
   border-bottom: none;
   width: 51%;
   padding: 1rem 2rem;
@@ -38,18 +38,18 @@
 }
 
 .heading {
-  color: var(--tan);
+  color: var(--black);
 }
 
 .copy {
   font-size: 1.1rem;
   text-transform: uppercase;
   width: 80%;
-  color: var(--tan);
+  color: var(--black);
 }
 
 .email {
-  border: 1px solid var(--tan);
+  border: 1px solid var(--black);
   width: 100%;
   display: flex;
   align-items: center;
@@ -60,19 +60,20 @@
 }
 
 .span {
-  color: var(--tan);
+  color: var(--black);
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
-  color: var(--tan);
+  color: var(--black);
   transform: rotate(90deg);
 }
 
 .privacy {
   font-size: 1.1rem;
   text-transform: uppercase;
+  color: var(--black);
 }
 
 .right {
@@ -80,13 +81,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
-  border-top: 1px solid var(--tan);
+  border-top: 1px solid var(--black);
 }
 
 .title {
   text-transform: uppercase;
   font-size: 1.1rem;
-  color: var(--tan);
+  color: var(--black);
 }
 
 .optionList {
@@ -102,7 +103,7 @@
 .option {
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: var(--tan);
+  color: var(--black);
 }
 
 .bottom {
@@ -159,7 +160,7 @@
     top: -29px;
     width: 51.3%;
   }
-  
+
   .right {
     grid-template-columns: repeat(2, 1fr);
   }

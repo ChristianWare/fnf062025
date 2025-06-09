@@ -8,7 +8,8 @@ import Support from "@/components/Support/Support";
 import Focus from "@/components/Focus/Focus";
 import Contact2 from "@/components/Contact2/Contact2";
 import ContactHero from "@/components/ContactHero/ContactHero";
-import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
+import Faq from "@/components/Faq/Faq";
+// import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
         <Why />
         <Support />
         <Focus />
-        <ServiceDetails />
+        {/* <ServiceDetails /> */}
+        <Faq />
         <ContactHero />
         <Contact2 />
       </div>

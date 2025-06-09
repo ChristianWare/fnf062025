@@ -15,10 +15,7 @@ export default function ContactHero() {
             Ready to improve your online store ?
           </h2>{" "}
           <p className={styles.copy}>
-            Ready to finally see how work, should work? We have the business
-            apps you depend on, the support you need, and the AI you’ve been
-            waiting for—all in one solution. Be one of the first to experience
-            our product and gain a competitive edge.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias sint facilis illo ipsa consequatur aliquam sunt quod rerum nisi.
           </p>
         </div>
         <div className={styles.content}>

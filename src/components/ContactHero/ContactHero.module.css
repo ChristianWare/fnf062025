@@ -34,6 +34,7 @@
 .copy {
   width: 60%;
   text-align: center;
+  font-size: 3rem;
 }
 
 .content {
@@ -93,7 +94,8 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .heading, .copy {
+  .heading,
+  .copy {
     width: 100%;
   }
 }

@@ -13,10 +13,10 @@ export default function ContactHero() {
         <div className={styles.top}>
           <h2 className={styles.heading}>
             Ready to improve your online store ?
-          </h2>{" "}
-          <p className={styles.copy}>
+          </h2>
+          {/* <p className={styles.copy}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias sint facilis illo ipsa consequatur aliquam sunt quod rerum nisi.
-          </p>
+          </p> */}
         </div>
         <div className={styles.content}>
           <div className={styles.left}>

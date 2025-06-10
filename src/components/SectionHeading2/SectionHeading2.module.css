@@ -1,6 +1,6 @@
 .content {
-  /* border-top-right-radius: 500px; */
-  /* border-bottom-right-radius: 500px; */
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
   padding-bottom: 5rem;
   background-image: repeating-linear-gradient(
     45deg,
@@ -10,11 +10,11 @@
     transparent 50%
   );
   background-size: 10px 10px;
-  border-radius: 7px;
+  /* border-radius: 7px; */
 }
 
 .title {
-  border-radius: 7px;
+  /* border-radius: 7px; */
   background-color: var(--black);
   padding: 2rem;
   font-family: var(--SuisseIntlCondensed);
@@ -44,7 +44,7 @@
     padding: 2rem;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
-    border: 1px solid var(--black);
+    border: 1px solid var(--taniii);
   }
 
   .titleContainer {

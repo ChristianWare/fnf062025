@@ -7,7 +7,6 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Button from "../Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 

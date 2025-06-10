@@ -1,12 +1,6 @@
 import styles from "./ProjectDetails.module.css";
-// import Button from "@/components/Button/Button";
-// import LayoutWrapper from "@/components/LayoutWrapper";
 import { StaticImageData } from "next/image";
-// import Stats from "../Stats/Stats";
-// import Description from "../Description/Description";
 import VideoSection from "../VideoSection/VideoSection";
-// import Results from "../Results/Results";
-// import Challenge from "./Challenge/Challenge";
 import { ComponentType, SVGProps } from "react";
 
 interface TagItem {
@@ -60,8 +54,7 @@ export default function ProjectDetails({ project }: Props) {
   // const Icon = project.icon;
 
   return (
-    <section className={styles.container} id={project.slug}>
-      {/* <LayoutWrapper> */}
+    <section className={styles.container}>
       <div className={styles.top}>{/* <Icon className={styles.icon} /> */}</div>
       <div className={styles.content}>
         {/* <div className={styles.introSection}>
@@ -120,7 +113,6 @@ export default function ProjectDetails({ project }: Props) {
 
       {/* <Challenge project={project} /> */}
       {/* <Results project={project} /> */}
-      {/* </LayoutWrapper> */}
     </section>
   );
 }

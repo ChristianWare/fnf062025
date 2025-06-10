@@ -4,6 +4,8 @@
   background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
     linear-gradient(to right, var(--tanii) 1px, transparent 1px);
   background-size: 100px 100px;
+  padding-bottom: 15rem;
+
 }
 
 .content::before {
@@ -54,7 +56,7 @@
   color: var(--black);
 }
 
-@media screen and (max-width: 1268px) {
+@media screen and (max-width: 1068px) {
   .container {
     height: 100%;
   }

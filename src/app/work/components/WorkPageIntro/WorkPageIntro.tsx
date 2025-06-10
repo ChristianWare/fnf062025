@@ -1,7 +1,7 @@
 "use client";
 
-import LayoutWrapper from "@/components/LayoutWrapper";
 import styles from "./WorkPageIntro.module.css";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

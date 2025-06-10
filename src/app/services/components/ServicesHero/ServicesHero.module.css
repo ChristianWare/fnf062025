@@ -4,7 +4,8 @@
   background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
     linear-gradient(to right, var(--tanii) 1px, transparent 1px);
   background-size: 100px 100px;
-  padding-bottom: 15rem;
+  padding-bottom: 5rem;
+
 }
 
 .content::before {
@@ -88,6 +89,7 @@
 }
 
 @media screen and (max-width: 668px) {
+  
   .copy {
     width: 100%;
   }

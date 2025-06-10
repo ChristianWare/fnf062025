@@ -1,6 +1,6 @@
 import styles from "./Process.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import SectionHeading from "@/components/SectionHeading/SectionHeading";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 
 const data = [
   {
@@ -30,13 +30,13 @@ const data = [
   },
   {
     id: 6,
-    feature: "Multi-vendor marketplaces",
-    desc: "→ Platforms hosting multiple sellers, perfect for community marketplaces, industry-specific exchanges, and businesses looking to create their own Amazon or Etsy-like ecosystem.",
+    feature: "Rental platforms",
+    desc: "→ Temporary-use item booking systems ideal for equipment rental businesses, property managers, vehicle rentals, and peer-to-peer sharing economy ventures.",
   },
   {
     id: 7,
-    feature: "Rental platforms",
-    desc: "→ Temporary-use item booking systems ideal for equipment rental businesses, property managers, vehicle rentals, and peer-to-peer sharing economy ventures.",
+    feature: "Multi-vendor marketplaces",
+    desc: "→ Platforms hosting multiple sellers, perfect for community marketplaces, industry-specific exchanges, and businesses looking to create their own Amazon or Etsy-like ecosystem.",
   },
 ];
 
@@ -44,13 +44,10 @@ export default function Process() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading
-          // number='4'
-          title='We Specialize in all e-comm business models'
-        />
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
+              <SectionHeading2 title='We Specialize in all e-comm business models' />
               <p className={styles.heading}>
                 Whether you&apos;re selling directly to consumers, building a
                 B2B portal, or creating a multi-vendor marketplace, we have the

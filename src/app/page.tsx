@@ -9,6 +9,7 @@ import Focus from "@/components/Focus/Focus";
 import Contact2 from "@/components/Contact2/Contact2";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import Faq from "@/components/Faq/Faq";
+import Process from "./services/components/Process/Process";
 // import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Support />
         <Focus />
         {/* <ServiceDetails /> */}
+        <Process />
         <Faq />
         <ContactHero />
         <Contact2 />

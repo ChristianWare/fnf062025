@@ -1,10 +1,11 @@
 import styles from "./ListOfServices.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+// import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import Image from "next/image";
-import Devlopment from "../../../public/images/servicesHero.jpg";
-import Booking from "../../../public/images/bookingii.jpg";
+import Devlopment from "../../../../../public/images/servicesHero.jpg";
+import Booking from "../../../../../public/images/bookingii.jpg";
 import Button from "@/components/Button/Button";
+// import Button from "@/components/Button/Button";
 
 const data = [
   {
@@ -13,6 +14,7 @@ const data = [
     headline: "Building robust, scalable online stores",
     desc: "Our development team brings your e-commerce vision to life with clean, efficient code and seamless integrations. We build on industry-leading platforms while customizing the functionality to meet your specific business requirements.",
     src: Devlopment,
+    price: "$5,900",
     servicesInclude: [
       {
         id: 3.1,
@@ -44,12 +46,12 @@ const data = [
         description:
           "We implement systems to track and display product availability in real-time across all your sales channels.",
       },
-      {
-        id: 3.6,
-        serviceName: "Product data import and setup",
-        description:
-          "We efficiently organize and import your product catalog with all necessary attributes, variations, and media.",
-      },
+      // {
+      //   id: 3.6,
+      //   serviceName: "Product data import and setup",
+      //   description:
+      //     "We efficiently organize and import your product catalog with all necessary attributes, variations, and media.",
+      // },
     ],
   },
   {
@@ -58,6 +60,7 @@ const data = [
     headline: "Fast, friction‑free scheduling & reservations",
     desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
     src: Booking,
+    price: "$4,500",
     servicesInclude: [
       {
         id: 4.1,
@@ -89,12 +92,16 @@ const data = [
         description:
           "We build admin dashboards where you assign services, set staff hours, and manage pricing per location—all in one place.",
       },
-      {
-        id: 4.6,
-        serviceName: "Analytics & occupancy reporting",
-        description:
-          "Custom dashboards surface key KPIs like utilisation rate, average booking value, and repeat‑guest percentage so you can optimise pricing and staffing.",
-      },
+      // {
+      //   id: 4.6,
+      //   serviceName: "Analytics & occupancy reporting",
+      //   description:
+      //     "Custom dashboards surface key KPIs like utilisation rate, average booking value, and repeat‑guest percentage so you can optimise pricing and staffing.",
+      // },
+      // {
+      //   id: 4.7,
+      //   price: "$5,900",
+      // },
     ],
   },
 ];
@@ -103,13 +110,11 @@ export default function ListOfServices() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Our Services' />
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
               <h3 className={styles.title}>{a.service}</h3>
               <p className={styles.desc}>{a.desc}</p>
-
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
                   <Image
@@ -124,7 +129,6 @@ export default function ListOfServices() {
                   <div key={b.id} className={styles.card}>
                     <div className={styles.cardContent}>
                       <div className={styles.cardTop}>
-                        {/* <span className={styles.index}>0{index + 1}</span> */}
                         <h3 className={styles.serviceName}>{b.serviceName}</h3>
                       </div>
                       <div className={styles.cardBottom}>
@@ -133,22 +137,19 @@ export default function ListOfServices() {
                     </div>
                   </div>
                 ))}
-                {/* <div className={styles.card}>
-                  <div className={styles.cardTop}>
-                    <span className={styles.index}>{a.id}</span>
-                  </div>
-                </div> */}
+                <div className={styles.priceContainer}>
+                  <h4 className={styles.price}>{a.price}</h4>
+                </div>
+              </div>
+              <div className={styles.btnContainer}>
+                <Button
+                  text='Start My Project'
+                  btnType='outline'
+                  href='/contact'
+                />
               </div>
             </div>
           ))}
-        </div>
-        <div className={styles.btnBottomContainer}>
-          <Button
-            text='Start My Project'
-            btnType='primary'
-            href='/contact'
-            marquee={true}
-          />
         </div>
       </LayoutWrapper>
     </section>

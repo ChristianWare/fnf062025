@@ -84,7 +84,7 @@
 }
 
 .card:first-child {
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--taniii);
 }
 
 .card:last-child {
@@ -141,15 +141,12 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .imgContainer {
-    height: 450px;
+  .heading {
+    width: 70%;
   }
 }
 
-@media screen and (max-width: 568px) {
-  .imgContainer {
-    height: 350px;
-  }
+@media screen and (max-width: 868px) {
 
   .heading {
     width: 100%;

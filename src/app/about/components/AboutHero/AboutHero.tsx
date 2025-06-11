@@ -58,9 +58,8 @@ export default function AboutHero() {
             <div className={styles.right}>
               <SectionIntro title='About Us' />
               <h1 ref={refs.heading} className={styles.heading}>
-                Meet Fonts & Footers
+                Meet us: <br /> Fonts & Footers
               </h1>
-             
             </div>
           </div>
         </LayoutWrapper>

@@ -21,6 +21,10 @@
   z-index: -1;
 }
 
+.top {
+  width: 50%;
+}
+
 .bottom {
   margin-top: 2rem;
   display: grid;
@@ -129,6 +133,12 @@
 
 .card:last-child {
   border-bottom: 1px solid var(--gray);
+}
+
+@media screen and (max-width: 968px) {
+  .top {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 868px) {

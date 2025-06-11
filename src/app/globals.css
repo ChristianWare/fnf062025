@@ -176,9 +176,9 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
+  /* h1 {
     font-size: 14vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 568px) {
@@ -188,6 +188,8 @@ textarea:focus {
 
   h1 {
     letter-spacing: -1.4px;
+    font-size: 13vw;
+
   }
 
 

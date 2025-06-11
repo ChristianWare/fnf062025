@@ -1,6 +1,6 @@
 import styles from "./HomePageSolutions.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import SectionHeading3 from "@/components/SectionHeading3/SectionHeading3";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import SectionIntro from "@/components/SectionIntro/SectionIntro";
 
 const data = [
@@ -40,9 +40,17 @@ export default function HomePageSolutions() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionIntro title='How it works'  />
-        <br />
-        <SectionHeading3 title='We make working with us easy' />
+        <div className={styles.top}>
+          <SectionIntro title='How it works' />
+          <br />
+          {/* <SectionHeading3 title='We make working with us easy' /> */}
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading2
+              title='we make working with us easy'
+              color='yellow'
+            />
+          </div>
+        </div>
         <div className={styles.bottom}>
           {data.map((x) => (
             <div key={x.id} className={`${styles.card} ${styles[x.span]}`}>

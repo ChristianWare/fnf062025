@@ -60,7 +60,7 @@ export default function WorkPageIntro() {
           </div>
           <div className={styles.right}>
             <h1 ref={refs.heading} className={styles.heading}>
-              Our work speaks for itself
+              Our work speaks <br /> for itself
             </h1>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function ContactHero() {
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>
-            Ready to improve your online store ?
+            Ready to improve <br /> your online store ?
           </h2>
           <div className={styles.btnContainer}>
             <Button href='/contact' btnType='outline' text='Contact us' />

@@ -1,101 +1,68 @@
 .container {
   position: relative;
   z-index: 1;
-  /* z-index: 998; */
-}
-
-.btn {
-  z-index: 998;
-  font-family: var(--NeubauGroteskNor);
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  user-select: none;
-  display: inline-block;
-  padding: 1.5rem 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  transition: all 0.2s ease-in;
-  background-color: var(--yellow);
-  border: 1px solid var(--gray);
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: transparent;
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.3rem 4rem;
+  font-family: var(--SuisseIntlMedium);
+  /* border: 1px solid var(--black); */
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border-radius: 50px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
-.dot1,
-.dot2,
-.dot3,
-.dot4 {
-  width: 5px;
-  height: 5px;
-  background-color: var(--black);
+.label {
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
+}
+
+.marqueeSpan {
   position: absolute;
-  transition: all 0.2s ease-in;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
 }
 
-.dot1 {
-  top: 5px;
-  right: 5px;
+.primary {
+  background-color: var(--yellow);
+  color: var(--brown);
 }
 
-.dot2 {
-  bottom: 5px;
-  right: 5px;
+.primary:hover {
+  background-color: var(--yellow2);
+  transform: scale(1.05);
 }
 
-.dot3 {
-  top: 5px;
-  left: 5px;
-}
-
-.dot4 {
-  bottom: 5px;
-  left: 5px;
-}
-
-.blue {
-  background-color: var(--blue);
-  color: var(--white);
-  border: 1px solid var(--blue);
-}
-
-.blue:hover {
-  background-color: transparent;
-  color: var(--blue);
-}
-
-.pink {
-  background-color: var(--pink);
-  color: var(--black);
-  border: 1px solid var(--pink);
-}
-
-.blue .dot1,
-.blue .dot2,
-.blue .dot3,
-.blue .dot4 {
-  background-color: var(--white);
-}
-
-.blue:hover .dot1,
-.blue:hover .dot2,
-.blue:hover .dot3,
-.blue:hover .dot4 {
-  background-color: var(--blue);
+.btn.primary:active {
+  transform: scale(0.95);
 }
 
 .black {
   background-color: var(--black);
-  color: var(--tan);
-  border: 1px solid var(--black);
+  color: var(--tan) !important;
+  border: 1px solid var(--gray);
+  z-index: 999;
 }
 
 .black:hover {
@@ -103,27 +70,79 @@
   color: var(--black);
 }
 
-.black .dot1,
-.black .dot2,
-.black .dot3,
-.black .dot4 {
-  background-color: var(--white);
-}
-
-.black:hover .dot1,
-.black:hover .dot2,
-.black:hover .dot3,
-.black:hover .dot4 {
-  background-color: var(--black);
+.normal {
+  color: var(--black);
+  background-color: transparent;
+  border: none;
+  font-family: var(--SuisseIntlMedium);
+  padding-left: 0rem;
+  padding-right: 0rem;
 }
 
 .outline {
   background-color: transparent;
   color: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
 }
 
 .outline:hover {
   background-color: var(--black);
-  color: var(--tan);
+  color: var(--yellow);
+}
+
+.btn.outline:hover .label {
+  color: var(--yellow);
+}
+
+.btn.outline:hover .chevron {
+  color: var(--yellow);
+}
+.btn.outline:hover .iconContainer {
+  border: 1px solid var(--yellow);
+}
+
+.btn.outline .label {
+  visibility: visible;
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chevron {
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(-90deg);
+}
+
+.btn.normal .label {
+  visibility: visible;
+}
+
+@keyframes chevronSlide {
+  0% {
+    transform: translateY(0);
+  }
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn.normal:hover .chevron {
+  animation: chevronSlide 0.2s ease-in-out 1;
 }

@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
+import FalseButton from "../FalseButton/FalseButton";
 
 const navItems = [
   { text: "Work", href: "/work" },
@@ -70,7 +71,7 @@ export default function Nav() {
         </div>
 
         <div className={styles.btnContainer}>
-          <Button text='Get Started' btnType='primary' href='#' marquee />
+          <FalseButton text='Get Started' btnType='primary' marquee />
         </div>
       </nav>
     </header>

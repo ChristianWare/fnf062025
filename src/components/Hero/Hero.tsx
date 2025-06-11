@@ -7,6 +7,8 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ParallaxImage from "../ParallaxImage/ParallaxImage";
+import Img1 from "../../../public/images/heroiv.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,6 +75,13 @@ export default function Hero() {
         <div className={styles.overlay} ref={refs.overlay}></div>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.headingClip}>
+              <h1 ref={refs.heading} className={styles.heading}>
+                We Build <br />
+                Blazing fast <br />
+                Online Stores
+              </h1>
+            </div>
             <p className={styles.copy}>
               Fonts & Footers builds lightning-fast, revenue-driven online
               stores for small and medium-sized brands. Every line of code is
@@ -81,12 +90,14 @@ export default function Hero() {
             </p>
           </div>
           <div className={styles.right}>
-            <div className={styles.headingClip}>
-              <h1 ref={refs.heading} className={styles.heading}>
-                We Build <br />
-                Blazing fast <br />
-                Online Stores
-              </h1>
+            <div className={styles.imgContainer}>
+              <ParallaxImage
+                src={Img1}
+                alt='Fonts & Footers office'
+                title='Fonts & Footers'
+                // color='tan'
+                // border='taniiBorder'
+              />
             </div>
           </div>
         </div>

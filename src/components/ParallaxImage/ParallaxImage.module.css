@@ -3,7 +3,7 @@
   width: fit-content;
   padding: 1rem 2rem;
   border: 1px solid var(--black);
-  border-radius: 7px;
+  border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-bottom: none;
@@ -22,7 +22,7 @@
 
 .container {
   border: 1px solid var(--black);
-  border-radius: 7px;
+  border-radius: 10px;
   border-top-left-radius: 0px;
   padding: 2rem;
   background-color: var(--tan);
@@ -67,6 +67,7 @@
   height: 100%;
   object-fit: cover;
   will-change: transform;
+  border-radius: 10px;
 }
 
 .imgContainer {
@@ -77,6 +78,7 @@
   height: 100%;
   overflow: hidden;
   will-change: transform;
+  border-radius: 10px;
 }
 
 .parallaxWrapper {
@@ -87,13 +89,13 @@
 
 @media screen and (max-width: 768px) {
   .parallaxWrapper {
-    height: 450px;
+    height: 300px;
   }
 }
 
 @media screen and (max-width: 568px) {
   .parallaxWrapper {
-    height: 350px;
+    height: 275px;
   }
 
   .top {

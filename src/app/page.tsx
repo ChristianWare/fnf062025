@@ -10,7 +10,6 @@ import Contact2 from "@/components/Contact2/Contact2";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import Faq from "@/components/Faq/Faq";
 import Process from "./services/components/Process/Process";
-// import ServiceDetails from "@/components/ServiceDetails/ServiceDetails";
 
 export default function Home() {
   return (
@@ -22,7 +21,6 @@ export default function Home() {
         <Why />
         <Support />
         <Focus />
-        {/* <ServiceDetails /> */}
         <Process />
         <Faq />
         <ContactHero />

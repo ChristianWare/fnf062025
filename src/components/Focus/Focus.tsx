@@ -52,7 +52,7 @@ export default function Focus() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: copyRef.current, // watch the paragraph
-        start: "top 80%", // when its top hits 90% of viewport
+        start: "top 90%", // when its top hits 90% of viewport
         end: "top 40%", // …animate until it reaches 40% (≈50 vh span)
         scrub: 3,
         // markers: true,

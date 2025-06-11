@@ -61,7 +61,7 @@ export default function Nav() {
           <Logo />
         </div>
 
-        <div className={styles.navItems} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.navItems}>
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className={styles.navItem}>
               {item.text}

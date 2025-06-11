@@ -1,7 +1,6 @@
 .container {
   background-color: var(--white);
-  padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding: 15rem 0rem;
   position: relative;
   z-index: 1;
 }
@@ -147,7 +146,6 @@
 }
 
 @media screen and (max-width: 868px) {
-
   .heading {
     width: 100%;
   }

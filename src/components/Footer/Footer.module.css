@@ -1,12 +1,14 @@
 .content {
-  border: 1px solid var(--black);
+  border: 1px solid var(--tan);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
   border-top: none;
   display: grid;
   grid-template-columns: 2fr 3fr;
 }
 
 .left {
-  border-right: 1px solid var(--black);
+  border-right: 1px solid var(--tan);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -23,11 +25,13 @@
   right: 0;
   height: 1px;
   width: 49%;
-  background-color: var(--black);
+  background-color: var(--tan);
 }
 
 .top {
-  border: 1px solid var(--black);
+  border: 1px solid var(--tan);
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
   border-bottom: none;
   width: 51%;
   padding: 1rem 2rem;
@@ -38,42 +42,42 @@
 }
 
 .heading {
-  color: var(--black);
+  color: var(--tan);
 }
 
 .copy {
   font-size: 1.1rem;
   text-transform: uppercase;
   width: 80%;
-  color: var(--black);
+  color: var(--tan);
 }
 
 .email {
-  border: 1px solid var(--black);
+  border: 1px solid var(--tan);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
-  color: var(--black);
+  color: var(--tan);
 }
 
 .span {
-  color: var(--black);
+  color: var(--tan);
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
-  color: var(--black);
+  color: var(--tan);
   transform: rotate(90deg);
 }
 
 .privacy {
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--tan);
 }
 
 .right {
@@ -81,13 +85,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--tan);
 }
 
 .title {
   text-transform: uppercase;
   font-size: 1.1rem;
-  color: var(--black);
+  color: var(--tan);
 }
 
 .optionList {
@@ -103,7 +107,7 @@
 .option {
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--tan);
 }
 
 .bottom {
@@ -145,7 +149,7 @@
 
   .left {
     border-right: none;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--tan);
   }
 }
 

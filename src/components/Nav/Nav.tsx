@@ -70,12 +70,7 @@ export default function Nav() {
         </div>
 
         <div className={styles.btnContainer}>
-          <Button
-            text='Get Started'
-            btnType='primary'
-            href='/contact'
-            marquee
-          />
+          <Button text='Get Started' btnType='primary' href='#' marquee />
         </div>
       </nav>
     </header>

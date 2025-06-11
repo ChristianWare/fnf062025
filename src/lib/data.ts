@@ -81,7 +81,6 @@ export const pricingii = [
   },
 ] as const;
 
-
 export const projects = [
   {
     id: 1,
@@ -322,5 +321,40 @@ export const projects = [
       { id: 3, title: "Increase in avg. stay length", desc: "+2.4 nights" },
       { id: 4, title: "Occupancy lift in slow periods", desc: "+41%" },
     ],
+  },
+] as const;
+
+export const faqs = [
+  {
+    id: 1,
+    title: "Services",
+    slug: "thundertrails",
+    src: Thundertrails,
+    icon: Thunder,
+    video: "/videos/thunder.mp4",
+  },
+  {
+    id: 2,
+    title: "Pricing & Timeline",
+    slug: "chuxly",
+    src: Chuxly,
+    icon: Headphones,
+    video: "/videos/chuxly.mp4",
+  },
+  {
+    id: 3,
+    title: "Project Management",
+    slug: "golden-drips",
+    src: Honey,
+    icon: Bee,
+    video: "/videos/honey.mp4",
+  },
+  {
+    id: 4,
+    title: "Tenchnology",
+    slug: "elite-retreat-rentals",
+    src: ERREntals,
+    icon: Rentals,
+    video: "/videos/rentals.mp4",
   },
 ] as const;

@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--white);
+  background-color: var(--tan);
   padding: 15rem 0rem;
   position: relative;
   z-index: 1;
@@ -21,6 +21,13 @@
 .top {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.btnContainer {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;

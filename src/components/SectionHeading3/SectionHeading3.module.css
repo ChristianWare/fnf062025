@@ -1,0 +1,64 @@
+.headingContainer {
+  width: 100%;
+}
+
+.hcTop {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--black),
+    var(--yellow) 1px,
+    var(--yellow) 0 50%
+  );
+  background-size: 10px 10px;
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.orange {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--black),
+    var(--yellow) 1px,
+    var(--yellow) 0 50%
+  );
+}
+
+.black {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--tan),
+    var(--black) 1px,
+    var(--tan) 0 50%
+  );
+}
+
+.heading {
+  width: 50%;
+  line-height: 1.1;
+  /* padding: 1rem; */
+  /* background-color: var(--pink); */
+  /* border: 1px solid var(--gray); */
+}
+
+@media screen and (max-width: 1268px) {
+  .heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .heading {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    width: 100%;
+  }
+}

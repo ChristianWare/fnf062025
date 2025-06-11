@@ -1,10 +1,12 @@
 "use client";
 
 import styles from "./ContactHero.module.css";
+import Button from "../Button/Button";
+import Circle from "../Circle/Circle";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import ContactForm from "@/components/ContactForm/ContactForm";
-import { InlineWidget } from "react-calendly";
-import SectionIntro from "@/components/SectionIntro/SectionIntro";
+// import ContactForm from "@/components/ContactForm/ContactForm";
+// import { InlineWidget } from "react-calendly";
+// import SectionIntro from "@/components/SectionIntro/SectionIntro";
 
 export default function ContactHero() {
   return (
@@ -14,11 +16,18 @@ export default function ContactHero() {
           <h2 className={styles.heading}>
             Ready to improve your online store ?
           </h2>
-          {/* <p className={styles.copy}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias sint facilis illo ipsa consequatur aliquam sunt quod rerum nisi.
-          </p> */}
+          <div className={styles.btnContainer}>
+            <Button href='/contact' btnType='outline' text='Contact us' />
+            <Button
+              text='Get Started'
+              btnType='primary'
+              href='/contact'
+              marquee
+            />{" "}
+          </div>
+          <Circle />
         </div>
-        <div className={styles.content}>
+        {/* <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.sectionIntroContainer1}>
               <SectionIntro
@@ -46,7 +55,7 @@ export default function ContactHero() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </LayoutWrapper>
     </div>
   );

@@ -1,0 +1,116 @@
+.container {
+  z-index: 0;
+  background-color: var(--tan);
+  background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
+    linear-gradient(to right, var(--tanii) 1px, transparent 1px);
+  background-size: 100px 100px;
+  padding-bottom: 5rem;
+}
+
+.content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.04;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  margin-top: 15rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.headingClip {
+  line-height: 0.95;
+  font-family: var(--SuisseIntlCondensed);
+}
+
+.headingClip * {
+  font-family: inherit;
+}
+
+.heading {
+  will-change: transform, opacity, filter;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  font-family: var(--SuisseIntlCondensed);
+}
+
+.heading :global(.word),
+.heading :global(.line) {
+  font-family: inherit;
+}
+
+.btnContainer {
+  margin-top: 3rem;
+}
+
+.copy {
+  z-index: 2;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  width: 60%;
+  color: var(--black);
+}
+
+@media screen and (max-width: 1068px) {
+  .container {
+    height: 100%;
+  }
+
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .copy {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .container {
+    padding-bottom: 5rem;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy {
+    width: 65%;
+  }
+
+  .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .copy {
+    width: 100%;
+  }
+}

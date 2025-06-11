@@ -28,14 +28,14 @@ export default function Circle() {
             fontSize='35'
             fill='var(--blackii)'
           >
-            <textPath
+            {/* <textPath
               href='#circlePath'
               startOffset='25%'
               textAnchor='middle'
               dy='-8'
             >
               Our Focus
-            </textPath>
+            </textPath> */}
           </text>
         </svg>
         <div className={styles.innerCircle}>
@@ -45,7 +45,7 @@ export default function Circle() {
           <div className={styles.quad4}>Automation</div>
         </div>
         <div className={styles.centerCircle}>
-          <span className={styles.centerText}>YOUR SUCCESS</span>
+          <span className={styles.centerText}>Fonts & Footers</span>
         </div>{" "}
       </div>
       {/* </LayoutWrapper> */}

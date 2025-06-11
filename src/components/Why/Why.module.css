@@ -69,6 +69,14 @@
   position: -webkit-sticky;
   position: sticky;
   top: 90px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5rem;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 100%;
 }
 
 .sectionHeadingContainer {

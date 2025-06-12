@@ -159,30 +159,45 @@ export default function ContactForm({ border = "" }: Props) {
                 </span>
               )}
             </div>
+            {/* --- Services check-box list --- */}
             <div className={styles.servicesSection}>
               <label className={styles.servicesLabel}>
                 What services are you interested in?
               </label>
+
               <div className={styles.serviceButtons}>
-                {serviceOptions.map((service) => (
-                  <button
-                    key={service}
-                    type='button'
-                    className={`${styles.serviceButton} ${
-                      selectedServices.includes(service) ? styles.selected : ""
-                    }`}
-                    onClick={() => toggleService(service)}
-                  >
-                    {service}
-                  </button>
-                ))}
+                {serviceOptions.map((service) => {
+                  const checked = selectedServices.includes(service);
+
+                  return (
+                    <label
+                      key={service}
+                      className={`
+            ${styles.serviceOption}      /* NEW wrapper */
+            ${checked ? styles.selected : ""}
+          `}
+                    >
+                      {/* Visually hidden native checkbox, but still accessible */}
+                      <input
+                        type='checkbox'
+                        value={service}
+                        {...register("services")}
+                        checked={checked}
+                        onChange={() => toggleService(service)}
+                        className={styles.hiddenCheckbox} /* NEW helper class */
+                      />
+
+                      <span className={styles.checkboxLabel}>{service}</span>
+                    </label>
+                  );
+                })}
               </div>
             </div>
           </div>
           <div className={styles.btnBtnContainer}>
             <FalseButton
               text={loading ? "Sending..." : "Submit"}
-              btnType='blue'
+              btnType='black'
             />
           </div>
         </form>

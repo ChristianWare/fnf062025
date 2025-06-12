@@ -1,8 +1,9 @@
 "use client";
 
-import styles from "./Modal.module.css";
 import { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Close from "../../../public/icons/close.svg";
+import styles from "./Modal.module.css";
 
 interface Props {
   isOpen: boolean;
@@ -10,17 +11,29 @@ interface Props {
   children: React.ReactNode;
 }
 
+/* ——————————————————————————————————————————————————————————————— */
+/*  Backdrop + dialog animation presets                              */
+/* ——————————————————————————————————————————————————————————————— */
+const backdropVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
+const dialogVariants = {
+  initial: {  opacity: 0 },
+  animate: {  opacity: 1 },
+  exit: {  opacity: 0 },
+};
+
 export default function Modal({ isOpen, onClose, children }: Props) {
+  /* — lock scrolling & ESC-to-close (same as before) — */
   useEffect(() => {
-    /* -- ESC closes -------------------------------------------------------- */
     const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onEsc);
 
-    /* -- Lock scrolling & block layout shift ------------------------------ */
     if (isOpen) {
       const scrollY = window.scrollY || window.pageYOffset;
-
-      /* scrollbar width = viewport - document width */
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
 
@@ -31,14 +44,12 @@ export default function Modal({ isOpen, onClose, children }: Props) {
         right: "0",
         width: "100%",
         overflow: "hidden",
-        paddingRight: `${scrollbarWidth}px`, // compensate for missing scrollbar
+        paddingRight: `${scrollbarWidth}px`,
       });
     }
 
     return () => {
       window.removeEventListener("keydown", onEsc);
-
-      /* restore scroll & body styles if we had locked them */
       const top = document.body.style.top;
       if (top) {
         const y = -parseInt(top, 10) || 0;
@@ -48,16 +59,34 @@ export default function Modal({ isOpen, onClose, children }: Props) {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
-
+  /* — render with motion variants wrapped in AnimatePresence — */
   return (
-    <div className={styles.modalBackdrop}>
-      <div className={styles.modalContent}>
-        <button onClick={onClose} className={styles.button}>
-          <Close width={30} height={30} className={styles.icon} />
-        </button>
-        <div className={styles.children}>{children}</div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className={styles.modalBackdrop}
+          variants={backdropVariants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          transition={{ duration: 0.25, ease: "easeInOut" }}
+        >
+          <motion.div
+            className={styles.modalContent}
+            variants={dialogVariants}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            <button onClick={onClose} className={styles.button}>
+              <Close width={30} height={30} className={styles.icon} />
+            </button>
+
+            <div className={styles.children}>{children}</div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

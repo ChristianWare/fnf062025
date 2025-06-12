@@ -1,19 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
-// import Button from "../Button/Button";
 import FalseButton from "../FalseButton/FalseButton";
+import Modal from "../Modal/Modal"; // ← NEW import
+import ContactForm from "../ContactForm/ContactForm";
 
 const navItems = [
   { text: "Work", href: "/work" },
   { text: "Services", href: "/services" },
   { text: "About", href: "/about" },
   { text: "faq", href: "/faq" },
-  // { text: "Blog", href: "/blog" },
-  // { text: "Contact", href: "/contact" },
 ];
 
 const isMobile = () =>
@@ -21,6 +20,7 @@ const isMobile = () =>
   window.matchMedia("(max-width: 568px)").matches;
 
 export default function Nav() {
+  /* ─────────────────────────────── NAV VISIBILITY ────────────────────────── */
   const [showNav, setShowNav] = useState(true);
 
   useEffect(() => {
@@ -53,27 +53,46 @@ export default function Nav() {
     };
   }, []);
 
+  /* ─────────────────────────────── MODAL STATE ───────────────────────────── */
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = useCallback(() => setModalOpen(true), []);
+  const closeModal = useCallback(() => setModalOpen(false), []);
+
+  /* ────────────────────────────────── JSX ────────────────────────────────── */
   return (
-    <header
-      className={`${styles.header} ${showNav ? styles.show : styles.hide}`}
-    >
-      <nav className={styles.navbar}>
-        <div className={styles.logoContainer}>
-          <Logo />
-        </div>
+    <>
+      <header
+        className={`${styles.header} ${showNav ? styles.show : styles.hide}`}
+      >
+        <nav className={styles.navbar}>
+          <div className={styles.logoContainer}>
+            <Logo />
+          </div>
 
-        <div className={styles.navItems}>
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={styles.navItem}>
-              {item.text}
-            </Link>
-          ))}
-        </div>
+          <div className={styles.navItems}>
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} className={styles.navItem}>
+                {item.text}
+              </Link>
+            ))}
+          </div>
 
-        <div className={styles.btnContainer}>
-          <FalseButton text='Get Started' btnType='primary' marquee />
-        </div>
-      </nav>
-    </header>
+          <div className={styles.btnContainer}>
+            {/* FalseButton receives onClick → opens modal */}
+            <FalseButton
+              text='Get Started'
+              btnType='primary'
+              marquee
+              onClick={openModal}
+            />
+          </div>
+        </nav>
+      </header>
+
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ContactForm />
+      </Modal>
+    </>
   );
 }

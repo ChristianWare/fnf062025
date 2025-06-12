@@ -60,7 +60,7 @@
 
 .black {
   background-color: var(--black);
-  color: var(--tan) !important;
+  color: var(--yellow) !important;
   border: 1px solid var(--gray);
   z-index: 999;
 }
@@ -68,6 +68,10 @@
 .black:hover {
   background-color: transparent;
   color: var(--black);
+}
+
+.btn.black .label {
+  visibility: visible;
 }
 
 .normal {

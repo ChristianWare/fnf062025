@@ -1,91 +1,70 @@
 "use client";
 
 import { ReactNode } from "react";
+import { motion, HTMLMotionProps } from "framer-motion";
 import styles from "./FalseButton.module.css";
-import { motion } from "framer-motion";
 
-interface Props {
+type MotionButtonProps = Omit<HTMLMotionProps<"button">, "children">;
+
+interface FalseButtonProps extends MotionButtonProps {
   text?: string;
-  btnType: string;
-  onClick?: () => void;
-  disabled?: boolean;
-  children?: ReactNode;
+  btnType?: "primary" | "secondary" | string;
   marquee?: boolean;
+  children?: ReactNode;
 }
 
 export default function FalseButton({
   text,
-  btnType,
-  disabled,
-  children,
+  btnType = "primary",
   marquee = false,
-}: Props) {
+  children,
+  ...rest // onClick, disabled, aria-*, whileHover, etc.
+}: FalseButtonProps) {
   const content = text || children;
+  
 
   return (
-    <div>
-      <motion.button className={styles.container} disabled={disabled}>
-        <div className={`${styles.btn} ${styles[btnType]}`}>
-          <span className={styles.label}>{content}</span>
+    <motion.button className={styles.container} {...rest}>
+      <div className={`${styles.btn} ${styles[btnType]}`}>
+        <span className={styles.label}>{content}</span>
 
-          {marquee && (
-            <>
-              <motion.span
-                className={styles.marqueeSpan}
-                initial={{ x: "0%" }}
-                animate={{ x: "calc(-100% - 6px)" }}
-                transition={{
-                  ease: "linear",
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-              >
-                {content} •
-              </motion.span>
-              <motion.span
-                className={styles.marqueeSpan}
-                initial={{ x: "calc(-100% - 6px)" }}
-                animate={{ x: "calc(-200% - 12px)" }}
-                transition={{
-                  ease: "linear",
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-              >
-                {content} •
-              </motion.span>
-              <motion.span
-                className={styles.marqueeSpan}
-                initial={{ x: "calc(100% + 6px)" }}
-                animate={{ x: "0%" }}
-                transition={{
-                  ease: "linear",
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-              >
-                {content} •
-              </motion.span>
-              <motion.span
-                className={styles.marqueeSpan}
-                initial={{ x: "calc(200% + 12px)" }}
-                animate={{ x: "calc(100% + 6px)" }}
-                transition={{
-                  ease: "linear",
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-              >
-                {content} •
-              </motion.span>
-            </>
-          )}
-        </div>
-      </motion.button>
-    </div>
+        {marquee && (
+          <>
+            <motion.span
+              className={styles.marqueeSpan}
+              initial={{ x: "0%" }}
+              animate={{ x: "calc(-100% - 6px)" }}
+              transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+            >
+              {content} •
+            </motion.span>
+            <motion.span
+              className={styles.marqueeSpan}
+              initial={{ x: "calc(-100% - 6px)" }}
+              animate={{ x: "calc(-200% - 12px)" }}
+              transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+            >
+              {content} •
+            </motion.span>
+            <motion.span
+              className={styles.marqueeSpan}
+              initial={{ x: "calc(100% + 6px)" }}
+              animate={{ x: "0%" }}
+              transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+            >
+              {content} •
+            </motion.span>
+            <motion.span
+              className={styles.marqueeSpan}
+              initial={{ x: "calc(200% + 12px)" }}
+              animate={{ x: "calc(100% + 6px)" }}
+              transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+            >
+              {content} •
+            </motion.span>
+          </>
+        )}
+      </div>
+    </motion.button>
   );
 }

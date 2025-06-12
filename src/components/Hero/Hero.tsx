@@ -13,24 +13,18 @@ import LayoutWrapper from "../LayoutWrapper";
 import FalseButton from "../FalseButton/FalseButton";
 import ContactForm from "../ContactForm/ContactForm";
 import Modal from "../Modal/Modal";
-// import Image from "next/image";
-// import Img1 from "../../../public/images/speed.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/*  load Silk only on the client to avoid SSR issues  */
 const Silk = dynamic(() => import("../Silk/Silk"), { ssr: false });
 
 export default function Hero() {
-  /* ───────── refs for GSAP ───────── */
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
     overlay: useRef<HTMLDivElement>(null),
   };
 
-  /* ───────── hero animations ─────── */
   useGSAP(() => {
-    /* fade-in overlay while scrolling  */
     if (refs.overlay.current) {
       gsap.fromTo(
         refs.overlay.current,
@@ -47,7 +41,6 @@ export default function Hero() {
       );
     }
 
-    /* split & animate headline words  */
     const animateText = (el: HTMLElement | null) => {
       if (!el) return;
       gsap.set(el, { visibility: "visible" });
@@ -75,15 +68,12 @@ export default function Hero() {
     return () => cleanup && cleanup();
   });
 
-  /* ───────── modal state ─────────── */
   const [isModalOpen, setModalOpen] = useState(false);
   const openModal = useCallback(() => setModalOpen(true), []);
   const closeModal = useCallback(() => setModalOpen(false), []);
 
-  /* ───────── render ──────────────── */
   return (
     <section className={styles.container}>
-      {/* flowing shader background */}
       <div className={styles.silkBg}>
         <Silk
           speed={5}
@@ -94,13 +84,10 @@ export default function Hero() {
         />
       </div>
 
-      {/* dark overlay that fades with scroll */}
       <div className={styles.overlay} ref={refs.overlay} />
 
-      {/* main hero content */}
       <LayoutWrapper>
         <div className={styles.content}>
-          {/* left column ------------------------------------------------ */}
           <div className={styles.left}>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
@@ -132,7 +119,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* right column ------------------------------------------------ */}
           <div className={styles.right}>
             {/* <div className={styles.imgContainer}>
               <Image
@@ -147,8 +133,6 @@ export default function Hero() {
           </div>
         </div>
       </LayoutWrapper>
-
-      {/* contact modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ContactForm />
       </Modal>

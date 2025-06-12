@@ -50,7 +50,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
-  border: 1px solid var(--tan);
+  border: 1px solid var(--gray);
   border-radius: 10px;
   background-color: var(--black);
   align-self: flex-start;

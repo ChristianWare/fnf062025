@@ -1,27 +1,45 @@
 "use client";
 
 import styles from "./ContactHero.module.css";
+import dynamic from "next/dynamic";
 import Button from "../Button/Button";
-import Circle from "../Circle/Circle";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Contact2 from "../Contact2/Contact2";
+import Thunder from "../../../public/icons/lightning.svg";
+import SectionIntro from "../SectionIntro/SectionIntro";
 // import ContactForm from "@/components/ContactForm/ContactForm";
 // import { InlineWidget } from "react-calendly";
 // import SectionIntro from "@/components/SectionIntro/SectionIntro";
 
+const Silk = dynamic(() => import("../Silk/Silk"), { ssr: false });
+
 export default function ContactHero() {
   return (
     <div className={styles.container}>
+      {/* flowing shader canvas */}
+      <div className={styles.silkBg}>
+        <Silk
+          speed={4}
+          scale={1.4}
+          color='#7B7481'
+          noiseIntensity={1.2}
+          rotation={0}
+        />
+      </div>
+
       <LayoutWrapper>
         <div className={styles.top}>
+          <SectionIntro title='FONTS & FOOTERS' color='tan' dotColor='tanDot' />
+
           <h2 className={styles.heading}>
-            Ready to improve <br /> your online store ?
+            Ready to improve <br /> your online store&nbsp;?
           </h2>
+
           <div className={styles.btnContainer}>
-            <Button href='/contact' btnType='outline' text='Contact us' />
-            <Button text='Get Started' btnType='primary' href='/contact' />{" "}
+            <Button href='/contact' btnType='tanOutline' text='Contact us' />
+            <Button href='/contact' btnType='primary' text='Get Started' />
           </div>
-          <Circle />
+          <Thunder className={styles.icon} />
           <Contact2 />
         </div>
         {/* <div className={styles.content}>

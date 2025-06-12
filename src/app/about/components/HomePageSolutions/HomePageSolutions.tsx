@@ -2,6 +2,8 @@ import styles from "./HomePageSolutions.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import SectionIntro from "@/components/SectionIntro/SectionIntro";
+import Image from "next/image";
+import Img1 from "../../../../../public/images/easy.jpg";
 
 const data = [
   {
@@ -28,12 +30,12 @@ const data = [
     desc: "Shopify, ERP, CRM, and fulfillment flow in one loop—zero manual re‑keying, fewer stockouts, happier ops.",
     span: "four",
   },
-  {
-    id: 5,
-    title: "Data‑Driven Optimisation",
-    desc: "30‑day analytics → A/B → deploy cycles compound small wins into sustained revenue growth.",
-    span: "five",
-  },
+  // {
+  //   id: 5,
+  //   title: "Data‑Driven Optimisation",
+  //   desc: "30‑day analytics → A/B → deploy cycles compound small wins into sustained revenue growth.",
+  //   span: "five",
+  // },
 ];
 
 export default function HomePageSolutions() {
@@ -43,7 +45,6 @@ export default function HomePageSolutions() {
         <div className={styles.top}>
           <SectionIntro title='How it works' />
           <br />
-          {/* <SectionHeading3 title='We make working with us easy' /> */}
           <div className={styles.sectionHeadingContainer}>
             <SectionHeading2
               title='we make working with us easy'
@@ -58,6 +59,9 @@ export default function HomePageSolutions() {
               <p className={styles.desc}>{x.desc}</p>
             </div>
           ))}
+          <div className={styles.imgContainer}>
+            <Image src={Img1} fill alt='' title='' className={styles.img} />
+          </div>
         </div>
       </LayoutWrapper>
     </section>

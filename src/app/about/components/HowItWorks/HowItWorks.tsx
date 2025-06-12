@@ -1,5 +1,7 @@
 import styles from "./HowItWorks.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import Image from "next/image";
+import Img1 from "../../../../../public/images/how.jpg";
 
 const data = [
   {
@@ -36,7 +38,9 @@ const HowItWorks = () => {
         <LayoutWrapper>
           <div className={styles.box}>
             <div className={styles.middle}>
-              <h2 className={styles.heading}>Our Values: <br /> What Drives Us</h2>
+              <h2 className={styles.heading}>
+                Our Values: <br /> What Drives Us
+              </h2>
             </div>
             <div className={styles.bottom}>
               {data.map((x) => (
@@ -50,6 +54,9 @@ const HowItWorks = () => {
                   </div>
                 </div>
               ))}
+              <div className={styles.imgContainer}>
+                <Image src={Img1} alt='' title='' fill className={styles.img} />
+              </div>
             </div>
           </div>
         </LayoutWrapper>

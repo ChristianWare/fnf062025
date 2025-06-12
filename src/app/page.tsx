@@ -4,11 +4,8 @@ import Hero from "@/components/Hero/Hero";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
-
 import Focus from "@/components/Focus/Focus";
-// import Contact2 from "@/components/Contact2/Contact2";
 import ContactHero from "@/components/ContactHero/ContactHero";
-// import Faq from "@/components/Faq/Faq";
 import Process from "./services/components/Process/Process";
 
 export default function Home() {
@@ -21,10 +18,8 @@ export default function Home() {
         <ProjectSection />
         <Support />
         <Why />
-        <Process />
-        {/* <Faq /> */}
+        <Process />        
         <ContactHero />
-        {/* <Contact2 /> */}
       </div>
     </main>
   );

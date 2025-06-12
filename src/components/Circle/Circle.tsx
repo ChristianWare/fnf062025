@@ -5,7 +5,7 @@ export default function Circle() {
   return (
     <section className={styles.container}>
       <div className={styles.outerCircle}>
-        <svg
+        {/* <svg
           className={styles.curveText}
           viewBox='0 0 500 500'
           preserveAspectRatio='xMidYMid meet'
@@ -36,13 +36,13 @@ export default function Circle() {
               Fonts & Footers
             </textPath>
           </text>
-        </svg>
-        <div className={styles.innerCircle}>
+        </svg> */}
+        {/* <div className={styles.innerCircle}>
           <div className={styles.quad1}>Performance</div>
           <div className={styles.quad2}>Conversion</div>
           <div className={styles.quad3}>Scalability</div>
           <div className={styles.quad4}>Automation</div>
-        </div>
+        </div> */}
         <div className={styles.centerCircle}>
           <span className={styles.centerText}>
             <Thunder className={styles.icon} />

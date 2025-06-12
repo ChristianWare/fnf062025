@@ -42,6 +42,7 @@
 
 .heading {
   font-size: 3rem;
+  color: var(--text);
 }
 
 .imgContainer {
@@ -81,8 +82,6 @@
   position: sticky;
   top: 90px;
 }
-
-
 
 .blackDot {
   width: 10px;

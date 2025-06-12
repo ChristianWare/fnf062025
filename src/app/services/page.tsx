@@ -1,4 +1,3 @@
-import Contact2 from "@/components/Contact2/Contact2";
 import ServicesHero from "./components/ServicesHero/ServicesHero";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import ListOfServices from "./components/ListOfServices/ListOfServices";
@@ -11,7 +10,6 @@ export default function ServicesPage() {
       <ListOfServices />
       <Why />
       <ContactHero />
-      <Contact2 />
     </main>
   );
 }

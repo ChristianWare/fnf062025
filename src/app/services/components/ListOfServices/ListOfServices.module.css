@@ -33,6 +33,7 @@
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
   font-size: 2rem;
+  color: var(--gray);
 }
 
 .title {
@@ -77,14 +78,6 @@
   gap: 7rem;
   height: 100%;
 }
-/* 
-.bottom .card:last-child {
-  grid-column: span 2
-} */
-
-/* .bottom .card:last-child .cardContent {
-  background-color: var(--yellow);
-} */
 
 .cardBottom {
   display: flex;
@@ -174,5 +167,13 @@
   .imgContainer {
     grid-column: span 1;
     height: 250px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .btnContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
 }

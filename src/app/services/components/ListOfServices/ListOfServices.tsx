@@ -144,7 +144,7 @@ export default function ListOfServices() {
               <div className={styles.btnContainer}>
                 <Button
                   text='Start My Project'
-                  btnType='outline'
+                  btnType='primary'
                   href='/contact'
                 />
               </div>

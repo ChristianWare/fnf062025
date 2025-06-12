@@ -13,6 +13,7 @@ const navItems = [
   { text: "Services", href: "/services" },
   { text: "About", href: "/about" },
   { text: "faq", href: "/faq" },
+  { text: "Contact", href: "/contact" },
 ];
 
 const isMobile = () =>

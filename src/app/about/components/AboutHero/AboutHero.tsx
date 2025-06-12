@@ -2,6 +2,7 @@
 
 import styles from "./AboutHero.module.css";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
@@ -11,27 +12,25 @@ import SectionIntro from "@/components/SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const Silk = dynamic(() => import("../../../../components/Silk/Silk"), {
+  ssr: false,
+});
+
 export default function AboutHero() {
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
-    overlay: useRef<HTMLDivElement>(null),
   };
 
   useGSAP(() => {
-    const animateText = (el: HTMLElement | null, type: "words" | "lines") => {
+    const animateText = (el: HTMLElement | null) => {
       if (!el) return;
       gsap.set(el, { visibility: "visible" });
-
       const split = new SplitType(el, {
-        types: type,
+        types: "words",
         lineClass: styles.line,
       });
-
-      const targets = type === "words" ? split.words : split.lines;
-
-      gsap.set(targets, { y: 200, x: -200, opacity: 0 });
-
-      gsap.to(targets, {
+      gsap.set(split.words, { y: 200, x: -200, opacity: 0 });
+      gsap.to(split.words, {
         y: 0,
         x: 0,
         opacity: 1,
@@ -40,30 +39,34 @@ export default function AboutHero() {
         ease: "power4.out",
         delay: 0.25,
       });
-
       return () => split.revert();
     };
-
-    const cleanups = [animateText(refs.heading.current, "words")];
-
-    return () => cleanups.forEach((c) => c && c());
+    const cleanup = animateText(refs.heading.current);
+    return () => cleanup && cleanup();
   });
 
   return (
     <section className={styles.container}>
-      <section className={styles.container}>
-        <LayoutWrapper>
-          <div className={styles.content}>
-            <div className={styles.left}></div>
-            <div className={styles.right}>
-              <SectionIntro title='About Us' />
-              <h1 ref={refs.heading} className={styles.heading}>
-                Meet us: <br /> Fonts & Footers
-              </h1>
-            </div>
+      <div className={styles.silkBg}>
+        <Silk
+          speed={4}
+          scale={1.4}
+          color='#7B7481'
+          noiseIntensity={1.2}
+          rotation={0}
+        />
+      </div>
+      <LayoutWrapper>
+        <div className={styles.content}>
+          <div className={styles.left} />
+          <div className={styles.right}>
+            <SectionIntro title='About Us' color='tan' dotColor='tanDot' />
+            <h1 ref={refs.heading} className={styles.heading}>
+              Meet us: <br /> Fonts &amp; Footers
+            </h1>
           </div>
-        </LayoutWrapper>
-      </section>
+        </div>
+      </LayoutWrapper>
     </section>
   );
 }

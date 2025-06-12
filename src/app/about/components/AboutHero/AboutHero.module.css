@@ -1,22 +1,15 @@
 .container {
+  position: relative;
   z-index: 0;
-  background-color: var(--tan);
-  background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
-    linear-gradient(to right, var(--tanii) 1px, transparent 1px);
-  background-size: 100px 100px;
-  padding-bottom: 5rem;
+  overflow: hidden;
+  padding-bottom: 15rem;
 }
 
-.content::before {
+.silkBg {
   position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
-  background: url("/images/noise.gif") repeat;
-  opacity: 0.04;
 }
 
 .content {
@@ -29,7 +22,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
   gap: 2rem;
 }
 
@@ -48,6 +40,7 @@
   backface-visibility: hidden;
   visibility: hidden;
   font-family: var(--SuisseIntlCondensed);
+  color: var(--tan);
 }
 
 .heading :global(.word),
@@ -64,44 +57,37 @@
   font-size: 2rem;
   letter-spacing: -0.5px;
   width: 60%;
-  color: var(--black);
+  color: var(--tan);
 }
 
-@media screen and (max-width: 1068px) {
+@media (max-width: 1068px) {
   .container {
     height: 100%;
   }
-
   .content {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
-
   .right {
     order: -1;
   }
-
   .copy {
     width: 50%;
   }
 }
 
-@media screen and (max-width: 868px) {
+@media (max-width: 868px) {
   .container {
     padding-bottom: 5rem;
   }
-
   .heading,
   .copy {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
-
   .copy {
     width: 65%;
   }
-
   .btnContainer {
     display: flex;
     align-items: center;
@@ -109,7 +95,7 @@
   }
 }
 
-@media screen and (max-width: 668px) {
+@media (max-width: 668px) {
   .copy {
     width: 100%;
   }

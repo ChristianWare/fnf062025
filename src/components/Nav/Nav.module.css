@@ -41,7 +41,7 @@
   background-color: var(--black);
   padding: 1.3rem 4rem;
   border-radius: 50px;
-  border: 1px solid var(--tan);
+  border: 1px solid var(--gray);
 }
 
 .navItem {
@@ -86,7 +86,6 @@
     padding-right: 15px;
     padding-left: 15px;
     backdrop-filter: blur(90px);
-
   }
 
   .header::before {

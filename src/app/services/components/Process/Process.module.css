@@ -73,22 +73,16 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
-  border: 1px solid var(--gray);
+  border: 2px solid var(--lightGray);
   background-color: var(--white);
-  /* border-bottom: none; */
+  border-radius: 10px;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
   top: 90px;
 }
 
-.card:first-child {
-  border-top: 1px solid var(--taniii);
-}
 
-.card:last-child {
-  border-bottom: 1px solid var(--black);
-}
 
 .blackDot {
   width: 10px;
@@ -103,7 +97,7 @@
 }
 
 .cardLeft {
-  border-right: 1px solid var(--black);
+  border-right: 1px solid var(--lightGray);
   padding: 2rem;
 }
 

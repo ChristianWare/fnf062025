@@ -39,7 +39,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   min-height: 90vh;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 /* ---------------- left column ----------------------------------------- */

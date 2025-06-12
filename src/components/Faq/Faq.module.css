@@ -50,7 +50,7 @@
   padding: 3rem 2rem;
   background-color: var(--tan);
   border: 1px solid var(--taniii);
-  border-radius: 7px;
+  border-radius: 10px;
   width: 100%;
   cursor: pointer;
   user-select: none;
@@ -97,7 +97,8 @@
 .question {
   font-size: 2rem;
   font-family: var(--SuisseIntlMedium);
-  text-transform: none;}
+  text-transform: none;
+}
 
 .answer {
   margin-top: 2rem;

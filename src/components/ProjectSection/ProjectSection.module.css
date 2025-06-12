@@ -2,11 +2,9 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 15rem 0;
-  padding-top: 5rem;
   z-index: 1;
   background-color: var(--tan);
-  padding-top: 5rem;
+  padding-bottom: 15rem;
   background-color: var(--tan);
 }
 
@@ -22,20 +20,16 @@
   opacity: 0.03;
 }
 
-.copy {
-  margin-top: 3rem;
-  width: 70%;
-  /* text-align: center; */
-  /* margin-left: auto; */
-  margin-right: auto;
-  font-size: 3rem;
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
   margin-top: 5rem;
+}
+
+.sectionHeaderContainer {
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
 .projectDataContainer {
@@ -80,17 +74,12 @@
 .projectDetails {
   background-color: var(--black);
   padding: 1rem;
+  border-radius: 10px;
 }
 
 .title {
   font-size: 2.5rem;
-  /* font-family: var(--SuisseIntlMedium); */
-  /* text-transform: none; */
 }
-
-/* .type {
-  text-transform: uppercase;
-} */
 
 .description {
   color: var(--tan);

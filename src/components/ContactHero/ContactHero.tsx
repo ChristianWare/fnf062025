@@ -4,6 +4,7 @@ import styles from "./ContactHero.module.css";
 import Button from "../Button/Button";
 import Circle from "../Circle/Circle";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import Contact2 from "../Contact2/Contact2";
 // import ContactForm from "@/components/ContactForm/ContactForm";
 // import { InlineWidget } from "react-calendly";
 // import SectionIntro from "@/components/SectionIntro/SectionIntro";
@@ -18,14 +19,10 @@ export default function ContactHero() {
           </h2>
           <div className={styles.btnContainer}>
             <Button href='/contact' btnType='outline' text='Contact us' />
-            <Button
-              text='Get Started'
-              btnType='primary'
-              href='/contact'
-              marquee
-            />{" "}
+            <Button text='Get Started' btnType='primary' href='/contact' />{" "}
           </div>
           <Circle />
+          <Contact2 />
         </div>
         {/* <div className={styles.content}>
           <div className={styles.left}>

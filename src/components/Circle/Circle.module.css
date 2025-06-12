@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 500px;
+  max-width: 475px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -11,20 +11,20 @@
   height: 0;
   padding-bottom: 100%;
   border: 2px solid var(--gray);
-  background-image: repeating-linear-gradient(
+  /* background-image: repeating-linear-gradient(
     45deg,
     var(--taniii),
     var(--black) 1px,
     var(--tan) 0 50%
   );
-  background-size: 10px 10px;
+  background-size: 10px 10px; */
   border-radius: 50%;
   margin: 0 auto;
 }
 
 .curveText {
   position: absolute;
-  top: -70px;
+  top: 20px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -32,7 +32,7 @@
 }
 
 .curveText textPath {
-  fill: var(--black);
+  fill: var(--GRAY);
 }
 
 .outerCircle:after {
@@ -88,6 +88,11 @@
   width: 100%;
   height: 100%;
   padding: 15%; /* Prevents text from touching edges */
+}
+
+.icon {
+  width: 80%;
+  height: 80%;
 }
 
 .innerCircle {

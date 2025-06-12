@@ -42,7 +42,7 @@
 
 .card {
   background-color: var(--gray);
-  border-radius: 7px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

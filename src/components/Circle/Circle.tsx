@@ -1,10 +1,9 @@
-// import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Circle.module.css";
+import Thunder from '../../../public/icons/lightning.svg'
 
 export default function Circle() {
   return (
     <section className={styles.container}>
-      {/* <LayoutWrapper> */}
       <div className={styles.outerCircle}>
         <svg
           className={styles.curveText}
@@ -28,14 +27,14 @@ export default function Circle() {
             fontSize='35'
             fill='var(--blackii)'
           >
-            {/* <textPath
+            <textPath
               href='#circlePath'
-              startOffset='25%'
+              startOffset='26%'
               textAnchor='middle'
               dy='-8'
             >
-              Our Focus
-            </textPath> */}
+              Fonts & Footers
+            </textPath>
           </text>
         </svg>
         <div className={styles.innerCircle}>
@@ -45,10 +44,11 @@ export default function Circle() {
           <div className={styles.quad4}>Automation</div>
         </div>
         <div className={styles.centerCircle}>
-          <span className={styles.centerText}>Fonts & Footers</span>
+          <span className={styles.centerText}>
+            <Thunder className={styles.icon} />
+          </span>
         </div>{" "}
       </div>
-      {/* </LayoutWrapper> */}
     </section>
   );
 }

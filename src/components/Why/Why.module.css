@@ -96,7 +96,7 @@
   /* border-top-right-radius: 500px; */
   /* border-bottom-right-radius: 500px; */
   border: 1px solid var(--taniii);
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: var(--tan);
   padding: 3rem;
   display: flex;

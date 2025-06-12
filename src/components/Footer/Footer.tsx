@@ -1,93 +1,93 @@
 import styles from "./Footer.module.css";
-import Arrow from "../../../public/icons/arrow.svg";
-import SectionIntro from "../SectionIntro/SectionIntro";
-import Link from "next/link";
+// import Arrow from "../../../public/icons/arrow.svg";
+// import SectionIntro from "../SectionIntro/SectionIntro";
+// import Link from "next/link";
 
-const data = [
-  {
-    id: 1,
-    title: "Services",
-    options: [
-      {
-        id: 1.1,
-        option: "All Honey Varieties",
-        href: "/",
-      },
-      {
-        id: 1.2,
-        option: "Gift Boxes",
-        href: "/",
-      },
-      {
-        id: 1.3,
-        option: "Raw & Unfiltered",
-        href: "/",
-      },
-      {
-        id: 1.4,
-        option: "Accessories & Tools",
-        href: "/",
-      },
-      {
-        id: 1.5,
-        option: "Honey Recipe Booklets",
-        href: "/",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Works",
-    options: [
-      {
-        id: 2.1,
-        option: "FAQ",
-        href: "/",
-      },
-      {
-        id: 2.2,
-        option: "Recipes",
-        href: "/",
-      },
-      {
-        id: 2.3,
-        option: "Our Story",
-        href: "/",
-      },
-      {
-        id: 2.4,
-        option: "Blog",
-        href: "/",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Account",
-    options: [
-      {
-        id: 3.1,
-        option: "login",
-        href: "/auth/login",
-      },
-      {
-        id: 3.2,
-        option: "Wholesale Inquiries",
-        href: "/",
-      },
-      {
-        id: 3.3,
-        option: "My Account",
-        href: "/",
-      },
-      {
-        id: 3.4,
-        option: "Careers",
-        href: "/",
-      },
-    ],
-  },
-];
+// const data = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     options: [
+//       {
+//         id: 1.1,
+//         option: "All Honey Varieties",
+//         href: "/",
+//       },
+//       {
+//         id: 1.2,
+//         option: "Gift Boxes",
+//         href: "/",
+//       },
+//       {
+//         id: 1.3,
+//         option: "Raw & Unfiltered",
+//         href: "/",
+//       },
+//       {
+//         id: 1.4,
+//         option: "Accessories & Tools",
+//         href: "/",
+//       },
+//       {
+//         id: 1.5,
+//         option: "Honey Recipe Booklets",
+//         href: "/",
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title: "Works",
+//     options: [
+//       {
+//         id: 2.1,
+//         option: "FAQ",
+//         href: "/",
+//       },
+//       {
+//         id: 2.2,
+//         option: "Recipes",
+//         href: "/",
+//       },
+//       {
+//         id: 2.3,
+//         option: "Our Story",
+//         href: "/",
+//       },
+//       {
+//         id: 2.4,
+//         option: "Blog",
+//         href: "/",
+//       },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     title: "Account",
+//     options: [
+//       {
+//         id: 3.1,
+//         option: "login",
+//         href: "/auth/login",
+//       },
+//       {
+//         id: 3.2,
+//         option: "Wholesale Inquiries",
+//         href: "/",
+//       },
+//       {
+//         id: 3.3,
+//         option: "My Account",
+//         href: "/",
+//       },
+//       {
+//         id: 3.4,
+//         option: "Careers",
+//         href: "/",
+//       },
+//     ],
+//   },
+// ];
 
 const data2 = [
   {
@@ -111,7 +111,7 @@ const data2 = [
 export default function Footer() {
   return (
     <footer className={styles.container}>
-      <div className={styles.content}>
+      {/* <div999 className={styles.content}>
         <div className={styles.left}>
           <div className={styles.top}>
             <SectionIntro
@@ -144,7 +144,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-      </div>
+      </div999> */}
       <div className={styles.bottom}>
         <div className={styles.data2Container}>
           {data2.map((x) => (

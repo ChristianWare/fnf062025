@@ -6,9 +6,9 @@ import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
 
 import Focus from "@/components/Focus/Focus";
-import Contact2 from "@/components/Contact2/Contact2";
+// import Contact2 from "@/components/Contact2/Contact2";
 import ContactHero from "@/components/ContactHero/ContactHero";
-import Faq from "@/components/Faq/Faq";
+// import Faq from "@/components/Faq/Faq";
 import Process from "./services/components/Process/Process";
 
 export default function Home() {
@@ -17,14 +17,14 @@ export default function Home() {
       <div className={styles.scrollContainer}>
         <Hero />
         <FontsandFooters />
-        <ProjectSection />
-        <Why />
-        <Support />
         <Focus />
+        <ProjectSection />
+        <Support />
+        <Why />
         <Process />
-        <Faq />
+        {/* <Faq /> */}
         <ContactHero />
-        <Contact2 />
+        {/* <Contact2 /> */}
       </div>
     </main>
   );

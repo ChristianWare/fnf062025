@@ -3,7 +3,7 @@
   --blackii: #4e4c4c;
   --gray: #818588;
   --grayii: #6e7072;
-  --lightGray: #d4d4d4;
+  --lightGray: #dedcdc;
   /* --yellow: #e7f255; */
   --yellow: #d9fb06;
   --yellow2: #eff77e;
@@ -68,7 +68,7 @@ span {
 }
 
 h1 {
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 0.9;
   letter-spacing: -2px;
 }

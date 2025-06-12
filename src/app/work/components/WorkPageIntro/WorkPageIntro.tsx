@@ -3,6 +3,7 @@
 import styles from "./WorkPageIntro.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
@@ -10,27 +11,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const Silk = dynamic(() => import("../../../../components/Silk/Silk"), { ssr: false });
+
 export default function WorkPageIntro() {
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
-    overlay: useRef<HTMLDivElement>(null),
   };
 
   useGSAP(() => {
-    const animateText = (el: HTMLElement | null, type: "words" | "lines") => {
+    const animateText = (el: HTMLElement | null) => {
       if (!el) return;
       gsap.set(el, { visibility: "visible" });
-
       const split = new SplitType(el, {
-        types: type,
-        lineClass: styles.line, // style below
+        types: "words",
+        lineClass: styles.line,
       });
-
-      const targets = type === "words" ? split.words : split.lines;
-
-      gsap.set(targets, { y: 200, x: -200, opacity: 0 });
-
-      gsap.to(targets, {
+      gsap.set(split.words, { y: 200, x: -200, opacity: 0 });
+      gsap.to(split.words, {
         y: 0,
         x: 0,
         opacity: 1,
@@ -39,17 +36,23 @@ export default function WorkPageIntro() {
         ease: "power4.out",
         delay: 0.25,
       });
-
       return () => split.revert();
     };
-
-    const cleanups = [animateText(refs.heading.current, "words")];
-
-    return () => cleanups.forEach((c) => c && c());
+    const cleanup = animateText(refs.heading.current);
+    return () => cleanup && cleanup();
   });
 
   return (
     <section className={styles.container}>
+      <div className={styles.silkBg}>
+        <Silk
+          speed={4}
+          scale={1.4}
+          color='#7B7481'
+          noiseIntensity={1.2}
+          rotation={0}
+        />
+      </div>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>

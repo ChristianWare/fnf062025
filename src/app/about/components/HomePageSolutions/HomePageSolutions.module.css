@@ -37,7 +37,7 @@
 
 .card {
   background-color: var(--tan);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--tanii);
   border-radius: 10px;
   display: flex;
   flex-direction: column;

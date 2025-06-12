@@ -85,12 +85,8 @@
     padding-bottom: 1rem;
     padding-right: 15px;
     padding-left: 15px;
-    background-color: var(--tan);
-    /* border-bottom: 1px solid var(--tanii); */
+    backdrop-filter: blur(90px);
 
-    background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
-      linear-gradient(to right, var(--tanii) 1px, transparent 1px);
-    background-size: 100px 100px;
   }
 
   .header::before {
@@ -106,9 +102,9 @@
   }
   .navItems {
     bottom: -90vh;
-    padding: 1.3rem 1.5rem;
+    padding: 1.5rem 2.5rem;
     justify-content: space-between;
-    width: 93%;
+    width: 95%;
   }
 
   .navItem {

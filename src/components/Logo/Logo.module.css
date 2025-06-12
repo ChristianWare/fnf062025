@@ -6,7 +6,7 @@
   z-index: 999;
   user-select: none;
   font-family: var(--SuisseIntlCondensed);
-  color: var(--black);
+  color: var(--yellow);
 }
 
 .large {
@@ -24,7 +24,7 @@
 }
 
 .icon {
-  color: var(--black);
+  color: var(--yellow);
   width: 5rem;
   height: 5rem;
 }

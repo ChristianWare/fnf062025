@@ -79,11 +79,9 @@ export default function Nav() {
           </div>
 
           <div className={styles.btnContainer}>
-            {/* FalseButton receives onClick → opens modal */}
             <FalseButton
               text='Get Started'
               btnType='primary'
-              marquee
               onClick={openModal}
             />
           </div>

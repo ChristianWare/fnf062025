@@ -94,6 +94,17 @@
   color: var(--yellow);
 }
 
+.tanOutline {
+  background-color: transparent;
+  color: var(--tan);
+  border: 1px solid var(--tan);
+}
+
+.tanOutline:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
 .btn.outline:hover .label {
   color: var(--yellow);
 }

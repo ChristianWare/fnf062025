@@ -9,6 +9,7 @@ import Modal from "../Modal/Modal"; // ← NEW import
 import ContactForm from "../ContactForm/ContactForm";
 
 const navItems = [
+  { text: "home", href: "/" },
   { text: "Work", href: "/work" },
   { text: "Services", href: "/services" },
   { text: "About", href: "/about" },

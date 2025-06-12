@@ -11,7 +11,7 @@ const data = [
   },
   {
     id: 2,
-    feature: "Transparency",
+    feature: "Clear Transparency",
     desc: "We believe in open communication about processes, timelines, and outcomes.",
   },
   {

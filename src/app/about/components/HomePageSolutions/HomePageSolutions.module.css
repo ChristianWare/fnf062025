@@ -43,8 +43,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 5rem;
   width: 100%;
   height: 100%;
+  padding: 3rem;
 }
 
 .one {
@@ -100,14 +102,8 @@
 
 .title,
 .titleii {
-  font-family: var(--FeatureDeckLight);
-  text-transform: none;
-  letter-spacing: 0em;
   line-height: 1.2;
-  font-size: 2.8rem;
-  padding: 3rem;
-  padding-bottom: 0rem;
-  width: 100%;
+  font-size: 3.4rem;
 }
 
 .card.one .desc {
@@ -121,7 +117,7 @@
 .desc {
   font-size: 1.4rem;
   color: var(--blackii);
-  padding: 3rem;
+  /* padding: 3rem; */
   text-transform: none;
 }
 

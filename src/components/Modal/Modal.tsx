@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Close from "../../icons/close.svg";
+// import Close from "../../icons/close.svg";
 import styles from "./Modal.module.css";
 
 interface Props {
@@ -80,7 +80,7 @@ export default function Modal({ isOpen, onClose, children }: Props) {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <button onClick={onClose} className={styles.button}>
-              <Close width={30} height={30} className={styles.icon} />
+              {/* <Close width={30} height={30} className={styles.icon} /> */}
             </button>
 
             <div className={styles.children}>{children}</div>

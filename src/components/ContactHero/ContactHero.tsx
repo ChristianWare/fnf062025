@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Button from "../Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Contact2 from "../Contact2/Contact2";
-import Thunder from "../../icons/lightning.svg";
+import Thunder from "@/icons/Thunder/Thunder";
 import SectionIntro from "../SectionIntro/SectionIntro";
 // import ContactForm from "@/components/ContactForm/ContactForm";
 // import { InlineWidget } from "react-calendly";
@@ -39,7 +39,7 @@ export default function ContactHero() {
             <Button href='/contact' btnType='tanOutline' text='Contact us' />
             <Button href='/contact' btnType='primary' text='Get Started' />
           </div>
-          <Thunder className={styles.icon} />
+          <Thunder />
           <Contact2 />
         </div>
         {/* <div className={styles.content}>

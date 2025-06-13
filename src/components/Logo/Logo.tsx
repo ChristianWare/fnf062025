@@ -1,6 +1,6 @@
 import styles from "./Logo.module.css";
 import Link from "next/link";
-import Thunder from "../../icons/lightning.svg";
+import Thunder from "@/icons/Thunder/Thunder";
 
 interface Props {
   size?: string;
@@ -13,7 +13,7 @@ const Logo = ({ size = "", color = "" }: Props) => {
       href={"/"}
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      <Thunder className={styles.icon} />
+      <Thunder />
     </Link>
   );
 };

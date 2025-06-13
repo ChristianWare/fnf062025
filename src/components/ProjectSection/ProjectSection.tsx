@@ -11,48 +11,48 @@ import Chuxly from "../../../public/images/chuxly.png";
 import Honey from "../../../public/images/honey.jpg";
 import Rentals from "../../../public/images/erRentals.png";
 import Img3 from "../../../public/images/heroiii.jpeg";
-import Arrow from "../../icons/arrow.svg";
+import Arrow from "@/icons/Arrow/Arrow";
 import gsap from "gsap";
 
 const projectData = [
   {
     id: 1,
     title: "Thundertrails",
-    type: <Arrow className={styles.icon} />,
+    type: <Arrow  />,
     description: "Thundertrails",
-    label: <Arrow className={styles.icon2} />,
+    label: <Arrow  />,
     src: Thunder,
   },
   {
     id: 2,
     title: "Chuxly",
-    type: <Arrow className={styles.icon} />,
+    type: <Arrow  />,
     description: "Chuxly",
-    label: <Arrow className={styles.icon2} />,
+    label: <Arrow  />,
     src: Chuxly,
   },
   {
     id: 3,
     title: "Golden Drips",
-    type: <Arrow className={styles.icon} />,
+    type: <Arrow />,
     description: "Golden Drips",
-    label: <Arrow className={styles.icon2} />,
+    label: <Arrow  />,
     src: Honey,
   },
   {
     id: 4,
     title: "Elite Retreat Rentals",
-    type: <Arrow className={styles.icon} />,
+    type: <Arrow  />,
     description: "Elite Retreat Rentals",
-    label: <Arrow className={styles.icon2} />,
+    label: <Arrow  />,
     src: Rentals,
   },
   {
     id: 5,
     title: "Furnitlure",
-    type: <Arrow className={styles.icon} />,
+    type: <Arrow  />,
     description: "Furnitlure",
-    label: <Arrow className={styles.icon2} />,
+    label: <Arrow  />,
     src: Img3,
   },
 ];

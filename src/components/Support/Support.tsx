@@ -3,7 +3,7 @@
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
-import Plus from '../../icons/plus.svg'
+// import Plus from '../../icons/plus.svg'
 
 const data = [
   {
@@ -68,7 +68,7 @@ export default function Support() {
                     <span className={styles.index}>(0{index + 1}) </span>
                     {x.feature}
                   </h3>
-                  <Plus className={styles.icon} />
+                  {/* <Plus className={styles.icon} /> */}
                 </div>
               ))}
             </div>

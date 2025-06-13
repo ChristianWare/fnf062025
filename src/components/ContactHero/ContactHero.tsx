@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Button from "../Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Contact2 from "../Contact2/Contact2";
-import Thunder from "../../../public/icons/lightning.svg";
+import Thunder from "../../icons/lightning.svg";
 import SectionIntro from "../SectionIntro/SectionIntro";
 // import ContactForm from "@/components/ContactForm/ContactForm";
 // import { InlineWidget } from "react-calendly";

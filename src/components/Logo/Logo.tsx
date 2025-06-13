@@ -1,6 +1,6 @@
 import styles from "./Logo.module.css";
 import Link from "next/link";
-import Thunder from "../../../public/icons/lightning.svg";
+import Thunder from "../../icons/lightning.svg";
 
 interface Props {
   size?: string;

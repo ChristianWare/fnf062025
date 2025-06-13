@@ -11,7 +11,7 @@ import Chuxly from "../../../public/images/chuxly.png";
 import Honey from "../../../public/images/honey.jpg";
 import Rentals from "../../../public/images/erRentals.png";
 import Img3 from "../../../public/images/heroiii.jpeg";
-import Arrow from "../../../public/icons/arrow.svg";
+import Arrow from "../../icons/arrow.svg";
 import gsap from "gsap";
 
 const projectData = [

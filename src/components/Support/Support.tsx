@@ -3,7 +3,7 @@
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
-import Plus from '../../../public/icons/plus.svg'
+import Plus from '../../icons/plus.svg'
 
 const data = [
   {

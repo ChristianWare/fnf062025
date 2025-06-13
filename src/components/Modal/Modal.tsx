@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Close from "../../../public/icons/close.svg";
+import Close from "../../icons/close.svg";
 import styles from "./Modal.module.css";
 
 interface Props {

@@ -2,10 +2,10 @@ import Thundertrails from "../../public/images/thunder.jpg";
 import Chuxly from "../../public/images/chuxly.png";
 import Honey from "../../public/images/honey.jpg";
 import ERREntals from "../../public/images/erRentals.png";
-import Thunder from "../../public/icons/lightning.svg";
-import Headphones from "../../public/icons/headphones.svg";
-import Bee from "../../public/icons/bee2.svg";
-import Rentals from "../../public/icons/rentals.svg";
+import Thunder from "../../public/icons/services.svg";
+import Headphones from "../../public/icons/pricing.svg";
+import Bee from "../../public/icons/project.svg";
+import Rentals from "../../public/icons/technology.svg";
 
 export const pricing = [
   {

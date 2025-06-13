@@ -2,10 +2,8 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
-  background-color: var(--tan);
-  background-image: linear-gradient(var(--tanii) 1px, transparent 1px),
-    linear-gradient(to right, var(--tanii) 1px, transparent 1px);
-  background-size: 100px 100px;
+  height: 100vh;
+
   padding-bottom: 15rem;
 }
 
@@ -27,8 +25,15 @@
 
 .content {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
   margin-top: 15rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .headingClip {
@@ -58,38 +63,30 @@
   z-index: 2;
   font-size: 2rem;
   letter-spacing: -0.5px;
-  width: 65%;
-  color: var(--tan);}
+  width: 40%;
+  color: var(--tan);
+}
 
 @media (max-width: 1068px) {
   .container {
     height: 100%;
   }
-  .content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .right {
-    order: -1;
-  }
+
   .copy {
     width: 50%;
   }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 568px) {
   .container {
-    padding-bottom: 5rem;
+    height: 100vh;
   }
-  .heading,
-  .copy {
-    text-align: center;
-    margin-inline: auto;
-  }
-}
 
-@media (max-width: 668px) {
   .copy {
-    width: 100%;
+    width: 80%;
+  }
+
+  .br {
+    display: none;
   }
 }

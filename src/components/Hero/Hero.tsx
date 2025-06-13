@@ -13,6 +13,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import FalseButton from "../FalseButton/FalseButton";
 import ContactForm from "../ContactForm/ContactForm";
 import Modal from "../Modal/Modal";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,6 +90,9 @@ export default function Hero() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.sectionHeadingContainer}>
+              <SectionIntro title='FONTS & FOOTERS' color='tan' dotColor='tanDot' />
+            </div>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 We Build <br />

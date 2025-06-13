@@ -4,7 +4,7 @@
 import styles from "./ParallaxArea.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import Img1 from "../../../public/images/aboutIntro.jpg";
-import ParallaxImageLarge from "@/ParallaxImageLarge/ParallaxImageLarge";
+import ParallaxImageLarge from "@/components/ParallaxImageLarge/ParallaxImageLarge";
 
 const data = [
   {

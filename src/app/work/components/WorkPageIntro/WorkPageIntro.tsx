@@ -8,10 +8,13 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionIntro from "@/components/SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Silk = dynamic(() => import("../../../../components/Silk/Silk"), { ssr: false });
+const Silk = dynamic(() => import("../../../../components/Silk/Silk"), {
+  ssr: false,
+});
 
 export default function WorkPageIntro() {
   const refs = {
@@ -56,15 +59,18 @@ export default function WorkPageIntro() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.sectionHeadingContainer}>
+              <SectionIntro title='Portfolio' color='tan' dotColor='tanDot' />
+            </div>
+            <h1 ref={refs.heading} className={styles.heading}>
+              Our work <br className={styles.br} /> speaks for itself
+            </h1>
+          </div>
+          <div className={styles.right}>
             <p className={styles.copy}>
               See how we&lsquo;ve transformed underperforming stores into
               revenue engines.
             </p>
-          </div>
-          <div className={styles.right}>
-            <h1 ref={refs.heading} className={styles.heading}>
-              Our work speaks <br /> for itself
-            </h1>
           </div>
         </div>
       </LayoutWrapper>

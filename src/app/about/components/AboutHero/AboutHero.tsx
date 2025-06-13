@@ -58,12 +58,17 @@ export default function AboutHero() {
       </div>
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.left} />
+          {/* <div className={styles.left} /> */}
           <div className={styles.right}>
             <SectionIntro title='About Us' color='tan' dotColor='tanDot' />
             <h1 ref={refs.heading} className={styles.heading}>
               Meet us: <br /> Fonts &amp; Footers
             </h1>
+            <p className={styles.copy}>
+              At Fonts & Footers, we don’t just build websites—we create
+              e-commerce experiences that drive sales and build lasting
+              connections. Seeing our clients thrive is what fuels our passion.
+            </p>
           </div>
         </div>
       </LayoutWrapper>

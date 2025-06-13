@@ -14,15 +14,6 @@
   pointer-events: none;
 }
 
-.content::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  background: url("/images/noise.gif") repeat;
-  opacity: 0.04;
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(1, 1fr);

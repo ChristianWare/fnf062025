@@ -68,8 +68,9 @@ export default function WorkPageIntro() {
           </div>
           <div className={styles.right}>
             <p className={styles.copy}>
-              See how we&lsquo;ve transformed underperforming stores into
-              revenue engines.
+              Explore our portfolio of successful e‑commerce projects across
+              various industries and business models. See how we&lsquo;ve
+              transformed underperforming stores into revenue engines.
             </p>
           </div>
         </div>

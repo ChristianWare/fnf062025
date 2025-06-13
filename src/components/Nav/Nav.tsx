@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import FalseButton from "../FalseButton/FalseButton";
-import Modal from "../Modal/Modal"; // ← NEW import
+import Modal from "../Modal/Modal";
 import ContactForm from "../ContactForm/ContactForm";
 
 const navItems = [
@@ -22,7 +22,6 @@ const isMobile = () =>
   window.matchMedia("(max-width: 568px)").matches;
 
 export default function Nav() {
-  /* ─────────────────────────────── NAV VISIBILITY ────────────────────────── */
   const [showNav, setShowNav] = useState(true);
 
   useEffect(() => {

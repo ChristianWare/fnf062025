@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
-  height: 100vh;
+  padding-bottom: 10rem;
 }
 
 .silkBg {
@@ -77,10 +77,6 @@
 }
 
 @media screen and (max-width: 668px) {
-  .container {
-    height: 100vh;
-  }
-
   .heading {
     width: 100%;
   }

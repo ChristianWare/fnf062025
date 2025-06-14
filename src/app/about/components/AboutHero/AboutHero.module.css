@@ -2,7 +2,8 @@
   position: relative;
   z-index: 0;
   overflow: hidden;
-  height: 100vh;
+  padding-bottom: 10rem;
+  /* height: 100vh; */
 }
 
 .silkBg {
@@ -87,12 +88,8 @@
 }
 
 @media (max-width: 568px) {
-  .container {
-    height: 100vh;
-
-  }
-
-  .heading, .copy {
+  .heading,
+  .copy {
     width: 100%;
   }
 }

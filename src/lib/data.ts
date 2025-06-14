@@ -2,10 +2,8 @@ import Thundertrails from "../../public/images/thunder.jpg";
 import Chuxly from "../../public/images/chuxly.png";
 import Honey from "../../public/images/honey.jpg";
 import ERREntals from "../../public/images/erRentals.png";
-import Thunder from "../../src/icons/lightning.svg";
-import Headphones from "../../src/icons/headphones.svg";
-import Bee from "../../src/icons/bee2.svg";
-import Rentals from "../../src/icons/rentals.svg";
+import Thunder from "@/icons/Thunder/Thunder";
+
 
 export const pricing = [
   {
@@ -147,7 +145,7 @@ export const projects = [
     title: "Chuxly",
     slug: "chuxly",
     src: Chuxly,
-    icon: Headphones,
+    icon: Thunder,
     video: "/videos/chuxly.mp4",
     description:
       "Founded by audio engineers with a passion for exceptional sound quality, Chuxly emerged in 2021 as a boutique brand dedicated to creating premium headphones and portable speakers. Combining cutting-edge acoustic technology with elegant, minimalist design, Chuxly quickly gained recognition among audiophiles and style-conscious consumers alike. As demand for their products grew beyond their flagship store, Chuxly needed an online platform that could communicate the unique sensory experience of their products while handling their expanding inventory and customer base.",
@@ -207,7 +205,7 @@ export const projects = [
     title: "Golden Drips",
     slug: "golden-drips",
     src: Honey,
-    icon: Bee,
+    icon: "Bee",
     video: "/videos/honey.mp4",
     description:
       "Golden Drips began as a family-owned apiary in 2018, producing small-batch, artisanal honey varieties from carefully selected floral sources. Their commitment to sustainable beekeeping practices and exceptionally pure, unprocessed honey products quickly earned them a devoted following at farmers' markets and specialty food stores. As demand for their premium honey and bee pollen products surged, Golden Drips recognized the need to expand their reach beyond local markets while maintaining the artisanal quality and personal connection that defined their brand.",
@@ -267,7 +265,7 @@ export const projects = [
     title: "Elite Retreat Rentals",
     slug: "elite-retreat-rentals",
     src: ERREntals,
-    icon: Rentals,
+    icon: Thunder,
     video: "/videos/rentals.mp4",
     description:
       "Elite Retreat Rentals was established in 2022 by a team of hospitality veterans with a vision to transform the vacation rental experience in Phoenix, Arizona. Their portfolio features three meticulously designed luxury properties, each offering a unique aesthetic and amenities while maintaining consistent high standards of comfort and service. As the Phoenix tourism market became increasingly competitive, Elite Retreat Rentals sought to break away from dependency on third-party booking platforms by creating a direct booking system that would showcase their properties' distinctive features and allow for a more personalized guest experience.",
@@ -338,7 +336,7 @@ export const faqs = [
     title: "Pricing & Timeline",
     slug: "chuxly",
     src: Chuxly,
-    icon: Headphones,
+    icon: Thunder,
     video: "/videos/chuxly.mp4",
   },
   {
@@ -346,7 +344,7 @@ export const faqs = [
     title: "Project Management",
     slug: "golden-drips",
     src: Honey,
-    icon: Bee,
+    icon: "Bee",
     video: "/videos/honey.mp4",
   },
   {
@@ -354,7 +352,7 @@ export const faqs = [
     title: "Tenchnology",
     slug: "elite-retreat-rentals",
     src: ERREntals,
-    icon: Rentals,
+    icon: Thunder,
     video: "/videos/rentals.mp4",
   },
 ] as const;

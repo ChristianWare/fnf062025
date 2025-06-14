@@ -3,7 +3,7 @@
 import styles from "./Faq.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import React, { useEffect, useRef, useState } from "react";
-import Arrow from "../../icons/arrow.svg";
+import Arrow from "@/icons/Arrow/Arrow";
 // import SectionHeading3 from "../SectionHeading3/SectionHeading3";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

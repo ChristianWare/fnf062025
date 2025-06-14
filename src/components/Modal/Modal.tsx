@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import Close from "../../icons/close.svg";
+import Close from "@/icons/Close/Close";
 import styles from "./Modal.module.css";
 
 interface Props {
@@ -27,7 +27,6 @@ const dialogVariants = {
 };
 
 export default function Modal({ isOpen, onClose, children }: Props) {
-  /* — lock scrolling & ESC-to-close (same as before) — */
   useEffect(() => {
     const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onEsc);
@@ -80,7 +79,7 @@ export default function Modal({ isOpen, onClose, children }: Props) {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <button onClick={onClose} className={styles.button}>
-              {/* <Close width={30} height={30} className={styles.icon} /> */}
+              <Close className={styles.icon} />
             </button>
 
             <div className={styles.children}>{children}</div>

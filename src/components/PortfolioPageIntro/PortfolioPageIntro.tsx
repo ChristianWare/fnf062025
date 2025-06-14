@@ -10,10 +10,16 @@ import Link from "next/link";
 import { projects } from "@/lib/data";
 
 /* ───────── helper types ───────────────────────────────────────── */
+type SVGComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 interface CardItem {
   id: number;
   title: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  /**
+   * Most cards have a React SVG component here,
+   * but some (e.g. `"Bee"`) are plain strings.
+   */
+  icon: SVGComponent | string;
   href: string;
 }
 
@@ -34,7 +40,10 @@ export default function PortfolioPageIntro() {
 
   /* ───────── SplitType animation ─────────────────────────────── */
   useGSAP(() => {
-    const animate = (el: HTMLElement | null, type: "words" | "lines") => {
+    const animate = (
+      el: HTMLElement | null,
+      type: "words" | "lines"
+    ): (() => void) | void => {
       if (!el) return;
       gsap.set(el, { visibility: "visible" });
 
@@ -120,7 +129,10 @@ export default function PortfolioPageIntro() {
     scheduleNext(remainingRef.current);
   };
 
-  const ActiveIcon = cards[activeIndex].icon;
+  /* ───────── resolve active icon (may be string) ────────────── */
+  const rawIcon = cards[activeIndex].icon;
+  const ActiveIcon =
+    typeof rawIcon === "string" ? null : (rawIcon as SVGComponent);
 
   /* ───────── render ─────────────────────────────────────────── */
   return (
@@ -136,7 +148,7 @@ export default function PortfolioPageIntro() {
             </div>
             <div className={styles.right}>
               <p ref={refs.copy} className={styles.copy}>
-                Explore our portfolio of successful e‑commerce projects across
+                Explore our portfolio of successful e-commerce projects across
                 various industries and business models.
               </p>
             </div>
@@ -159,14 +171,15 @@ export default function PortfolioPageIntro() {
                   data-idx={idx}
                   onMouseEnter={() => setActiveIndex(idx)}
                 >
-                  <h2 className={`${styles.title}`}>{item.title}</h2>
+                  <h2 className={styles.title}>{item.title}</h2>
                   <span className={styles.progress} />
                 </Link>
               ))}
             </div>
 
             <div className={styles.bottomRight}>
-              <ActiveIcon className={styles.icon} />
+              {/* only render if it's a React component, not a string */}
+              {ActiveIcon && <ActiveIcon className={styles.icon} />}
             </div>
           </div>
         </div>

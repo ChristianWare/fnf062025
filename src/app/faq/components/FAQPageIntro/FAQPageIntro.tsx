@@ -9,21 +9,24 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import Link from "next/link";
 import { faqs } from "@/lib/data";
 
+/* ──────────────────── Types ──────────────────── */
+type SVGComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 interface CardItem {
   id: number;
   title: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  /** some FAQ rows give a string like "Bee", others give an actual component */
+  icon: SVGComponent | string;
   href: string;
 }
 
-/* derive cards from the single source of truth (`projects`) */
-// const cards: CardItem[] = projects.map(({ id, title, slug, icon }) => ({
+/* ─────────────────── Cards array ─────────────────── */
+/* derives from the single source of truth (`faqs`) */
 const cards: CardItem[] = faqs.map(({ id, title, icon }) => ({
   id,
   title,
   icon,
-  //   href: `/portfolio/#${slug}`,
-  href: `#`,
+  href: "#",
 }));
 
 export default function FAQPageIntro() {
@@ -121,7 +124,11 @@ export default function FAQPageIntro() {
     scheduleNext(remainingRef.current);
   };
 
-  const ActiveIcon = cards[activeIndex].icon;
+  /* ───────── Active icon (may be string or component) ───────── */
+  const rawIcon = cards[activeIndex].icon;
+  const ActiveIcon =
+    typeof rawIcon === "string" ? null : (rawIcon as SVGComponent);
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
@@ -136,8 +143,8 @@ export default function FAQPageIntro() {
             </div>
             <div className={styles.right}>
               <p ref={refs.copy} className={styles.copy}>
-                Explore our portfolio of successful e‑commerce projects across
-                various industries and business models.
+                Explore answers to common inquiries about our workflow,
+                timelines, and technology.
               </p>
             </div>
           </div>
@@ -159,14 +166,15 @@ export default function FAQPageIntro() {
                   data-idx={idx}
                   onMouseEnter={() => setActiveIndex(idx)}
                 >
-                  <h2 className={`${styles.title}`}>{item.title}</h2>
+                  <h2 className={styles.title}>{item.title}</h2>
                   <span className={styles.progress} />
                 </Link>
               ))}
             </div>
 
             <div className={styles.bottomRight}>
-              <ActiveIcon className={styles.icon} />
+              {/* Only render if it's an actual component */}
+              {ActiveIcon && <ActiveIcon className={styles.icon} />}
             </div>
           </div>
         </div>

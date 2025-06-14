@@ -1,8 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
+// src/components/ProjectDetails/ProjectDetails.tsx
+
 import styles from "./ProjectDetails.module.css";
 import { StaticImageData } from "next/image";
 import VideoSection from "../VideoSection/VideoSection";
+// import Challenge from "../Challenge/Challenge";      /* ← original, left commented */
+// import Results from "../Results/Results";            /* ← original, left commented */
 import { ComponentType, SVGProps } from "react";
 
+/* ──────────── data sub-types ──────────── */
 interface TagItem {
   id: number;
   tag: string;
@@ -29,12 +35,16 @@ interface StatItem {
   desc: string;
 }
 
+/* ──────────── props ──────────── */
+type SVGComponent = ComponentType<SVGProps<SVGSVGElement>>;
+
 interface Props {
   project: {
     title: string;
     slug: string;
     src: StaticImageData;
-    icon: ComponentType<SVGProps<SVGSVGElement>>;
+    /** can be a React SVG component *or* a literal string like "Bee" */
+    icon: SVGComponent | string;
     video?: string;
     description?: string;
     tags?: readonly TagItem[];
@@ -50,69 +60,64 @@ interface Props {
   };
 }
 
+/* ──────────── component ──────────── */
 export default function ProjectDetails({ project }: Props) {
-  // const Icon = project.icon;
+  /* if `icon` is a string, skip rendering it */
+  const IconComponent =
+    typeof project.icon === "string" ? null : (project.icon as SVGComponent);
 
   return (
     <section className={styles.container}>
-      <div className={styles.top}>{/* <Icon className={styles.icon} /> */}</div>
-      <div className={styles.content}>
-        {/* <div className={styles.introSection}>
-          <div className={styles.isLeft}>
-            <div className={styles.isLeftTop}>
-              <div className={styles.isl1}>
-                <div>
-                  <span className={styles.sectionTitle}>Client</span>
-                  <p className={styles.copy}>{project.title}</p>
-                </div>
-                <div>
-                  <span className={styles.sectionTitle}>Year</span>
-                  <p className={styles.copy}>{project.year}</p>
-                </div>
-              </div>
-              <div className={styles.isl2}>
-                <div>
-                  <span className={styles.sectionTitle}>CMS/Platform</span>
-                  <p className={styles.copy}>{project.platform}</p>
-                </div>
-                <div>
-                  <span className={styles.sectionTitle}>Tech</span>
-                  <p className={styles.copy}>{project.tech}</p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.isLeftBottom}>
-              <div className={styles.btnContainer}>
-                <Button
-                  href={project.href}
-                  btnType='secondary'
-                  text='Visit Website'
-                  target='_blank'
-                />
-              </div>
-            </div>
-          </div>
-          <div className={styles.isRight}>
-            <h3 className={styles.heading}>{project.h1}</h3>
-            <div className={styles.tagContainer}>
-              {project.tags?.map((x) => (
-                <span className={styles.tag} key={x.id}>
-                  {x.tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div> */}
+      {/* ─── header section ─── */}
+      <div className={styles.top}>
+        {IconComponent && <IconComponent className={styles.icon} />}
+        <h2 className={styles.h1}>{project.h1}</h2>
+        <p className={styles.meta}>
+          {project.platform} &nbsp;•&nbsp; {project.year}
+        </p>
       </div>
-      {/* {project.stats && project.stats.length > 0 && (
-        <Stats stats={project.stats} />
-      )} */}
-      {/* <Description project={project} /> */}
-      {project.video && <VideoSection video={project.video} />}
-      <h2 className={styles.title}>{project.title}</h2>
 
+      {/* ─── description & tags ─── */}
+      <div className={styles.content}>
+        {project.description && (
+          <p className={styles.description}>{project.description}</p>
+        )}
+
+        {project.tags && (
+          <ul className={styles.tags}>
+            {project.tags.map((tag) => (
+              <li key={tag.id}>{tag.tag}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* ─── video (optional) ─── */}
+      {project.video && <VideoSection video={project.video} />}
+
+      {/* ─── challenge / results (commented out in original) ─── */}
       {/* <Challenge project={project} /> */}
       {/* <Results project={project} /> */}
+
+      {/* ─── gallery (optional) ─── */}
+      {project.gallery && (
+        <div className={styles.gallery}>
+          {project.gallery.map((g) => (
+            <img key={g.id} src={g.src.src} alt='' />
+          ))}
+        </div>
+      )}
+
+      {/* ─── stats (optional) ─── */}
+      {project.stats && (
+        <ul className={styles.stats}>
+          {project.stats.map((s) => (
+            <li key={s.id}>
+              <strong>{s.title}</strong> – {s.desc}
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

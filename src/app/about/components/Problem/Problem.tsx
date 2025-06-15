@@ -36,9 +36,7 @@ const Problem = () => {
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.problemContainer}>
-            <h2 className={styles.heading}>
-              Problems <br /> we solve
-            </h2>
+            <h2 className={styles.heading}>Problems we solve</h2>
           </div>
         </div>
         <div className={styles.bottom}>

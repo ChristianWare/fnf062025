@@ -8,12 +8,12 @@
 .top {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .heading {
-  text-align: right;
+  /* text-align: right; */
   width: 100%;
   color: var(--yellow);
 }
@@ -32,6 +32,8 @@
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
   margin-top: 5rem;
+  width: 60%;
+  margin-left: auto;
 }
 
 .card {
@@ -84,9 +86,10 @@
   margin-top: 5rem;
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1268px) {
   .bottom {
     margin-top: 5rem;
+    width: 100%;
   }
 
   .description {

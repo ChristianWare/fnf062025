@@ -1,21 +1,9 @@
 .container {
   background-color: var(--white);
   padding: 15rem 0rem;
+  padding-bottom: 20rem;
   position: relative;
   z-index: 1;
-}
-
-.container::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url("/images/noise.gif") repeat;
-  opacity: 0.07;
-  z-index: -1;
 }
 
 .content {
@@ -37,7 +25,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 5rem;
+  width: 100%;
+}
+
+.sectionHeadingContainer {
+  width: 100%;
 }
 
 .heading {
@@ -74,8 +67,8 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
-  border: 2px solid var(--lightGray);
-  background-color: var(--white);
+  border: 1px solid var(--taniii);
+  background-color: var(--lightGray);
   border-radius: 10px;
   align-self: flex-start;
   position: -webkit-sticky;
@@ -131,10 +124,15 @@
 @media screen and (max-width: 1268px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
   }
 
   .heading {
     width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5rem;
   }
 }
 
@@ -158,5 +156,15 @@
 
   .desc {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .content {
+    gap: 0rem;
   }
 }

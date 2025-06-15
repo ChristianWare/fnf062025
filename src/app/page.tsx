@@ -4,9 +4,13 @@ import Hero from "@/components/Hero/Hero";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
-import Focus from "@/components/Focus/Focus";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import Process from "./services/components/Process/Process";
+import AboutIntro from "@/components/AboutIntro/AboutIntro";
+import ListOfServices from "./services/components/ListOfServices/ListOfServices";
+// import HowItWorks from "./about/components/HowItWorks/HowItWorks";
+import Faq from "@/components/Faq/Faq";
+import Problem from "./about/components/Problem/Problem";
 
 export default function Home() {
   return (
@@ -14,11 +18,15 @@ export default function Home() {
       <div className={styles.scrollContainer}>
         <Hero />
         <FontsandFooters />
-        <Focus />
+        <AboutIntro />
+        {/* <HowItWorks /> */}
+        <Problem />
         <ProjectSection />
         <Support />
         <Why />
-        <Process />        
+        <ListOfServices />
+        <Process />
+        <Faq />
         <ContactHero />
       </div>
     </main>

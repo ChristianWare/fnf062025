@@ -47,7 +47,9 @@ export default function Process() {
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <SectionHeading2 title='We Specialize in all e-comm business models' />
+              <div className={styles.sectionHeadingContainer}>
+                <SectionHeading2 title='What we build' />
+              </div>
               <p className={styles.heading}>
                 Whether you&apos;re selling directly to consumers, building a
                 B2B portal, or creating a multi-vendor marketplace, we have the

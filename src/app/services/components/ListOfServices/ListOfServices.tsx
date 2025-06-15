@@ -1,11 +1,10 @@
 import styles from "./ListOfServices.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-// import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import Image from "next/image";
 import Devlopment from "../../../../../public/images/servicesHero.jpg";
 import Booking from "../../../../../public/images/bookingii.jpg";
 import Button from "@/components/Button/Button";
-// import Button from "@/components/Button/Button";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 
 const data = [
   {
@@ -40,12 +39,12 @@ const data = [
         description:
           "We set up accurate shipping calculations and tax applications to prevent checkout surprises and abandoned carts.",
       },
-      {
-        id: 3.5,
-        serviceName: "Inventory management",
-        description:
-          "We implement systems to track and display product availability in real-time across all your sales channels.",
-      },
+      // {
+      //   id: 3.5,
+      //   serviceName: "Inventory management",
+      //   description:
+      //     "We implement systems to track and display product availability in real-time across all your sales channels.",
+      // },
       // {
       //   id: 3.6,
       //   serviceName: "Product data import and setup",
@@ -86,12 +85,12 @@ const data = [
         description:
           "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
       },
-      {
-        id: 4.5,
-        serviceName: "Multi‑location & staff management",
-        description:
-          "We build admin dashboards where you assign services, set staff hours, and manage pricing per location—all in one place.",
-      },
+      // {
+      //   id: 4.5,
+      //   serviceName: "Multi‑location & staff management",
+      //   description:
+      //     "We build admin dashboards where you assign services, set staff hours, and manage pricing per location—all in one place.",
+      // },
       // {
       //   id: 4.6,
       //   serviceName: "Analytics & occupancy reporting",
@@ -110,11 +109,16 @@ export default function ListOfServices() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <div className={styles.top}>
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading2 title='Services + Pricing' />
+          </div>
+        </div>
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
               <h3 className={styles.title}>{a.service}</h3>
-              <p className={styles.desc}>{a.desc}</p>
+              {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
                   <Image

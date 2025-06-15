@@ -6,16 +6,15 @@ import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import FalseButton from "../FalseButton/FalseButton";
 import Modal from "../Modal/Modal";
-// import ContactForm from "../ContactForm/ContactForm";
-import Button from "../Button/Button";
+import ContactForm from "../ContactForm/ContactForm";
 
 const navItems = [
   { text: "home", href: "/" },
-  { text: "Work", href: "/work" },
-  { text: "Services", href: "/services" },
-  { text: "About", href: "/about" },
-  { text: "faq", href: "/faq" },
-  { text: "Contact", href: "/contact" },
+  { text: "Work", href: "/" },
+  { text: "Services", href: "/" },
+  { text: "About", href: "/" },
+  { text: "faq", href: "/" },
+  { text: "Contact", href: "/" },
 ];
 
 const isMobile = () =>
@@ -78,17 +77,25 @@ export default function Nav() {
           </div>
 
           <div className={styles.btnContainer}>
-            <Button text='Get Started' btnType='primary' href='/contact' />
+            <FalseButton
+              text='Get Started'
+              btnType='primary'
+              onClick={openModal}
+            />
           </div>
           <div className={styles.btnContainerMobile}>
-            <FalseButton text='Menu' btnType='primary' onClick={openModal} />
+            <FalseButton
+              text='Get Started'
+              btnType='primary'
+              onClick={openModal}
+            />
           </div>
         </nav>
       </header>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        {/* <ContactForm /> */}
-        <div className={styles.navItemsMobile}>
+        <ContactForm />
+        {/* <div className={styles.navItemsMobile}>
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -99,7 +106,7 @@ export default function Nav() {
               {item.text}
             </Link>
           ))}
-        </div>
+        </div> */}
       </Modal>
     </>
   );

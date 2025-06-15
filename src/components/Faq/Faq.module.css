@@ -225,24 +225,6 @@
   box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
 } */
 
-.blackDot {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--black);
-}
-
-.card1 .cardInner .blackDot {
-  background-color: var(--tan);
-}
-
-.card4 .cardInner .blackDot {
-  background-color: var(--gray);
-}
-
 @media screen and (max-width: 1268px) {
   .card {
     height: 250px;

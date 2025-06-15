@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import LayoutWrapper from "../LayoutWrapper";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 import Thunder from "../../../public/images/thunder.jpg";
 import Chuxly from "../../../public/images/chuxly.png";
 import Honey from "../../../public/images/honey.jpg";
@@ -203,9 +203,9 @@ export default function ProjectSection() {
           </div>
         </div>
 
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Button text='View All Projects' btnType='black' href='/work' />
-        </div>
+        </div> */}
       </LayoutWrapper>
     </section>
   );

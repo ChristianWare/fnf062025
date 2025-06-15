@@ -11,7 +11,6 @@ export default function AboutIntro() {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        {/* ───────────── Left column ───────────── */}
         <div className={styles.left}>
           <LayoutWrapper>
             <div className={styles.leftContent}>
@@ -43,7 +42,6 @@ export default function AboutIntro() {
           </LayoutWrapper>
         </div>
 
-        {/* ───────────── Right column (masked image) ───────────── */}
         <div className={styles.right}>
           <div
             className={styles.imgContainer}

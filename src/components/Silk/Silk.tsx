@@ -2,12 +2,15 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Preload } from "@react-three/drei";
 import {
   forwardRef,
   useMemo,
   useRef,
   useLayoutEffect,
   MutableRefObject,
+  Suspense,
+  useState,
 } from "react";
 import * as THREE from "three";
 
@@ -84,7 +87,6 @@ void main() {
 /* ───────────────── types ────────────────────────────────────────────── */
 
 interface SilkUniforms {
-  /* index-signature makes it assignable to ShaderMaterial.uniforms */
   [key: string]: THREE.IUniform<any>;
   uSpeed: THREE.IUniform<number>;
   uScale: THREE.IUniform<number>;
@@ -155,6 +157,7 @@ export default function Silk({
   rotation = 0,
 }: SilkProps) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const [visible, setVisible] = useState(false); // hide canvas until ready
 
   const uniforms = useMemo<SilkUniforms>(
     () => ({
@@ -172,9 +175,19 @@ export default function Silk({
     <Canvas
       dpr={[1, 2]}
       frameloop='always'
-      style={{ position: "absolute", inset: 0 }}
+      onCreated={() => setVisible(true)} // show once WebGL is ready
+      style={{
+        position: "absolute",
+        inset: 0,
+        opacity: visible ? 1 : 0,
+        transition: "opacity 0.15s ease",
+      }}
     >
-      <SilkPlane ref={meshRef} uniforms={uniforms} />
+      <Suspense fallback={null}>
+        <SilkPlane ref={meshRef} uniforms={uniforms} />
+        {/* Preload compiles shaders & materials before fade-in */}
+        <Preload all />
+      </Suspense>
     </Canvas>
   );
 }

@@ -52,7 +52,7 @@ export default function ServicesHero() {
         <div className={styles.content}>
           <div className={styles.left}>
             <h1 ref={headingRef} className={styles.heading}>
-              E-Commerce Services Built <br className={styles.br} /> for Growth
+              E-Commerce <br /> Services Built <br /> for Growth
             </h1>
             <p className={styles.copy}>
               Explore my services and pricing that adapt to your project while

@@ -9,19 +9,15 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import Link from "next/link";
 import { faqs } from "@/lib/data";
 
-/* ──────────────────── Types ──────────────────── */
 type SVGComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 interface CardItem {
   id: number;
   title: string;
-  /** some FAQ rows give a string like "Bee", others give an actual component */
   icon: SVGComponent | string;
   href: string;
 }
 
-/* ─────────────────── Cards array ─────────────────── */
-/* derives from the single source of truth (`faqs`) */
 const cards: CardItem[] = faqs.map(({ id, title, icon }) => ({
   id,
   title,
@@ -30,13 +26,11 @@ const cards: CardItem[] = faqs.map(({ id, title, icon }) => ({
 }));
 
 export default function FAQPageIntro() {
-  /* ───────── intro text refs ─────────────────────────────────── */
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
     copy: useRef<HTMLParagraphElement>(null),
   };
 
-  /* ───────── SplitType animation ─────────────────────────────── */
   useGSAP(() => {
     const animate = (el: HTMLElement | null, type: "words" | "lines") => {
       if (!el) return;
@@ -66,14 +60,12 @@ export default function FAQPageIntro() {
     return () => clean.forEach((c) => c && c());
   });
 
-  /* ───────── autoplay state & refs ───────────────────────────── */
   const [activeIndex, setActiveIndex] = useState(0);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null); // drives index change
-  const progressTl = useRef<gsap.core.Tween | null>(null); // fills progress bar
-  const pausedRef = useRef(false); // true while hovered
-  const remainingRef = useRef(5000); // ms left when paused
-  const startedTsRef = useRef<number>(Date.now()); // cycle start timestamp
-
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null); 
+  const progressTl = useRef<gsap.core.Tween | null>(null); 
+  const pausedRef = useRef(false); 
+  const remainingRef = useRef(5000); 
+  const startedTsRef = useRef<number>(Date.now()); 
   const scheduleNext = (delay = 5000) => {
     timeoutRef.current = setTimeout(() => {
       setActiveIndex((i) => (i + 1) % cards.length);
@@ -81,13 +73,11 @@ export default function FAQPageIntro() {
     startedTsRef.current = Date.now();
   };
 
-  /* ───────── start first cycle on mount ─────────────────────── */
   useEffect(() => {
     scheduleNext();
     return () => clearTimeout(timeoutRef.current!);
   }, []);
 
-  /* ───────── when activeIndex changes ───────────────────────── */
   useEffect(() => {
     progressTl.current?.kill();
     gsap.set(`.${styles.progress}`, { scaleX: 0 });
@@ -104,7 +94,6 @@ export default function FAQPageIntro() {
     if (!pausedRef.current) scheduleNext();
   }, [activeIndex]);
 
-  /* ───────── hover handlers ─────────────────────────────────── */
   const handlePause = () => {
     if (pausedRef.current) return;
     pausedRef.current = true;
@@ -124,7 +113,6 @@ export default function FAQPageIntro() {
     scheduleNext(remainingRef.current);
   };
 
-  /* ───────── Active icon (may be string or component) ───────── */
   const rawIcon = cards[activeIndex].icon;
   const ActiveIcon =
     typeof rawIcon === "string" ? null : (rawIcon as SVGComponent);
@@ -133,7 +121,6 @@ export default function FAQPageIntro() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          {/* ─── intro copy ─────────────────── */}
           <div className={styles.top}>
             <div className={styles.left}>
               <h1 ref={refs.heading} className={styles.heading}>
@@ -148,8 +135,6 @@ export default function FAQPageIntro() {
               </p>
             </div>
           </div>
-
-          {/* ─── cards + icon ───────────────── */}
           <div className={styles.bottom}>
             <div
               className={styles.bottomLeft}
@@ -171,9 +156,7 @@ export default function FAQPageIntro() {
                 </Link>
               ))}
             </div>
-
             <div className={styles.bottomRight}>
-              {/* Only render if it's an actual component */}
               {ActiveIcon && <ActiveIcon className={styles.icon} />}
             </div>
           </div>

@@ -4,11 +4,11 @@ import Image from "next/image";
 import Devlopment from "../../../../../public/images/servicesHero.jpg";
 import Booking from "../../../../../public/images/bookingii.jpg";
 import Button from "@/components/Button/Button";
-import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 
 const data = [
   {
-    id: 3,
+    id: 1,
     service: "E-commerce Development",
     headline: "Building robust, scalable online stores",
     desc: "Our development team brings your e-commerce vision to life with clean, efficient code and seamless integrations. We build on industry-leading platforms while customizing the functionality to meet your specific business requirements.",
@@ -54,7 +54,7 @@ const data = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     service: "Booking‑Site Development",
     headline: "Fast, friction‑free scheduling & reservations",
     desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
@@ -110,14 +110,19 @@ export default function ListOfServices() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <div className={styles.sectionHeadingContainer}>
+          {/* <div className={styles.sectionHeadingContainer}>
             <SectionHeading2 title='Services + Pricing' />
-          </div>
+          </div> */}
+          <div className={styles.sectionIntroAreaBox}></div>
         </div>
         <div className={styles.content}>
           {data.map((a) => (
             <div key={a.id} className={styles.section}>
-              <h3 className={styles.title}>{a.service}</h3>
+              {/* <h3 className={styles.title}>{a.service}</h3> */}
+              <SectionIntroArea
+                sectionTitle={`service ${a.id}`}
+                heading={a.service}
+              />
               {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>

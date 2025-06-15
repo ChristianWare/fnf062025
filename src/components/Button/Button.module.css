@@ -29,7 +29,6 @@
 
 .primary:hover {
   background-color: var(--yellow2);
-  transform: scale(1.05);
 }
 
 .btn.primary:active {

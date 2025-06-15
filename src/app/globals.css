@@ -204,10 +204,10 @@ textarea:focus {
 /* Only use in production */
 @media screen and (max-width: 480px) {
   h1 {
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
   }
   h2 {
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
     line-height: 120%;
   }
 }

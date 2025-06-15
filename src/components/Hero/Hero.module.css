@@ -91,6 +91,11 @@
 }
 
 @media (max-width: 1268px) {
+  .container {
+    height: auto;
+    padding-bottom: 10rem;
+  }
+
   .content {
     grid-template-columns: 1fr;
     gap: 3rem;

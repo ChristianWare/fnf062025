@@ -66,7 +66,7 @@ function Card({ title, index }: CardProps) {
       <div className={styles.cardInner}>
         <div className={styles.cardContent}>
           <h2 className={styles.titleHeading}>{title}</h2>
-          <div className={styles.blackDot}></div>
+          {/* <div className={styles.blackDot}></div> */}
         </div>
       </div>
     </div>

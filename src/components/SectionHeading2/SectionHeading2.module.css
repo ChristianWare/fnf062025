@@ -1,7 +1,6 @@
 .content {
-  border-top-right-radius: 500px;
-  border-bottom-right-radius: 500px;
-  padding-bottom: 5rem;
+  border-radius: 500px;
+  padding: 4rem 0rem;
   background-image: repeating-linear-gradient(
     45deg,
     var(--taniii),
@@ -10,51 +9,30 @@
     transparent 50%
   );
   background-size: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
-  background-color: var(--black);
-  padding: 2rem;
   font-family: var(--SuisseIntlCondensed);
-  color: var(--yellow);
+  color: var(--black);
   font-size: 4.5rem;
   width: 70%;
-}
-
-.lightGray {
-  color: var(--lightGray);
-}
-
-.tan {
-  color: var(--tan);
-}
-
-.white {
-  color: var(--white);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 568px) {
   .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0rem;
     padding: 2rem;
-    border-top-left-radius: 500px;
-    border-bottom-left-radius: 500px;
     border: 1px solid var(--taniii);
   }
 
-  .titleContainer {
-    border-radius: 500px;
-    background-color: var(--black);
-  }
-
   .title {
-    border-radius: 500px;
     text-align: center;
     width: 100%;
-    padding: 3rem;
     font-size: 8vw;
     letter-spacing: 0px;
   }

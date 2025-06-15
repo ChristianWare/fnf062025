@@ -204,7 +204,7 @@ export default function ProjectSection() {
         </div>
 
         <div className={styles.btnContainer}>
-          <Button text='View All Projects' btnType='black' href='/portfolio' />
+          <Button text='View All Projects' btnType='black' href='/work' />
         </div>
       </LayoutWrapper>
     </section>

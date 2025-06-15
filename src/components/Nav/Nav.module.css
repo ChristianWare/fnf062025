@@ -106,12 +106,12 @@
     opacity: 0.5;
   }
 
-  .header {
+  /* .header {
     top: 0px;
     padding-top: 8rem;
     padding-bottom: 1rem;
     padding-right: 15px;
     padding-left: 15px;
     backdrop-filter: blur(90px);
-  }
+  } */
 }

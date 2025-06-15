@@ -41,7 +41,7 @@ export default function Focus() {
           </h2>
         </div>
         <div className={styles.middle}>
-          <p  className={styles.copy}>
+          <p className={styles.copy}>
             Fonts & Footers exists exclusively for small to mid-sized businesses
             that sell physical products online. Whether you move five SKUs or
             five thousand, we concentrate on headless Shopify and custom Next.js
@@ -63,6 +63,7 @@ export default function Focus() {
             src={Img1}
             alt='Fonts & Footers office'
             title='Fonts & Footers'
+            border='taniiiBorder'
           />
         </div>
       </LayoutWrapper>

@@ -13,7 +13,12 @@ export default function Thunder(props: SVGProps<SVGSVGElement>) {
       xmlSpace='preserve'
       {...props} // lets callers override size, className, etc.
     >
-      <polygon points='20.972 0 5.076 15.803 10.972 15.803 6.44 27.793 22.716 11.989 16.819 11.989' />
+      <polygon
+        points='20.972 0 5.076 15.803 10.972 15.803 6.44 27.793 22.716 11.989 16.819 11.989'
+        fill='currentColor'
+        stroke='black'
+        strokeWidth={0.5}
+      />
     </svg>
   );
 }

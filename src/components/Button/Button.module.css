@@ -24,7 +24,7 @@
 
 .primary {
   background-color: var(--yellow);
-  color: var(--brown);
+  color: var(--black);
   border: 1px solid var(--black);
 }
 

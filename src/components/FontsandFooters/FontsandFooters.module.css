@@ -83,36 +83,11 @@
   .card {
     height: 250px;
   }
-
-
-
-  .blackDot {
-    top: 30px;
-    right: 30px;
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 868px) {
-  .blackDot {
-    top: 25px;
-    right: 25px;
-    width: 25px;
-    height: 25px;
-  }
 }
 
 @media screen and (max-width: 568px) {
   .titleHeading {
     font-size: 25vw;
-    letter-spacing: -2px;
-  }
-
-  .blackDot {
-    top: 25;
-    right: 25;
-    width: 25px;
-    height: 25px;
+    letter-spacing: -5px;
   }
 }

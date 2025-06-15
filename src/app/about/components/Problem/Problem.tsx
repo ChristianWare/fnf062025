@@ -1,5 +1,4 @@
 import styles from "./Problem.module.css";
-// import Button from "@/components/Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 const Problem = () => {
@@ -43,16 +42,13 @@ const Problem = () => {
           {data.map((x, index) => (
             <div key={index} className={styles.card}>
               <span className={styles.index}>0{index + 1}</span>
-              <div>
+              <div className={styles.cardRight}>
                 <h3 className={styles.title}>{x.title}</h3>
                 <p className={styles.description}>{x.description}</p>
               </div>
             </div>
           ))}
         </div>
-        {/* <div className={styles.btnContainer}>
-          <Button text='learn more about us' href='/about' btnType='black' />
-        </div> */}
       </LayoutWrapper>
     </section>
   );

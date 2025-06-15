@@ -27,7 +27,8 @@
 @media screen and (max-width: 568px) {
   .content {
     padding: 2rem;
-    border: 1px solid var(--taniii);
+    border: 1px solid var(--black);
+    background-image: none
   }
 
   .title {

@@ -60,8 +60,6 @@
 
 .card {
   background-color: var(--white);
-  /* border: 1px solid var(--gray); */
-  /* padding: 1rem; */
 }
 
 .cardContent {
@@ -72,7 +70,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 7rem;
+  gap: 3rem;
   height: 100%;
 }
 
@@ -85,9 +83,7 @@
 }
 
 .serviceName {
-  font-family: var(--FeatureDeckLight);
-  text-transform: none;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   width: 90%;
 }
 
@@ -177,10 +173,37 @@
   }
 }
 
-@media screen and (max-width: 568px) {
-  .btnContainer {
+@media screen and (max-width: 768px) {
+  /* .btnContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  } */
+
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imgContainer,
+  .priceContainer {
+    grid-column: span 2;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .serviceName {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .cardTop {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
     width: 100%;
   }
 }

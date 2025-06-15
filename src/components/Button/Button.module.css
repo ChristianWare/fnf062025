@@ -25,6 +25,7 @@
 .primary {
   background-color: var(--yellow);
   color: var(--brown);
+  border: 1px solid var(--black);
 }
 
 .primary:hover {

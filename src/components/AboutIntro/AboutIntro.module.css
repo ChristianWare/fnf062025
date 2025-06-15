@@ -99,6 +99,10 @@
 }
 
 @media screen and (max-width: 568px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
   .left {
     padding: 10rem 0rem;
     padding-bottom: 20rem;

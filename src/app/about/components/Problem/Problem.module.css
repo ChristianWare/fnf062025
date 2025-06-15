@@ -80,7 +80,7 @@
   opacity: 0.6;
 }
 
-.card:nth-child(2) {
+/* .card:nth-child(2) {
   background-color: var(--gray);
   border-color: var(--gray);
 }
@@ -89,7 +89,7 @@
 .card:nth-child(2) .index,
 .card:nth-child(2) .title {
   color: var(--yellow);
-}
+} */
 
 .btnContainer {
   margin-top: 5rem;

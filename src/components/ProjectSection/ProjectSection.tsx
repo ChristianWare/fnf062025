@@ -4,8 +4,6 @@ import styles from "./ProjectSection.module.css";
 import { useEffect, useRef, useState, useCallback } from "react";
 import LayoutWrapper from "../LayoutWrapper";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-// import Button from "../Button/Button";
 import Thunder from "../../../public/images/thunder.jpg";
 import Chuxly from "../../../public/images/chuxly.png";
 import Honey from "../../../public/images/honey.jpg";
@@ -13,6 +11,7 @@ import Rentals from "../../../public/images/erRentals.png";
 import Img3 from "../../../public/images/heroiii.jpeg";
 import Arrow from "@/icons/Arrow/Arrow";
 import gsap from "gsap";
+import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
 const projectData = [
   {
@@ -145,8 +144,11 @@ export default function ProjectSection() {
             onMouseEnter={handlePause}
             onMouseLeave={handleResume}
           >
-            <div className={styles.sectionHeaderContainer}>
-              <SectionHeading2 title='Featured projects' />
+            <div className={styles.sectionIntroAreaBox}>
+              <SectionIntroArea
+                sectionTitle='Our Portfolio'
+                heading='Featured Projects'
+              />
             </div>
             {projectData.map((project, index) => (
               <div

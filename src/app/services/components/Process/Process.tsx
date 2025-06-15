@@ -1,6 +1,6 @@
 import styles from "./Process.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 
 const data = [
   {
@@ -48,13 +48,21 @@ export default function Process() {
           <div className={styles.left}>
             <div className={styles.leftContent}>
               <div className={styles.sectionHeadingContainer}>
-                <SectionHeading2 title='What we build' />
+                <div className={styles.sectionIntroAreaBox}>
+                  <SectionIntroArea
+                    sectionTitle='Why Fonts & Footers?'
+                    heading='What we build'
+                    copy="Whether you're selling directly to consumers, building a
+                B2B portal, or creating a multi-vendor marketplace, we have the
+                expertise to build the perfect solution for your business model:"
+                  />
+                </div>
               </div>
-              <p className={styles.heading}>
+              {/* <p className={styles.heading}>
                 Whether you&apos;re selling directly to consumers, building a
                 B2B portal, or creating a multi-vendor marketplace, we have the
                 expertise to build the perfect solution for your business model:
-              </p>
+              </p> */}
             </div>
           </div>
           <div className={styles.right}>
@@ -72,9 +80,6 @@ export default function Process() {
                 </div>
               ))}
             </div>
-            {/* <div className={styles.projectsBox}>
-              <Projects />
-            </div> */}
           </div>
         </div>
       </LayoutWrapper>

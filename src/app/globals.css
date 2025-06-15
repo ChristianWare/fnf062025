@@ -74,9 +74,9 @@ h1 {
 }
 
 h2 {
-  font-size: 5.6rem;
-  line-height: 115%;
-  letter-spacing: -1px;
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
 h3,
@@ -186,15 +186,10 @@ textarea:focus {
     font-size: 50%;
   }
 
-  h1 {
+  h1,
+  h2 {
     letter-spacing: -1.4px;
     font-size: 13vw;
-
-  }
-
-
-  h2 {
-    font-size: 5rem;
   }
 }
 
@@ -208,7 +203,7 @@ textarea:focus {
   }
   h2 {
     letter-spacing: -2px;
-    line-height: 120%;
+    line-height: 110%;
   }
 }
 

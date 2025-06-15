@@ -1,10 +1,8 @@
 import styles from "./Why.module.css";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Img1 from "../../../public/images/service.jpg";
-// import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import LayoutWrapper from "../LayoutWrapper";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-// import Explain from "../Explain/Explain";
+import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
 const data = [
   {
@@ -39,14 +37,14 @@ export default function Why() {
     <section className={styles.container} id='about'>
       <LayoutWrapper>
         <div className={styles.parent}>
-          <div className={styles.sectionHeadingContainer}>
-            {/* <SectionHeading2 title='Why work with us' color='tan' /> */}
-            {/* <Explain /> */}
-            {/* <h2 className={styles.heading}>Why work with us?</h2> */}
-          </div>
           <div className={styles.bottom}>
             <div className={styles.bottomLeft}>
-              <SectionHeading2 title='Why work with us?' />
+              <div className={styles.sectionIntroAreaBox}>
+                <SectionIntroArea
+                  sectionTitle='Why Fonts & Footers?'
+                  heading='Why Work with us?'
+                />
+              </div>
               <div className={styles.imgContainer}>
                 <ParallaxImage
                   src={Img1}

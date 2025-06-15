@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid var(--taniii);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.heading {
+  width: 90%;
+}
+
+.copy {
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading {
+    width: 100%;
+  }
+}

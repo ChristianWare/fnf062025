@@ -47,30 +47,6 @@
   color: var(--gray);
 }
 
-/* .card1 .titleHeading,
-  .card4 .titleHeading {
-    color: #07feff;
-    text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-    background: rgba(7, 254, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    padding: 0.5rem 1rem;
-    border: 1px solid rgba(7, 254, 255, 0.3);
-    display: inline-block;
-    transform: perspective(1000px) translateZ(0);
-    box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
-  } */
-
-.blackDot {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--black);
-}
-
 .card1 .cardInner .blackDot {
   background-color: var(--tan);
 }

@@ -10,11 +10,11 @@ import ContactForm from "../ContactForm/ContactForm";
 
 const navItems = [
   { text: "home", href: "/" },
-  { text: "Work", href: "/" },
-  { text: "Services", href: "/" },
-  { text: "About", href: "/" },
-  { text: "faq", href: "/" },
-  { text: "Contact", href: "/" },
+  { text: "Work", href: "/#work" },
+  { text: "Services", href: "/#services" },
+  { text: "About", href: "/#aboutus" },
+  { text: "faq", href: "/#faq" },
+  { text: "Contact", href: "/#contact" },
 ];
 
 const isMobile = () =>

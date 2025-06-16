@@ -54,11 +54,10 @@
   color: var(--black);
 }
 
-
 /* Mobile overrides */
 @media (max-width: 768px) {
   .dialog {
-    width: 95vw;
+    width: 100vw;
     min-height: 90vh;
   }
 }

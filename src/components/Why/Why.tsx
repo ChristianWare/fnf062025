@@ -1,6 +1,6 @@
 import styles from "./Why.module.css";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
-import Img1 from "../../../public/images/service.jpg";
+import Img1 from "../../../public/images/serviceii.jpg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 

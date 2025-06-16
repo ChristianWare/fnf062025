@@ -16,7 +16,6 @@ const Silk = dynamic(() => import("../Silk/Silk"), { ssr: false });
 export default function ContactHero() {
   return (
     <div className={styles.container}>
-      {/* flowing shader canvas */}
       <div className={styles.silkBg}>
         <Silk
           speed={4}

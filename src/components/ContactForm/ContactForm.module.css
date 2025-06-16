@@ -109,7 +109,7 @@
   border: 1px solid var(--gray);
   background-color: var(--white);
   color: var(--black);
-  border-radius: 30px;
+  /* border-radius: 30px; */
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -156,7 +156,7 @@
   border: 1px solid var(--gray);
   background-color: var(--white);
   color: var(--black);
-  border-radius: 30px;
+  /* border-radius: 30px; */
   font-size: 1.4rem;
   transition: all 0.2s ease;
   user-select: none;

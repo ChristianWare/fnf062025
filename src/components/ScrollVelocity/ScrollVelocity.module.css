@@ -14,8 +14,13 @@
 
 .scroller span {
   flex-shrink: 0;
-  font-size: 5rem;
   line-height: 1;
   font-size: 5vw;
   color: var(--yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .scroller span {
+    font-size: 14vw;
+  }
 }

@@ -1,5 +1,7 @@
 import styles from "./Process.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import ParallaxImage from "@/components/ParallaxImage/ParallaxImage";
+import Img1 from '../../../../../public/images/build.jpg'
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 
 const data = [
@@ -63,6 +65,15 @@ export default function Process() {
                 B2B portal, or creating a multi-vendor marketplace, we have the
                 expertise to build the perfect solution for your business model:
               </p> */}
+              <div className={styles.imgContainer}>
+                <ParallaxImage
+                  src={Img1}
+                  alt='Fonts & Footers office'
+                  title='Fonts & Footers'
+                  color='lightGray'
+                  border='taniiiBorder'
+                />
+              </div>
             </div>
           </div>
           <div className={styles.right}>

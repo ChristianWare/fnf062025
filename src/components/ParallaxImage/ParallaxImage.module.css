@@ -55,6 +55,12 @@
 .yellow::after {
   background-color: var(--yellow);
 }
+
+.lightGray,
+.lightGray::after {
+  background-color: var(--lightGray);
+}
+
 .white,
 .white::after {
   background-color: var(--white);

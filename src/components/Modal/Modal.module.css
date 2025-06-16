@@ -54,10 +54,6 @@
   color: var(--black);
 }
 
-/* Content wrapper */
-.body {
-  margin-top: 1rem;
-}
 
 /* Mobile overrides */
 @media (max-width: 768px) {

@@ -30,11 +30,7 @@ const serviceOptions = [
   "Blog/Content Site",
 ];
 
-interface Props {
-  border?: string;
-}
-
-export default function ContactForm({ border = "" }: Props) {
+export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
@@ -78,130 +74,122 @@ export default function ContactForm({ border = "" }: Props) {
   };
 
   return (
-    <div className={styles.parent}>
-      <div className={`${styles.content} ${styles[border]}`}>
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.namesContainer}>
-            <div className={styles.labelInputBox}>
-              <label htmlFor='firstName'>
-                First Name <span className={styles.required}>*</span>
-              </label>
-              <input
-                id='firstName'
-                type='text'
-                {...register("firstName", { required: true })}
-              />
-              {errors.firstName && (
-                <span className={styles.error}>*** First Name is required</span>
-              )}
-            </div>
-            <div className={styles.labelInputBox}>
-              <label htmlFor='lastName'>
-                Last Name <span className={styles.required}>*</span>
-              </label>
-              <input
-                id='lastName'
-                type='text'
-                {...register("lastName", { required: true })}
-              />
-              {errors.lastName && (
-                <span className={styles.error}>*** Last Name is required</span>
-              )}
-            </div>
-          </div>
-          <div className={styles.everythingElse}>
-            <div className={styles.labelInputBox}>
-              <label htmlFor='email'>
-                Email <span className={styles.required}>*</span>
-              </label>
-              <input
-                id='senderEmail'
-                type='email'
-                {...register("email", {
-                  required: true,
-                  pattern: {
-                    value: /\S+@\S+\.\S+/,
-                    message: "Entered value does not match email format",
-                  },
-                })}
-                placeholder='So I can respond. I won&#39;t send you spam.'
-                maxLength={500}
-              />
-              {errors.email && (
-                <span className={styles.error}>*** Email is required</span>
-              )}
-            </div>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles.namesContainer}>
+        <div className={styles.labelInputBox}>
+          <label htmlFor='firstName'>
+            First Name <span className={styles.required}>*</span>
+          </label>
+          <input
+            id='firstName'
+            type='text'
+            {...register("firstName", { required: true })}
+          />
+          {errors.firstName && (
+            <span className={styles.error}>*** First Name is required</span>
+          )}
+        </div>
+        <div className={styles.labelInputBox}>
+          <label htmlFor='lastName'>
+            Last Name <span className={styles.required}>*</span>
+          </label>
+          <input
+            id='lastName'
+            type='text'
+            {...register("lastName", { required: true })}
+          />
+          {errors.lastName && (
+            <span className={styles.error}>*** Last Name is required</span>
+          )}
+        </div>
+      </div>
+      <div className={styles.everythingElse}>
+        <div className={styles.labelInputBox}>
+          <label htmlFor='email'>
+            Email <span className={styles.required}>*</span>
+          </label>
+          <input
+            id='senderEmail'
+            type='email'
+            {...register("email", {
+              required: true,
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Entered value does not match email format",
+              },
+            })}
+            placeholder='So I can respond. I won&#39;t send you spam.'
+            maxLength={500}
+          />
+          {errors.email && (
+            <span className={styles.error}>*** Email is required</span>
+          )}
+        </div>
 
-            <div className={styles.labelInputBox}>
-              <label htmlFor='company'>Company</label>
-              <input
-                id='company'
-                type='text'
-                {...register("company")}
-                placeholder='Your company name (if applicable)'
-                maxLength={500}
-              />
-            </div>
+        <div className={styles.labelInputBox}>
+          <label htmlFor='company'>Company</label>
+          <input
+            id='company'
+            type='text'
+            {...register("company")}
+            placeholder='Your company name (if applicable)'
+            maxLength={500}
+          />
+        </div>
 
-            <div className={styles.labelInputBox}>
-              <label htmlFor='projectDescription'>
-                Project Description <span className={styles.required}>*</span>
-              </label>
-              <textarea
-                id='projectDescription'
-                maxLength={5000}
-                {...register("projectDescription", { required: true })}
-                placeholder='Tell me about your project needs.'
-              />
-              {errors.projectDescription && (
-                <span className={styles.error}>
-                  *** Project Description is required
-                </span>
-              )}
-            </div>
-            {/* --- Services check-box list --- */}
-            <div className={styles.servicesSection}>
-              <label className={styles.servicesLabel}>
-                What services are you interested in?
-              </label>
+        <div className={styles.labelInputBox}>
+          <label htmlFor='projectDescription'>
+            Project Description <span className={styles.required}>*</span>
+          </label>
+          <textarea
+            id='projectDescription'
+            maxLength={5000}
+            {...register("projectDescription", { required: true })}
+            placeholder='Tell me about your project needs.'
+          />
+          {errors.projectDescription && (
+            <span className={styles.error}>
+              *** Project Description is required
+            </span>
+          )}
+        </div>
+        {/* --- Services check-box list --- */}
+        <div className={styles.servicesSection}>
+          <label className={styles.servicesLabel}>
+            What services are you interested in?
+          </label>
 
-              <div className={styles.serviceButtons}>
-                {serviceOptions.map((service) => {
-                  const checked = selectedServices.includes(service);
+          <div className={styles.serviceButtons}>
+            {serviceOptions.map((service) => {
+              const checked = selectedServices.includes(service);
 
-                  return (
-                    <label
-                      key={service}
-                      className={`
+              return (
+                <label
+                  key={service}
+                  className={`
             ${styles.serviceOption}      /* NEW wrapper */
             ${checked ? styles.selected : ""}
           `}
-                    >
-                      {/* Visually hidden native checkbox, but still accessible */}
-                      <input
-                        type='checkbox'
-                        value={service}
-                        {...register("services")}
-                        checked={checked}
-                        onChange={() => toggleService(service)}
-                        className={styles.hiddenCheckbox} /* NEW helper class */
-                      />
+                >
+                  <input
+                    type='checkbox'
+                    value={service}
+                    {...register("services")}
+                    checked={checked}
+                    onChange={() => toggleService(service)}
+                    className={styles.hiddenCheckbox} /* NEW helper class */
+                  />
 
-                      <span className={styles.checkboxLabel}>{service}</span>
-                    </label>
-                  );
-                })}
-              </div>
-            </div>
+                  <span className={styles.checkboxLabel}>{service}</span>
+                </label>
+              );
+            })}
           </div>
-          <div className={styles.btnBtnContainer}>
-            <FalseButton
-              text={loading ? "Sending..." : "Submit"}
-              btnType='black'
-            />
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
+      <div className={styles.btnBtnContainer}>
+        <FalseButton text={loading ? "Sending..." : "Submit"} btnType='black' />
+      </div>
+    </form>
   );
 }

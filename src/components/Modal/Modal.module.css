@@ -58,6 +58,6 @@
 @media (max-width: 768px) {
   .dialog {
     width: 100vw;
-    min-height: 85vh;
+    min-height: 90vh;
   }
 }

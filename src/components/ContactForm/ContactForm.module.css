@@ -156,7 +156,7 @@
   border: 1px solid var(--gray);
   background-color: var(--white);
   color: var(--black);
-  /* border-radius: 30px; */
+  border-radius: 30px;
   font-size: 1.4rem;
   transition: all 0.2s ease;
   user-select: none;
@@ -192,25 +192,35 @@
 @media screen and (max-width: 568px) {
   /* let the form itself fill the dialog */
   .form {
-    display: flex;              /* keep flex, not grid */
+    display: flex; /* keep flex, not grid */
     flex-direction: column;
-    height: 100%;               /* take full modal height */
+    height: 100%; /* take full modal height */
     justify-content: space-between; /* push button to the bottom */
     align-items: stretch;
   }
 
+  .labelInputBox input,
+  .labelInputBox textarea {
+    height: auto;
+    resize: vertical;
+  }
+
   .namesContainer,
   .everythingElse {
-    flex: 1;                 
+    flex: 1;
   }
 
   .namesContainer {
     flex-direction: column;
     gap: 1.5rem;
   }
+/* 
+  .servicesSection {
+    display: none;
+  } */
 
   .btnBtnContainer {
-    margin-top: 2rem;        
+    margin-top: 2rem;
     display: grid;
   }
 }

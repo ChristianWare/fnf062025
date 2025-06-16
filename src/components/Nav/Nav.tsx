@@ -83,13 +83,13 @@ export default function Nav() {
               onClick={openModal}
             />
           </div>
-          <div className={styles.btnContainerMobile}>
+          {/* <div className={styles.btnContainerMobile}>
             <FalseButton
               text='Get Started'
               btnType='primary'
               onClick={openModal}
             />
-          </div>
+          </div> */}
         </nav>
       </header>
 

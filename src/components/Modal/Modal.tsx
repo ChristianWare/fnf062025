@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, MouseEvent } from "react";
 import Close from "@/icons/Close/Close";
 import styles from "./Modal.module.css";
 
@@ -11,30 +10,18 @@ interface Props {
   children: React.ReactNode;
 }
 
-/* ───────────────────────── Variants ───────────────────────── */
-const backdrop = {
-  closed: { opacity: 0 },
-  open: { opacity: 1 },
-};
-
-const dialog = {
-  closed: { opacity: 0, scale: 0.98, y: 20 },
-  open: { opacity: 1, scale: 1, y: 0 },
-};
-
 export default function Modal({ isOpen, onClose, children }: Props) {
-  /* ─────────── Lock body scroll only when modal is open ─────────── */
+  /* — lock body scroll only while modal is open — */
   useEffect(() => {
-    if (!isOpen) return; // nothing to do
+    if (!isOpen) return;
 
-    /* esc-to-close */
     const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onEsc);
 
-    /* freeze scroll */
     const scrollY = window.scrollY;
     const scrollbarWidth =
       window.innerWidth - document.documentElement.clientWidth;
+
     Object.assign(document.body.style, {
       position: "fixed",
       top: `-${scrollY}px`,
@@ -56,31 +43,29 @@ export default function Modal({ isOpen, onClose, children }: Props) {
     };
   }, [isOpen, onClose]);
 
-  /* ───────────────────────── Render ───────────────────────── */
+  /* — stop backdrop-click from closing if you click inside the dialog — */
+  const stop = (e: MouseEvent) => e.stopPropagation();
+
   return (
-    <motion.div
+    <div
       /* Backdrop */
-      className={styles.modalBackdrop}
-      variants={backdrop}
-      initial={false} /* skip first animation */
-      animate={isOpen ? "open" : "closed"}
-      transition={{ duration: 0.25, ease: "easeInOut" }}
-      /* When closed, ignore pointer events so underlying page is clickable */
-      style={{ pointerEvents: isOpen ? "auto" : "none" }}
+      className={`${styles.backdrop} ${isOpen ? styles.open : styles.closed}`}
+      onClick={onClose}
+      /* keep in DOM at all times to avoid strict-mode remount flicker */
     >
-      <motion.div
+      <div
         /* Dialog */
-        className={styles.modalContent}
-        variants={dialog}
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-        transition={{ duration: 0.25, ease: "easeInOut" }}
+        className={`${styles.dialog} ${isOpen ? styles.open : styles.closed}`}
+        onClick={stop}
+        role='dialog'
+        aria-modal='true'
       >
-        <button onClick={onClose} className={styles.button}>
+        <button onClick={onClose} className={styles.closeBtn}>
           <Close className={styles.icon} />
         </button>
-        <div className={styles.children}>{children}</div>
-      </motion.div>
-    </motion.div>
+
+        <div className={styles.body}>{children}</div>
+      </div>
+    </div>
   );
 }

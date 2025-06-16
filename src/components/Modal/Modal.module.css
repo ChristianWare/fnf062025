@@ -1,60 +1,67 @@
-.modalBackdrop {
+/* Backdrop — stays mounted, we just fade it & toggle pointer-events */
+.backdrop {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 10000;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in;
-  overflow: visible;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.25s ease;
+  pointer-events: none;            /* closed by default */
+  opacity: 0;                      /*   "     "        */
 }
 
-.modalBackdrop[style*="pointer-events: none"] {
-  visibility: hidden;          /* stays accessible to screen readers */
+.backdrop.open {
+  pointer-events: auto;
+  opacity: 1;
 }
 
-.modalContent {
-  background-color: var(--white);
+/* Dialog box */
+.dialog {
+  background: var(--white);
   border-radius: 10px;
   padding: 2rem;
   width: 700px;
-  max-height: 100%;
-  position: relative;
-  transition: all 0.3s ease-in;
-  z-index: 1008999999901;
+  max-height: 95vh;
   overflow: auto;
+  position: relative;
+  transform: scale(0.98) translateY(20px);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.button {
+.dialog.open {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Close button */
+.closeBtn {
   cursor: pointer;
   margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  background: transparent;
+  border: none;
 }
 
-.children {
-  margin-top: 1rem;
-  height: 100%;
-}
-
-.modalLinks {
-  display: flex;
-  flex-direction: column;
-}
-
+/* SVG icon size / color */
 .icon {
+  width: 4rem;
+  height: 4rem;
   color: var(--black);
-  width: 5rem;
-  height: 5rem;
 }
 
-@media screen and (max-width: 768px) {
-  .modalContent {
+/* Content wrapper */
+.body {
+  margin-top: 1rem;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  .dialog {
     width: 95vw;
     min-height: 95vh;
   }

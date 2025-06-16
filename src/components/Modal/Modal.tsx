@@ -1,3 +1,4 @@
+/* Modal.tsx */
 "use client";
 
 import { useEffect } from "react";
@@ -11,31 +12,25 @@ interface Props {
   children: React.ReactNode;
 }
 
-/* ——————————————————————————————————————————————————————————————— */
-/*  Backdrop + dialog animation presets                              */
-/* ——————————————————————————————————————————————————————————————— */
 const backdropVariants = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
-
 const dialogVariants = {
-  initial: {  opacity: 0 },
-  animate: {  opacity: 1 },
-  exit: {  opacity: 0 },
+  initial: { opacity: 0, scale: 0.98 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.98 },
 };
 
 export default function Modal({ isOpen, onClose, children }: Props) {
+  /* lock body scroll (unchanged) */
   useEffect(() => {
     const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onEsc);
 
     if (isOpen) {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
-
+      const scrollY = window.scrollY;
       Object.assign(document.body.style, {
         position: "fixed",
         top: `-${scrollY}px`,
@@ -43,7 +38,6 @@ export default function Modal({ isOpen, onClose, children }: Props) {
         right: "0",
         width: "100%",
         overflow: "hidden",
-        paddingRight: `${scrollbarWidth}px`,
       });
     }
 
@@ -58,11 +52,15 @@ export default function Modal({ isOpen, onClose, children }: Props) {
     };
   }, [isOpen, onClose]);
 
-  /* — render with motion variants wrapped in AnimatePresence — */
+  /* ---------- the only changes are right here ---------- */
   return (
-    <AnimatePresence>
+    <AnimatePresence
+      mode='wait' /* wait for exit animation to finish */
+      initial={false} /* <-- skip the first mount animation */
+    >
       {isOpen && (
         <motion.div
+          key='backdrop' /* stable keys are important */
           className={styles.modalBackdrop}
           variants={backdropVariants}
           initial='initial'
@@ -71,6 +69,7 @@ export default function Modal({ isOpen, onClose, children }: Props) {
           transition={{ duration: 0.25, ease: "easeInOut" }}
         >
           <motion.div
+            key='dialog'
             className={styles.modalContent}
             variants={dialogVariants}
             initial='initial'

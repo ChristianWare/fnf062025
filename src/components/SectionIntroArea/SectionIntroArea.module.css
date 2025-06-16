@@ -8,6 +8,15 @@
   width: 100%;
 }
 
+.tanBorder {
+  border: 1px solid var(--tanii);
+}
+
+.noBorder {
+  border: none;
+  padding: 0rem;
+}
+
 .heading {
   width: 90%;
 }

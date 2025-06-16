@@ -5,6 +5,7 @@ import Devlopment from "../../../../../public/images/servicesHero.jpg";
 import Booking from "../../../../../public/images/bookingii.jpg";
 import Button from "@/components/Button/Button";
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
+import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 
 const data = [
   {
@@ -110,9 +111,9 @@ export default function ListOfServices() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          {/* <div className={styles.sectionHeadingContainer}>
-            <SectionHeading2 title='Services + Pricing' />
-          </div> */}
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading2 title='Services + Pricing' color='tan' />
+          </div>
           <div className={styles.sectionIntroAreaBox}></div>
         </div>
         <div className={styles.content}>
@@ -122,6 +123,7 @@ export default function ListOfServices() {
               <SectionIntroArea
                 sectionTitle={`service ${a.id}`}
                 heading={a.service}
+                border='tanBorder'
               />
               {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>

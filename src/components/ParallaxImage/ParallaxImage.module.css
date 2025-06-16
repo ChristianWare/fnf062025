@@ -1,11 +1,9 @@
-/* Make the root fill its parent’s height, and stack top + image areas */
 .parent {
   display: flex;
   flex-direction: column;
-  height: 100%; /* ← Will stretch to whatever height its parent has */
+  height: 100%; 
 }
 
-/* The little title badge at the top */
 .top {
   background-color: var(--tan);
   width: fit-content;

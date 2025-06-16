@@ -36,7 +36,6 @@
   transform: scale(1);
 }
 
-/* Close button */
 .closeBtn {
   cursor: pointer;
   margin-left: auto;
@@ -50,17 +49,22 @@
   right: 10px;
 }
 
-/* SVG icon size / color */
 .icon {
   width: 4rem;
   height: 4rem;
   color: var(--black);
 }
 
-/* Mobile overrides */
 @media (max-width: 768px) {
   .dialog {
     width: 100vw;
     min-height: 90vh;
+  }
+}
+
+@media (max-width: 568px) {
+  .closeBtn {
+    top: 20px;
+    right: 20px;
   }
 }

@@ -13,6 +13,10 @@
   overflow: visible;
 }
 
+.modalBackdrop[style*="pointer-events: none"] {
+  visibility: hidden;          /* stays accessible to screen readers */
+}
+
 .modalContent {
   background-color: var(--white);
   border-radius: 10px;

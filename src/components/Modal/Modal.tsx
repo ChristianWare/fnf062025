@@ -1,8 +1,7 @@
-/* Modal.tsx */
 "use client";
 
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Close from "@/icons/Close/Close";
 import styles from "./Modal.module.css";
 
@@ -12,34 +11,39 @@ interface Props {
   children: React.ReactNode;
 }
 
-const backdropVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
+/* ───────────────────────── Variants ───────────────────────── */
+const backdrop = {
+  closed: { opacity: 0 },
+  open: { opacity: 1 },
 };
-const dialogVariants = {
-  initial: { opacity: 0, scale: 0.98 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.98 },
+
+const dialog = {
+  closed: { opacity: 0, scale: 0.98, y: 20 },
+  open: { opacity: 1, scale: 1, y: 0 },
 };
 
 export default function Modal({ isOpen, onClose, children }: Props) {
-  /* lock body scroll (unchanged) */
+  /* ─────────── Lock body scroll only when modal is open ─────────── */
   useEffect(() => {
+    if (!isOpen) return; // nothing to do
+
+    /* esc-to-close */
     const onEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onEsc);
 
-    if (isOpen) {
-      const scrollY = window.scrollY;
-      Object.assign(document.body.style, {
-        position: "fixed",
-        top: `-${scrollY}px`,
-        left: "0",
-        right: "0",
-        width: "100%",
-        overflow: "hidden",
-      });
-    }
+    /* freeze scroll */
+    const scrollY = window.scrollY;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    Object.assign(document.body.style, {
+      position: "fixed",
+      top: `-${scrollY}px`,
+      left: "0",
+      right: "0",
+      width: "100%",
+      overflow: "hidden",
+      paddingRight: `${scrollbarWidth}px`,
+    });
 
     return () => {
       window.removeEventListener("keydown", onEsc);
@@ -52,39 +56,31 @@ export default function Modal({ isOpen, onClose, children }: Props) {
     };
   }, [isOpen, onClose]);
 
-  /* ---------- the only changes are right here ---------- */
+  /* ───────────────────────── Render ───────────────────────── */
   return (
-    <AnimatePresence
-      mode='wait' /* wait for exit animation to finish */
-      initial={false} /* <-- skip the first mount animation */
+    <motion.div
+      /* Backdrop */
+      className={styles.modalBackdrop}
+      variants={backdrop}
+      initial={false} /* skip first animation */
+      animate={isOpen ? "open" : "closed"}
+      transition={{ duration: 0.25, ease: "easeInOut" }}
+      /* When closed, ignore pointer events so underlying page is clickable */
+      style={{ pointerEvents: isOpen ? "auto" : "none" }}
     >
-      {isOpen && (
-        <motion.div
-          key='backdrop' /* stable keys are important */
-          className={styles.modalBackdrop}
-          variants={backdropVariants}
-          initial='initial'
-          animate='animate'
-          exit='exit'
-          transition={{ duration: 0.25, ease: "easeInOut" }}
-        >
-          <motion.div
-            key='dialog'
-            className={styles.modalContent}
-            variants={dialogVariants}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-          >
-            <button onClick={onClose} className={styles.button}>
-              <Close className={styles.icon} />
-            </button>
-
-            <div className={styles.children}>{children}</div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+      <motion.div
+        /* Dialog */
+        className={styles.modalContent}
+        variants={dialog}
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+      >
+        <button onClick={onClose} className={styles.button}>
+          <Close className={styles.icon} />
+        </button>
+        <div className={styles.children}>{children}</div>
+      </motion.div>
+    </motion.div>
   );
 }

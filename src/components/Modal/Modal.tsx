@@ -11,7 +11,6 @@ interface Props {
 }
 
 export default function Modal({ isOpen, onClose, children }: Props) {
-  /* — lock body scroll only while modal is open — */
   useEffect(() => {
     if (!isOpen) return;
 
@@ -43,18 +42,14 @@ export default function Modal({ isOpen, onClose, children }: Props) {
     };
   }, [isOpen, onClose]);
 
-  /* — stop backdrop-click from closing if you click inside the dialog — */
   const stop = (e: MouseEvent) => e.stopPropagation();
 
   return (
     <div
-      /* Backdrop */
       className={`${styles.backdrop} ${isOpen ? styles.open : styles.closed}`}
       onClick={onClose}
-      /* keep in DOM at all times to avoid strict-mode remount flicker */
     >
       <div
-        /* Dialog */
         className={`${styles.dialog} ${isOpen ? styles.open : styles.closed}`}
         onClick={stop}
         role='dialog'

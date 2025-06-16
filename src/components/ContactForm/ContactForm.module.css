@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.formHeading {
+  margin-bottom: 3rem;
+}
+
 .namesContainer {
   display: flex;
   align-items: center;
@@ -190,12 +194,11 @@
 }
 
 @media screen and (max-width: 568px) {
-  /* let the form itself fill the dialog */
   .form {
-    display: flex; /* keep flex, not grid */
+    display: flex;
     flex-direction: column;
-    height: 100%; /* take full modal height */
-    justify-content: space-between; /* push button to the bottom */
+    height: 100%;
+    justify-content: space-between;
     align-items: stretch;
   }
 
@@ -214,7 +217,7 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-/* 
+  /* 
   .servicesSection {
     display: none;
   } */

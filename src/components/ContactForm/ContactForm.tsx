@@ -75,6 +75,7 @@ export default function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <h2 className={styles.formHeading}>Contact US</h2>
       <div className={styles.namesContainer}>
         <div className={styles.labelInputBox}>
           <label htmlFor='firstName'>
@@ -153,7 +154,6 @@ export default function ContactForm() {
             </span>
           )}
         </div>
-        {/* --- Services check-box list --- */}
         <div className={styles.servicesSection}>
           <label className={styles.servicesLabel}>
             What services are you interested in?
@@ -177,7 +177,7 @@ export default function ContactForm() {
                     {...register("services")}
                     checked={checked}
                     onChange={() => toggleService(service)}
-                    className={styles.hiddenCheckbox} /* NEW helper class */
+                    className={styles.hiddenCheckbox}
                   />
 
                   <span className={styles.checkboxLabel}>{service}</span>

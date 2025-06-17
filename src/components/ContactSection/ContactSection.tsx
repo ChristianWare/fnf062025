@@ -9,6 +9,7 @@ import Location from "@/icons/Location/Location";
 import Email from "@/icons/Email/Email";
 import Phone from "@/icons/Phone/Phone";
 import FalseButton from "../FalseButton/FalseButton";
+import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
 interface Inputs {
   firstName: string;
@@ -51,12 +52,19 @@ export default function ContactSection() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>Contact Us</h2>
+            {/* <h2 className={styles.heading}>Contact Us</h2>
             <p className={styles.copy}>
               Reach out to us anytime. Our dedicated team is ready to assist you
               with bookings, inquiries, and personalized travel solutions.
               We&#39;re just a message or call away.
-            </p>
+            </p> */}
+            <SectionIntroArea
+              sectionTitle='Our Story'
+              heading='About Fonts & Footers'
+              copy='Reach out to us anytime. Our dedicated team is ready to assist you
+              with bookings, inquiries, and personalized travel solutions.
+              We&#39;re just a message or call away.'
+            />
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>

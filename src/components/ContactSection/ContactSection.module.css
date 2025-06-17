@@ -5,13 +5,12 @@
 }
 
 .top {
-  border-bottom: 5px solid var(--black);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  width: 50%;
 }
 
 .bottom {
@@ -134,13 +133,18 @@
   margin-top: 3rem;
 }
 
-@media screen and (max-width: 958px) {
+@media screen and (max-width: 1058px) {
   .top {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     display: flex;
+    width: 100%;
+  }
+
+  .letsTalkContainer {
+    width: 100%;
   }
 
   .copy {
@@ -171,9 +175,7 @@
     width: 100%;
   }
 
-  .letsTalkContainer {
-    width: 100%;
-  }
+  
 }
 
 @media screen and (max-width: 568px) {

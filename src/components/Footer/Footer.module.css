@@ -7,18 +7,19 @@
   font-size: 8vw;
   text-align: center;
   color: var(--yellow);
+
   margin-bottom: 3rem;
 }
 
 .content {
-  border: 2px solid var(--yellow);
+  border: 1px solid var(--yellow);
   border-radius: 15px;
   display: grid;
   grid-template-columns: 2fr 3fr;
 }
 
 .left {
-  border-right: 2px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
   padding: 5rem;
   display: flex;
   flex-direction: column;
@@ -142,7 +143,7 @@
 
 @media screen and (max-width: 568px) {
   .headingOne {
-    font-size: 15vw;
+    font-size: 20vw;
   }
 
   .right {

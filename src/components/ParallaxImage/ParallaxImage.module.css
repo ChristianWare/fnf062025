@@ -1,7 +1,7 @@
 .parent {
   display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 100%;
 }
 
 .top {
@@ -12,9 +12,11 @@
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  z-index: 999;
   border-bottom: none;
   position: relative;
 }
+
 .top::after {
   content: "";
   position: absolute;
@@ -34,6 +36,7 @@
   padding: 2rem;
   background-color: var(--tan);
   width: 100%;
+
 }
 
 .imgContainer {
@@ -69,6 +72,7 @@
 .lightGray::after {
   background-color: var(--lightGray);
 }
+
 .tanii,
 .tanii::after {
   background-color: var(--tanii);
@@ -77,9 +81,12 @@
 .grayBorder {
   border: 1px solid var(--gray);
 }
+
 .taniiBorder {
   border: 1px solid var(--tanii);
 }
+
 .taniiiBorder {
   border: 1px solid var(--taniii);
+  /* border-bottom: none; */
 }

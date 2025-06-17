@@ -1,7 +1,8 @@
 .content {
   border-radius: 500px;
   padding: 4rem 0rem;
-  border: 1px solid var(--tanii);
+  /* border: 1px solid var(--tanii); */
+  background-color: var(--yellow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +10,7 @@
 
 .title {
   font-family: var(--SuisseIntlCondensed);
-  color: var(--tanii);
+  color: var(--black);
   font-size: 4.5rem;
   width: 70%;
   text-align: center;

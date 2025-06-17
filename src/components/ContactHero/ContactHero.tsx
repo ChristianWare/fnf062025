@@ -4,7 +4,7 @@ import styles from "./ContactHero.module.css";
 import dynamic from "next/dynamic";
 import Button from "../Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import Contact2 from "../Contact2/Contact2";
+// import Contact2 from "../Contact2/Contact2";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import Logo from "../Logo/Logo";
 // import ContactForm from "@/components/ContactForm/ContactForm";
@@ -39,7 +39,7 @@ export default function ContactHero() {
             <Button href='/contact' btnType='tanOutline' text='Contact us' />
             <Button href='/contact' btnType='primary' text='Get Started' />
           </div>
-          <Contact2 />
+          {/* <Contact2 /> */}
         </div>
         {/* <div className={styles.content}>
           <div className={styles.left}>

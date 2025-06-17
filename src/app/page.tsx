@@ -11,6 +11,8 @@ import ListOfServices from "./services/components/ListOfServices/ListOfServices"
 // import HowItWorks from "./about/components/HowItWorks/HowItWorks";
 import Faq from "@/components/Faq/Faq";
 import Problem from "./about/components/Problem/Problem";
+import ContactSection from "@/components/ContactSection/ContactSection";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -28,6 +30,8 @@ export default function Home() {
         <Process />
         <Faq />
         <ContactHero />
+        <ContactSection />
+        <Footer />
       </div>
     </main>
   );

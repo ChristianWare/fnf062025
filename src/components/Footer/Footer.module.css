@@ -6,19 +6,19 @@
 .headingOne {
   font-size: 8vw;
   text-align: center;
-  color: var(--tan);
+  color: var(--yellow);
   margin-bottom: 3rem;
 }
 
 .content {
-  border: 2px solid var(--tan);
+  border: 2px solid var(--yellow);
   border-radius: 15px;
   display: grid;
   grid-template-columns: 2fr 3fr;
 }
 
 .left {
-  border-right: 2px solid var(--tan);
+  border-right: 2px solid var(--yellow);
   padding: 5rem;
   display: flex;
   flex-direction: column;
@@ -29,31 +29,31 @@
 
 .heading {
   font-size: 4rem;
-  color: var(--tan);
+  color: var(--yellow);
 }
 
 .copy {
   font-size: 1.1rem;
   text-transform: uppercase;
   width: 80%;
-  color: var(--tan);
+  color: var(--yellow);
 }
 
 .email {
-  border: 1px solid var(--tan);
+  border: 1px solid var(--yellow);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
-  color: var(--tan);
+  color: var(--yellow);
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
-  color: var(--tan);
+  color: var(--yellow);
   transform: rotate(90deg);
 }
 
@@ -72,7 +72,7 @@
 .title {
   text-transform: uppercase;
   font-family: var(--PPNeueMontrealBold);
-  color: var(--tan);
+  color: var(--yellow);
 }
 
 .optionList {
@@ -87,7 +87,7 @@
 
 .option {
   font-size: 1.4rem;
-  color: var(--tan);
+  color: var(--yellow);
 }
 
 .bottom {
@@ -136,7 +136,7 @@
 
   .left {
     border-right: none;
-    border-bottom: 2px solid var(--tan);
+    border-bottom: 2px solid var(--yellow);
   }
 }
 

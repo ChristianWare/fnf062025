@@ -59,8 +59,8 @@ export default function ContactSection() {
               We&#39;re just a message or call away.
             </p> */}
             <SectionIntroArea
-              sectionTitle='Our Story'
-              heading='About Fonts & Footers'
+              sectionTitle='Contact Us'
+              heading='Get In Touch'
               copy='Reach out to us anytime. Our dedicated team is ready to assist you
               with bookings, inquiries, and personalized travel solutions.
               We&#39;re just a message or call away.'

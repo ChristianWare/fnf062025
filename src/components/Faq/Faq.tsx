@@ -6,10 +6,8 @@ import Arrow from "@/icons/Plus/Plus";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Img1 from "../../../public/images/questionsii.jpg";
+import Img1 from "../../../public/images/aboutpage.jpg";
 import { questions } from "@/lib/data";
-
-
 
 const cardsData = [
   { id: 1, title: "Frequently" },

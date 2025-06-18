@@ -11,11 +11,6 @@ const data = [
     desc: "Every pixel is crafted around your brand and products, not crammed into a generic theme, so shoppers feel they’re on a store made just for them.",
   },
   {
-    id: 2,
-    title: "Lightning-Fast Performance",
-    desc: "Hand-written code removes unnecessary bloat, letting pages load in under a second and keeping potential buyers from bouncing away.",
-  },
-  {
     id: 3,
     title: "Smooth Interactions",
     desc: "Subtle animations and intuitive transitions guide visitors naturally from discovery to checkout, boosting engagement and sales.",
@@ -29,6 +24,11 @@ const data = [
     id: 5,
     title: "True Ownership",
     desc: "You control every line of code—no monthly template fees, no lock-in—so scaling or moving platforms is always your choice.",
+  },
+  {
+    id: 2,
+    title: "Lightning-Fast Performance",
+    desc: "Hand-written code removes unnecessary bloat, letting pages load in under a second and keeping potential buyers from bouncing away.",
   },
 ];
 

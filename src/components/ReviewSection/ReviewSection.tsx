@@ -61,7 +61,7 @@ export default function ReviewSection() {
           <div className={styles.cardLeft}>
             <div>
               <span className={styles.title}>{slide.reviewer}</span>
-              <span className={styles.location}>{slide.company}</span>
+              {/* <span className={styles.location}>{slide.company}</span> */}
               <span className={styles.starContainer}>
                 <span className={styles.star}></span>
                 <span className={styles.star}></span>

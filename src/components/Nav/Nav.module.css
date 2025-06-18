@@ -83,6 +83,7 @@
     left: 50%;
     transform: translateX(-50%);
     justify-content: space-between;
+    border-color: var(--yellow);
   }
 
   .btnContainerMobile,
@@ -100,6 +101,7 @@
 
   .navItem {
     font-size: 3vw;
+    color: var(--yellow);
     transition: all 0.3s ease-in;
   }
 

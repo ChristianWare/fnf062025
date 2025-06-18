@@ -16,6 +16,7 @@
   font-size: 3.4rem;
   letter-spacing: -1px;
   width: 90%;
+  line-height: 1.3;
   /* font-family: var(--SuisseIntlMedium);
   text-transform: none; */
 }
@@ -24,6 +25,7 @@
 .index {
   color: var(--gray);
   letter-spacing: -1px;
+  line-height: 1.3;
   /* font-family: var(--SuisseIntlMedium);
   text-transform: none; */
 }
@@ -50,7 +52,7 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--white);
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
@@ -91,7 +93,7 @@
 
 .answer {
   margin-top: 2rem;
-  color: var(--gray);
+  color: var(--lightGray);
   font-size: 1.8rem;
   line-height: 1.6;
 }

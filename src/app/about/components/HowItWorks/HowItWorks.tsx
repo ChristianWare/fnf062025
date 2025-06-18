@@ -2,32 +2,33 @@ import styles from "./HowItWorks.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../../public/images/how.jpg";
+import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 
 const data = [
   {
     id: 1,
-    feature: "Quality over quantity",
-    desc: "We take on a limited number of projects to ensure each client receives our full attention and the highest quality work.",
+    feature: "Discovery & Goal Mapping",
+    desc: "A quick strategy call and analytics review to pin down revenue targets, customer pain points, and brand voice before any design work begins.",
   },
   {
     id: 2,
-    feature: "Clear Transparency",
-    desc: "We believe in open communication about processes, timelines, and outcomes.",
+    feature: "Strategic Blueprint",
+    desc: "You receive a detailed project roadmap—site architecture, milestones, and fixed pricing—so you know exactly what’s coming and when.",
   },
   {
     id: 3,
-    feature: "Measurable results",
-    desc: "We focus on metrics that matter to your business, not just vanity statistics.",
+    feature: "Interactive Prototype",
+    desc: "We build a clickable Figma prototype of every page and interaction, allowing you to test user flows and request tweaks before code is written.",
   },
   {
     id: 4,
-    feature: "Long-term partnerships",
-    desc: "We build relationships with our clients that extend beyond the initial project launch.",
+    feature: "Build & Integrate",
+    desc: "Our developers turn the prototype into a high-performance storefront, integrating payment gateways, inventory systems, and marketing tools.",
   },
   {
     id: 5,
-    feature: "Continuous learning",
-    desc: "The e-commerce landscape is constantly evolving, and we stay at the forefront of industry developments.",
+    feature: "Launch & Growth Tune-Ups",
+    desc: "After go-live we monitor performance, run quick-win A/B tests, and provide 30 days of complimentary support to ensure the site hits your KPIs.",
   },
 ];
 
@@ -38,9 +39,10 @@ const HowItWorks = () => {
         <LayoutWrapper>
           <div className={styles.box}>
             <div className={styles.middle}>
-              <h2 className={styles.heading}>
-                Our Values: <br /> What Drives Us
-              </h2>
+              <SectionIntroArea
+                sectionTitle='The process'
+                heading='how it works'
+              />
             </div>
             <div className={styles.bottom}>
               {data.map((x) => (

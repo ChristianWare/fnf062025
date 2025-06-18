@@ -9,28 +9,28 @@ import { useState } from "react";
 const data = [
   {
     id: 1,
-    feature: "Discovery & Goal Setting",
-    desc: "→ A 30-minute call and analytics audit to uncover revenue targets, customer pain points, and technical constraints before a single pixel is designed.",
+    feature: "Dedicated Account Lead",
+    desc: "→ From day one you’re paired with a single point of contact who knows your brand, answers questions within one business day, and keeps every task on track.",
   },
   {
     id: 2,
-    feature: "Blueprint & Roadmap",
-    desc: "→ We draft a detailed project spec, site architecture, and timeline so you know exactly what’s being built, why it matters, and when each milestone ships.",
+    feature: "Weekly Progress Check-Ins",
+    desc: "→ Short video calls or Loom walkthroughs keep you updated on milestones, gather feedback early, and ensure there are zero surprise pivots at launch.",
   },
   {
     id: 3,
-    feature: "UX & UI Prototype",
-    desc: "→ In Figma you’ll click through every screen—complete with micro-interactions—ensuring the user journey converts before we write production code.",
+    feature: "Interactive Client Portal",
+    desc: "→ A secure hub lets you review files, e-sign approvals, complete questionnaires, and chat with the team—available 24/7, all in one place.",
   },
   {
     id: 4,
-    feature: "Full-Stack Development",
-    desc: "→ Our engineers turn the prototype into a headless Shopify + Next.js storefront, integrating 3PLs, CRMs, and payment gateways for launch-ready functionality.",
+    feature: "Hands-On Training & Handoff",
+    desc: "→ We record step-by-step video tutorials and host a live training session so your staff can update products, run promos, and pull reports without us.",
   },
   {
     id: 5,
-    feature: "Launch & Growth Optimization",
-    desc: "→ After QA and performance tuning, we go live, monitor Core Web Vitals, and run quick-win A/B tests to squeeze added revenue in the first 30 days.",
+    feature: "Post-Launch Care & Iteration",
+    desc: "→ Thirty days of complimentary support plus optional growth sprints for A/B tests and new features mean your store keeps improving, not just staying online.",
   },
 ];
 
@@ -41,7 +41,10 @@ export default function Support() {
 
   return (
     <section className={styles.container}>
-      <ScrollVelocity texts={["Our Process •", "Our Process •"]} className='' />
+      <ScrollVelocity
+        texts={["End to end support •", "End to end support •"]}
+        className='End to end support •'
+      />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}></div>
@@ -50,7 +53,8 @@ export default function Support() {
               From discovery to launch.
               <br />
               <span className={styles.headingSpan}>
-                Every step of your website journey is covered by a single person
+                Every step of your website journey is supported in the following
+                ways
               </span>
             </h2>
             <div className={styles.dataMapContainer}>

@@ -8,7 +8,7 @@ import ContactHero from "@/components/ContactHero/ContactHero";
 import Process from "./services/components/Process/Process";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import ListOfServices from "./services/components/ListOfServices/ListOfServices";
-// import HowItWorks from "./about/components/HowItWorks/HowItWorks";
+import HowItWorks from "./about/components/HowItWorks/HowItWorks";
 import Faq from "@/components/Faq/Faq";
 import Problem from "./about/components/Problem/Problem";
 import ContactSection from "@/components/ContactSection/ContactSection";
@@ -22,10 +22,10 @@ export default function Home() {
         <Hero />
         <FontsandFooters />
         <AboutIntro />
-        {/* <HowItWorks /> */}
         <Problem />
         <ProjectSection />
         <Support />
+        <HowItWorks />
         <Why />
         <ListOfServices />
         <Process />

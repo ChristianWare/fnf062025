@@ -9,8 +9,6 @@ import {
   useRef,
   useLayoutEffect,
   MutableRefObject,
-  Suspense,
-  useState,
 } from "react";
 import * as THREE from "three";
 
@@ -157,7 +155,6 @@ export default function Silk({
   rotation = 0,
 }: SilkProps) {
   const meshRef = useRef<THREE.Mesh>(null);
-  const [visible, setVisible] = useState(false); // hide canvas until ready
 
   const uniforms = useMemo<SilkUniforms>(
     () => ({
@@ -175,19 +172,17 @@ export default function Silk({
     <Canvas
       dpr={[1, 2]}
       frameloop='always'
-      onCreated={() => setVisible(true)} // show once WebGL is ready
+      gl={{
+        antialias: false,
+        powerPreference: "high-performance",
+      }}
       style={{
         position: "absolute",
         inset: 0,
-        opacity: visible ? 1 : 0,
-        transition: "opacity 0.15s ease",
       }}
     >
-      <Suspense fallback={null}>
-        <SilkPlane ref={meshRef} uniforms={uniforms} />
-        {/* Preload compiles shaders & materials before fade-in */}
-        <Preload all />
-      </Suspense>
+      <SilkPlane ref={meshRef} uniforms={uniforms} />
+      <Preload all />
     </Canvas>
   );
 }

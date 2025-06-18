@@ -17,7 +17,10 @@ import SectionIntro from "../SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Silk = dynamic(() => import("../Silk/Silk"), { ssr: false });
+const Silk = dynamic(() => import("../Silk/Silk"), {
+  ssr: false,
+  loading: () => null, 
+});
 
 export default function Hero() {
   const refs = {

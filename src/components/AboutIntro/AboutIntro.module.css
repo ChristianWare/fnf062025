@@ -33,6 +33,10 @@
   color: var(--text);
 }
 
+.servicesHeading {
+  font-size: 2rem;
+}
+
 .servicesContainer {
   list-style: none;
 }

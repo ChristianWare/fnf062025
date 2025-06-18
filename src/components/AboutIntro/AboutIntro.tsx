@@ -5,10 +5,10 @@ import Image from "next/image";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
 const services = [
-  { id: 1, name: "Multi-page Business Websites" },
-  { id: 2, name: "E-commerce Stores" },
-  { id: 3, name: "Landing Pages" },
-  { id: 4, name: "Full stack web applications" },
+  { id: 1, name: "Full-Build Storefronts" },
+  { id: 2, name: "Performance Rescue" },
+  { id: 3, name: "Conversion Optimization & A/B Testing" },
+  { id: 4, name: "Maintenance & Growth Partnership" },
 ];
 
 const lightningMaskURI =
@@ -46,6 +46,7 @@ export default function AboutIntro() {
                 with a focus on creating solutions that convert visitors into
                 customers and customers into advocates.
               </p> */}
+              <span className={styles.servicesHeading}>We Specialize in:</span>
               <ul className={styles.servicesContainer}>
                 {services.map((x) => (
                   <li className={styles.service} key={x.id}>

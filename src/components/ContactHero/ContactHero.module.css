@@ -5,6 +5,8 @@
   padding-bottom: 20rem;
   z-index: 1;
   overflow: hidden;
+    min-height: 100vh;
+
 }
 
 .silkBg {

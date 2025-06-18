@@ -5,6 +5,7 @@
   padding-top: 15rem;
   padding-bottom: 20rem;
   background-color: var(--tan);
+  min-height: 100vh;
 }
 
 .content {

@@ -80,7 +80,7 @@ export default function ContactSection() {
                   <Phone className={styles.icon} />
                   <span className={styles.info}>480-300-6003</span>
                 </div> */}
-               
+
                 <div className={styles.iconInfoContainer}>
                   <Arrow className={styles.iconii} />
                   <span className={styles.info}>Follow Us On LinkedIn</span>

@@ -59,7 +59,8 @@
   gap: 2rem;
 }
 
-.icon, .iconii {
+.icon,
+.iconii {
   width: 3rem;
   height: 3rem;
   color: var(--white);
@@ -101,7 +102,6 @@
 }
 
 .labelInputBox label {
-  
   font-weight: 400;
   color: var(--text);
   padding-left: 0.3rem;
@@ -178,8 +178,6 @@
   .copy {
     width: 100%;
   }
-
-  
 }
 
 @media screen and (max-width: 568px) {

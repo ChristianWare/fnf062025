@@ -1,15 +1,22 @@
 .container {
   background-color: var(--black);
-  padding-top: 10rem;
+  padding-top: 7rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .headingOne {
   font-size: 8vw;
   text-align: center;
   color: var(--yellow);
-
   margin-bottom: 3rem;
 }
+
 
 .content {
   border: 1px solid var(--yellow);

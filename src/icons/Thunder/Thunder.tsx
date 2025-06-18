@@ -16,7 +16,7 @@ export default function Thunder(props: SVGProps<SVGSVGElement>) {
       <polygon
         points='20.972 0 5.076 15.803 10.972 15.803 6.44 27.793 22.716 11.989 16.819 11.989'
         fill='currentColor'
-        stroke='black'
+        stroke='#2c2c2c'
         strokeWidth={0.5}
       />
     </svg>

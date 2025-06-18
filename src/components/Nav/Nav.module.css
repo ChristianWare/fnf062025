@@ -77,7 +77,12 @@
   }
 
   .navItems {
-    display: none;
+    position: absolute;
+    bottom: -90vh;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
   }
 
   .btnContainerMobile,
@@ -94,10 +99,10 @@
   }
 
   .navItem {
-    color: var(--black);
-    font-family: var(--SuisseIntlCondensed);
-    text-transform: uppercase;
-    font-size: 4rem;
+    /* color: var(--black); */
+    /* font-family: var(--SuisseIntlCondensed); */
+    /* text-transform: uppercase; */
+    font-size: 3vw;
     transition: all 0.3s ease-in;
   }
 

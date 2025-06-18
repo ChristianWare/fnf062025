@@ -36,6 +36,13 @@ const Problem = () => {
         <div className={styles.top}>
           <div className={styles.problemContainer}>
             <h2 className={styles.heading}>Problems we solve</h2>
+            <p className={styles.copy}>
+              Shoppers leave slow, cluttered storefronts in seconds. Generic
+              templates and bloated plugins cripple performance, frustrate
+              visitors, and drain ad budgets. You deserve a store engineered for
+              speed, stability, and storytelling—without hiring an in-house tech
+              team or wading through freelance uncertainty.
+            </p>
           </div>
         </div>
         <div className={styles.bottom}>

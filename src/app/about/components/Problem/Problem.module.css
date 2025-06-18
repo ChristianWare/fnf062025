@@ -13,9 +13,17 @@
 }
 
 .heading {
-  /* text-align: right; */
   width: 100%;
   color: var(--yellow);
+}
+
+.copy {
+  z-index: 2;
+  line-height: 1.4;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--tan);
+  width: 40%;
 }
 
 .falseBtnContainerii {
@@ -30,7 +38,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 5rem;
   margin-top: 5rem;
   width: 60%;
   margin-left: auto;
@@ -101,7 +109,17 @@
     width: 100%;
   }
 
+  .copy {
+    width: 60%;
+  }
+
   .description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
     width: 100%;
   }
 }
@@ -112,7 +130,8 @@
     justify-content: center;
   }
 
-  .heading {
+  .heading,
+  .copy {
     text-align: center;
     width: 100%;
   }

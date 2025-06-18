@@ -17,6 +17,14 @@
   padding: 0rem;
 }
 
+.borderBottom {
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid var(--tanii);
+  padding: 0rem;
+  padding-bottom: 1rem;
+}
+
 .heading {
   width: 90%;
 }

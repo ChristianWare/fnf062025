@@ -6,29 +6,29 @@ import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
 const data = [
   {
+    id: 1,
+    title: "Tailored Design",
+    desc: "Every pixel is crafted around your brand and products, not crammed into a generic theme, so shoppers feel they’re on a store made just for them.",
+  },
+  {
+    id: 2,
+    title: "Lightning-Fast Performance",
+    desc: "Hand-written code removes unnecessary bloat, letting pages load in under a second and keeping potential buyers from bouncing away.",
+  },
+  {
+    id: 3,
+    title: "Smooth Interactions",
+    desc: "Subtle animations and intuitive transitions guide visitors naturally from discovery to checkout, boosting engagement and sales.",
+  },
+  {
     id: 4,
-    title: "Slow Page",
-    desc: "A slow website frustrates customers and leads to abandoned carts, costing you sales and damaging your brand's reputation.",
+    title: "Future-Proof Flexibility",
+    desc: "A clean, modular architecture lets you add features or integrations later without costly rebuilds or platform limitations.",
   },
   {
     id: 5,
-    title: "Bad Mobile Experience",
-    desc: "Many e-commerce sites struggle to deliver a seamless shopping experience on mobile devices.",
-  },
-  {
-    id: 6,
-    title: "Complicated Checkout",
-    desc: "A confusing or lengthy checkout process causes potential buyers to abandon their carts, leaving revenue on the table.",
-  },
-  {
-    id: 8,
-    title: "Poor Inventory",
-    desc: "Managing products, stock levels, and updates can become overwhelming, leading to mistakes and unhappy customers.",
-  },
-  {
-    id: 7,
-    title: "Low Search",
-    desc: "Without proper optimization, your website fails to rank on search engines, making it hard for potential customers to find you online.",
+    title: "True Ownership",
+    desc: "You control every line of code—no monthly template fees, no lock-in—so scaling or moving platforms is always your choice.",
   },
 ];
 

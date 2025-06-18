@@ -124,6 +124,7 @@ export default function ListOfServices() {
                 sectionTitle={`service ${a.id}`}
                 heading={a.service}
                 border='tanBorder'
+                borderBottom='borderBottom'
               />
               {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>

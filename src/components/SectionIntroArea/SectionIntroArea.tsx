@@ -6,6 +6,7 @@ interface Props {
   heading: string;
   copy?: string;
   border?: string;
+  borderBottom?: string;
 }
 
 export default function SectionIntroArea({
@@ -13,9 +14,12 @@ export default function SectionIntroArea({
   heading,
   copy,
   border = "",
+  borderBottom = "",
 }: Props) {
   return (
-    <div className={`${styles.container} ${styles[border]}`}>
+    <div
+      className={`${styles.container} ${styles[border]} ${styles[borderBottom]}`}
+    >
       <div className={styles.sectionHeadingContainer}>
         <SectionIntro title={sectionTitle} />
       </div>

@@ -32,20 +32,15 @@ export default function AboutIntro() {
                 the recognition that successful online stores require both
                 beautiful aesthetics and robust functionality.'
               />
-
               <p className={styles.copy}>
-                Our name represents this philosophy – &ldquo;Fonts&rdquo;
-                symbolizes the design elements that create emotional connections
-                with your customers, while &ldquo;Footers&rdquo; represents the
-                solid technical foundation that supports your business growth.
+                We exist exclusively for small to mid-sized businesses that sell
+                physical products online. Whether you move five SKUs or five
+                thousand, we concentrate on headless Shopify and custom Next.js
+                storefronts that scale with you. By niching down, we stay
+                razor-sharp on e-commerce trends, checkout psychology, and
+                back-office integrations that matter most to merchants—not
+                generic “all-in-one” web services.
               </p>
-
-              {/* <p className={styles.copy}>
-                Since our founding, we&apos;ve helped businesses across various
-                industries establish and grow their e-commerce presence, always
-                with a focus on creating solutions that convert visitors into
-                customers and customers into advocates.
-              </p> */}
               <span className={styles.servicesHeading}>We Specialize in:</span>
               <ul className={styles.servicesContainer}>
                 {services.map((x) => (

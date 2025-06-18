@@ -3,53 +3,45 @@
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
-// import Plus from '../../icons/plus.svg'
+import Plus from "@/icons/Plus/Plus";
+import { useState } from "react";
 
 const data = [
   {
     id: 1,
-    feature: "B2C storefronts",
-    desc: "→ Direct-to-consumer online shops ideal for retail brands, specialty goods, and independent artisans looking to sell products directly to end consumers.",
+    feature: "Discovery & Goal Setting",
+    desc: "→ A 30-minute call and analytics audit to uncover revenue targets, customer pain points, and technical constraints before a single pixel is designed.",
   },
   {
     id: 2,
-    feature: "B2B portals",
-    desc: "→ Business-focused platforms perfect for wholesalers, manufacturers, industrial suppliers, and service providers who primarily sell to other businesses rather than consumers.",
+    feature: "Blueprint & Roadmap",
+    desc: "→ We draft a detailed project spec, site architecture, and timeline so you know exactly what’s being built, why it matters, and when each milestone ships.",
   },
   {
     id: 3,
-    feature: "Subscription services",
-    desc: "→ Recurring billing platforms ideal for software companies (SaaS), content creators, box subscription services, and membership organizations requiring regular payment processing.",
+    feature: "UX & UI Prototype",
+    desc: "→ In Figma you’ll click through every screen—complete with micro-interactions—ensuring the user journey converts before we write production code.",
   },
   {
     id: 4,
-    feature: "Digital product delivery",
-    desc: "→ Platforms for selling and distributing non-physical goods, perfect for educational content creators, software developers, digital artists, and e-book publishers.",
+    feature: "Full-Stack Development",
+    desc: "→ Our engineers turn the prototype into a headless Shopify + Next.js storefront, integrating 3PLs, CRMs, and payment gateways for launch-ready functionality.",
   },
   {
     id: 5,
-    feature: "Service booking platforms",
-    desc: "→ Appointment and reservation systems ideal for consultants, healthcare providers, beauty professionals, fitness instructors, and event venues needing to manage client scheduling.",
-  },
-  {
-    id: 6,
-    feature: "Multi-vendor marketplaces",
-    desc: "→ Platforms hosting multiple sellers, perfect for community marketplaces, industry-specific exchanges, and businesses looking to create their own Amazon or Etsy-like ecosystem.",
-  },
-  {
-    id: 7,
-    feature: "Rental platforms",
-    desc: "→ Temporary-use item booking systems ideal for equipment rental businesses, property managers, vehicle rentals, and peer-to-peer sharing economy ventures.",
+    feature: "Launch & Growth Optimization",
+    desc: "→ After QA and performance tuning, we go live, monitor Core Web Vitals, and run quick-win A/B tests to squeeze added revenue in the first 30 days.",
   },
 ];
 
 export default function Support() {
+  const [selected, setSelected] = useState<null | number>(null);
+
+  const toggle = (i: number) => setSelected(selected === i ? null : i);
+
   return (
     <section className={styles.container}>
-      <ScrollVelocity
-        texts={["End to end support •", "End to end support •"]}
-        className='End to end support •'
-      />
+      <ScrollVelocity texts={["Our Process •", "Our Process •"]} className='' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}></div>
@@ -62,13 +54,38 @@ export default function Support() {
               </span>
             </h2>
             <div className={styles.dataMapContainer}>
-              {data.map((x, index) => (
-                <div className={styles.card} key={x.id}>
-                  <h3 className={styles.title}>
-                    <span className={styles.index}>(0{index + 1}) </span>
-                    {x.feature}
-                  </h3>
-                  {/* <Plus className={styles.icon} /> */}
+              {data.map((item, i) => (
+                <div
+                  key={item.id}
+                  className={
+                    selected === i
+                      ? `${styles.card} ${styles.showBorder}`
+                      : styles.card
+                  }
+                  onClick={() => toggle(i)}
+                >
+                  <div className={styles.cardTop}>
+                    <div className={styles.title}>
+                      <span className={styles.index}>{i + 1}.</span>
+                      {item.feature}
+                    </div>
+                    {selected === i ? (
+                      <Plus className={styles.iconFlip} />
+                    ) : (
+                      <Plus className={styles.icon} />
+                    )}
+                  </div>
+
+                  {/* Answer block */}
+                  <div
+                    className={
+                      selected === i
+                        ? `${styles.answerContainer} ${styles.show}`
+                        : styles.answerContainer
+                    }
+                  >
+                    <p className={styles.answer}>{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

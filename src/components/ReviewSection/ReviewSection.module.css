@@ -1,8 +1,7 @@
 .container {
   background-color: var(--black);
   padding: 15rem 0rem;
-    min-height: 100vh;
-
+  min-height: 100vh;
 }
 
 .top {
@@ -60,8 +59,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
   min-height: 650px;
-  background-color: var(--yellow);
-  border-radius: 25px;
+  background-color: var(--tan);
+  border-radius: 15px;
   padding: 5rem;
 }
 
@@ -170,7 +169,8 @@
 }
 
 .arrowBox {
-  border: 2px solid var(--black);
+  /* border: 2px solid var(--black); */
+  background-color: var(--tanii);
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -182,7 +182,7 @@
 }
 
 .arrowBox:hover {
-  background-color: var(--black);
+  background-color: var(--taniii);
 }
 
 .icon {
@@ -193,7 +193,7 @@
 }
 
 .arrowBox:hover .icon {
-  color: var(--red);
+  color: var(--yellow);
 }
 
 .indicators {
@@ -213,10 +213,6 @@
 
 .indicator:hover {
   transform: scale(1.2);
-}
-
-.activeIndicator {
-  background-color: transparent;
 }
 
 .imgContainer {
@@ -240,7 +236,7 @@
 
 .indicator {
   fill: none;
-  stroke: var(--black);
+  stroke: var(--yellow);
   stroke-width: 2px;
   stroke-linecap: round;
   stroke-dasharray: 306;
@@ -275,7 +271,8 @@
 }
 
 .activeIndicator {
-  background-color: transparent;
+  background-color: var(--yellow);
+  border: 1px solid var(--black);
 }
 
 @media screen and (max-width: 1068px) {

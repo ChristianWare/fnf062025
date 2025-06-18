@@ -95,7 +95,7 @@ export const projects = [
     icon: Thunder,
     video: "/videos/thunder.mp4",
     description:
-      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+      "Founded in 2019 by mountain-bike enthusiasts, Thundertrails quickly evolved from a local favorite into a regional hub for high-performance bikes and gear—and now needs a digital presence that matches its in-store experience and growth ambitions.",
     tags: [
       {
         id: 1.98,
@@ -155,7 +155,7 @@ export const projects = [
     icon: Thunder,
     video: "/videos/chuxly.mp4",
     description:
-      "Founded by audio engineers with a passion for exceptional sound quality, Chuxly emerged in 2021 as a boutique brand dedicated to creating premium headphones and portable speakers. Combining cutting-edge acoustic technology with elegant, minimalist design, Chuxly quickly gained recognition among audiophiles and style-conscious consumers alike. As demand for their products grew beyond their flagship store, Chuxly needed an online platform that could communicate the unique sensory experience of their products while handling their expanding inventory and customer base.",
+      "Founded in 2021 by audio engineers passionate about exceptional sound, Chuxly crafts premium headphones and portable speakers that blend advanced acoustics with minimalist design—and now needs an online platform to showcase its sensory-rich products while supporting a growing inventory and customer base.",
     tags: [
       {
         id: 2.98,
@@ -215,7 +215,7 @@ export const projects = [
     icon: "Bee",
     video: "/videos/honey.mp4",
     description:
-      "Golden Drips began as a family-owned apiary in 2018, producing small-batch, artisanal honey varieties from carefully selected floral sources. Their commitment to sustainable beekeeping practices and exceptionally pure, unprocessed honey products quickly earned them a devoted following at farmers' markets and specialty food stores. As demand for their premium honey and bee pollen products surged, Golden Drips recognized the need to expand their reach beyond local markets while maintaining the artisanal quality and personal connection that defined their brand.",
+      "Founded in 2018 as a family-owned apiary crafting small-batch, unprocessed honey from select floral sources, Golden Drips built a devoted following through sustainable beekeeping and artisanal quality—and now seeks an online platform to extend its reach beyond local markets while preserving its personal touch.",
     tags: [
       {
         id: 3.98,
@@ -275,7 +275,7 @@ export const projects = [
     icon: Thunder,
     video: "/videos/rentals.mp4",
     description:
-      "Elite Retreat Rentals was established in 2022 by a team of hospitality veterans with a vision to transform the vacation rental experience in Phoenix, Arizona. Their portfolio features three meticulously designed luxury properties, each offering a unique aesthetic and amenities while maintaining consistent high standards of comfort and service. As the Phoenix tourism market became increasingly competitive, Elite Retreat Rentals sought to break away from dependency on third-party booking platforms by creating a direct booking system that would showcase their properties' distinctive features and allow for a more personalized guest experience.",
+      "Founded in 2022 by hospitality veterans in Phoenix, Elite Retreat Rentals manages three luxury properties—each with distinctive design, top-tier amenities, and unwavering service standards—and now needs a direct booking platform to highlight their unique features and deliver a more personalized guest experience.",
     tags: [
       {
         id: 4.98,
@@ -487,7 +487,6 @@ export const faqs = [
     video: "/videos/rentals.mp4",
   },
 ] as const;
-
 
 export const reviews = [
   {

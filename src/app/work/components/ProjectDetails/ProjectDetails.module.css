@@ -1,4 +1,31 @@
-.title {
-  margin-top: 2rem;
-  font-size: 2.5rem;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  background-color: var(--tan);
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+.btnContainer {
+  margin-top: 3rem;
+}
+
+.video {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+  }
+
+  .video {
+    grid-column: span 1;
+  }
 }

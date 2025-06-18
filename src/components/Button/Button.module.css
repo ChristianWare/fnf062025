@@ -38,8 +38,8 @@
 
 .black {
   background-color: var(--black);
-  color: var(--yellow) !important;
-  border: 1px solid var(--gray);
+  color: var(--tan);
+  border: 1px solid var(--black);
   z-index: 999;
 }
 
@@ -64,7 +64,7 @@
 .outline {
   background-color: transparent;
   color: var(--black);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--taniii);
 }
 
 .outline:hover {

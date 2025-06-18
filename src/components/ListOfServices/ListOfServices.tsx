@@ -1,8 +1,8 @@
 import styles from "./ListOfServices.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
-import Devlopment from "../../../../../public/images/servicesHero.jpg";
-import Booking from "../../../../../public/images/bookingii.jpg";
+import Devlopment from "../../../public/images/servicesHero.jpg";
+import Booking from "../../../public/images/bookingii.jpg";
 // import Button from "@/components/Button/Button";
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";

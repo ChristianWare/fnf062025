@@ -1,18 +1,29 @@
 import styles from "./ProjectDetails.module.css";
 import VideoSection from "../VideoSection/VideoSection";
+import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
+import Button from "@/components/Button/Button";
 
 interface Props {
   project: {
     title: string;
+    description: string;
     video?: string;
   };
 }
 
 export default function ProjectDetails({ project }: Props) {
   return (
-    <section className={styles.container}>
-      {project.video && <VideoSection video={project.video} />}
-      <h2 className={styles.title}>{project.title}</h2>
-    </section>
+    <div className={styles.container}>
+      <SectionIntroArea sectionTitle='E-commerce' heading={project.title} />
+      <div>
+        <p className={styles.desc}>{project.description}</p>
+        <div className={styles.btnContainer}>
+          <Button href='/' btnType='outline' text='Live Site' />
+        </div>
+      </div>
+      <div className={styles.video}>
+        {project.video && <VideoSection video={project.video} />}
+      </div>
+    </div>
   );
 }

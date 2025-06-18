@@ -1,19 +1,19 @@
 import FontsandFooters from "@/components/FontsandFooters/FontsandFooters";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
-import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Why from "@/components/Why/Why";
 import Support from "@/components/Support/Support";
 import ContactHero from "@/components/ContactHero/ContactHero";
-import Process from "./services/components/Process/Process";
+import Process from "@/components/Process/Process";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
-import ListOfServices from "./services/components/ListOfServices/ListOfServices";
-import HowItWorks from "./about/components/HowItWorks/HowItWorks";
+import ListOfServices from "@/components/ListOfServices/ListOfServices";
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Faq from "@/components/Faq/Faq";
-import Problem from "./about/components/Problem/Problem";
+import Problem from "@/components/Problem/Problem";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import Footer from "@/components/Footer/Footer";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
+import ProjectPreview from "./work/components/ProjectPreview/ProjectPreview";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <FontsandFooters />
         <AboutIntro />
         <Problem />
-        <ProjectSection />
+        <ProjectPreview />
         <Support />
         <HowItWorks />
         <Why />

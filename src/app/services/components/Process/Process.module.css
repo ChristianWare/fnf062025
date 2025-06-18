@@ -4,8 +4,7 @@
   padding-bottom: 20rem;
   position: relative;
   z-index: 1;
-    min-height: 100vh;
-
+  min-height: 100vh;
 }
 
 .content {
@@ -13,10 +12,6 @@
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 10rem;
 }
-
-/* .left {
-  padding: 2rem 0rem;
-} */
 
 .leftContent {
   align-self: flex-start;
@@ -171,9 +166,5 @@
 @media screen and (max-width: 568px) {
   .heading {
     font-size: 2rem;
-  }
-
-  .content {
-    gap: 0rem;
   }
 }

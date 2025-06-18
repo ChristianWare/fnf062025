@@ -5,9 +5,9 @@ import styles from "./ContactSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import toast from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
-import Location from "@/icons/Location/Location";
 import Email from "@/icons/Email/Email";
-import Phone from "@/icons/Phone/Phone";
+import Arrow from "@/icons/Arrow/Arrow";
+import Calendar from "@/icons/Calendar/Calendar";
 import FalseButton from "../FalseButton/FalseButton";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
@@ -76,13 +76,18 @@ export default function ContactSection() {
                     reservations@niertransportation.com
                   </span>
                 </div>
-                <div className={styles.iconInfoContainer}>
+                {/* <div className={styles.iconInfoContainer}>
                   <Phone className={styles.icon} />
                   <span className={styles.info}>480-300-6003</span>
+                </div> */}
+               
+                <div className={styles.iconInfoContainer}>
+                  <Arrow className={styles.iconii} />
+                  <span className={styles.info}>Follow Us On LinkedIn</span>
                 </div>
                 <div className={styles.iconInfoContainer}>
-                  <Location className={styles.icon} />
-                  <span className={styles.info}>Scottsdale, AZ</span>
+                  <Calendar className={styles.icon} />
+                  <span className={styles.info}>Schedule a Meeting</span>
                 </div>
               </div>
             </div>

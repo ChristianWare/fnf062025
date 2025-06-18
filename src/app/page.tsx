@@ -13,6 +13,7 @@ import Faq from "@/components/Faq/Faq";
 import Problem from "./about/components/Problem/Problem";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import Footer from "@/components/Footer/Footer";
+import ReviewSection from "@/components/ReviewSection/ReviewSection";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Why />
         <ListOfServices />
         <Process />
+        <ReviewSection />
         <Faq />
         <ContactHero />
         <ContactSection />

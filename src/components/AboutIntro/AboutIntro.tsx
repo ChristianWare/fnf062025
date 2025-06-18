@@ -4,6 +4,13 @@ import Img1 from "../../../public/images/aboutIntro.jpg";
 import Image from "next/image";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
+const services = [
+  { id: 1, name: "Multi-page Business Websites" },
+  { id: 2, name: "E-commerce Stores" },
+  { id: 3, name: "Landing Pages" },
+  { id: 4, name: "Full stack web applications" },
+];
+
 const lightningMaskURI =
   "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2027.793%2027.793'%3E%3Cpolygon%20fill='white'%20points='20.972%200%205.076%2015.803%2010.972%2015.803%206.44%2027.793%2022.716%2011.989%2016.819%2011.989'/%3E%3C/svg%3E\")";
 
@@ -33,12 +40,20 @@ export default function AboutIntro() {
                 solid technical foundation that supports your business growth.
               </p>
 
-              <p className={styles.copy}>
+              {/* <p className={styles.copy}>
                 Since our founding, we&apos;ve helped businesses across various
                 industries establish and grow their e-commerce presence, always
                 with a focus on creating solutions that convert visitors into
                 customers and customers into advocates.
-              </p>
+              </p> */}
+              <ul className={styles.servicesContainer}>
+                {services.map((x) => (
+                  <li className={styles.service} key={x.id}>
+                    {x.name}
+                    <span className={styles.blackDot} />
+                  </li>
+                ))}
+              </ul>
             </div>
           </LayoutWrapper>
         </div>

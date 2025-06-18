@@ -33,6 +33,34 @@
   color: var(--text);
 }
 
+.servicesContainer {
+  list-style: none;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--taniii);
+  padding: 1rem 0rem;
+
+  width: 100%;
+  /* color: var(--orange); */
+}
+
+.service:nth-child(1) {
+  border-top: 1px solid var(--taniii);
+}
+
+.blackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+  display: block;
+  margin-left: auto;
+}
+
 .right {
   display: flex;
   align-items: center;
@@ -102,7 +130,7 @@
   .heading {
     font-size: 2rem;
   }
-  
+
   .left {
     padding: 10rem 0rem;
     padding-bottom: 20rem;

@@ -59,10 +59,14 @@
   gap: 2rem;
 }
 
-.icon {
+.icon, .iconii {
   width: 3rem;
   height: 3rem;
   color: var(--white);
+}
+
+.iconii {
+  transform: rotate(45deg);
 }
 
 .info {

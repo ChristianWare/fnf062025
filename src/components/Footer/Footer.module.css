@@ -1,6 +1,7 @@
 .container {
   background-color: var(--black);
   padding-top: 7rem;
+  padding-bottom: 10rem;
 }
 
 .logoContainer {

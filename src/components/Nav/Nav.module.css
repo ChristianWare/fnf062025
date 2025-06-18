@@ -99,9 +99,6 @@
   }
 
   .navItem {
-    /* color: var(--black); */
-    /* font-family: var(--SuisseIntlCondensed); */
-    /* text-transform: uppercase; */
     font-size: 3vw;
     transition: all 0.3s ease-in;
   }
@@ -118,4 +115,10 @@
     padding-left: 15px;
     backdrop-filter: blur(90px);
   } */
+}
+
+@media screen and (max-width: 568px) {
+  .navItems {
+    bottom: -89vh;
+  }
 }

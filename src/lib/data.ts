@@ -207,66 +207,66 @@ export const projects = [
       { id: 4, title: "Avg. time on product page", desc: "3 min 05 s" },
     ],
   },
-  {
-    id: 3,
-    title: "Golden Drips",
-    slug: "golden-drips",
-    src: Honey,
-    icon: "Bee",
-    video: "/videos/honey.mp4",
-    description:
-      "Founded in 2018 as a family-owned apiary crafting small-batch, unprocessed honey from select floral sources, Golden Drips built a devoted following through sustainable beekeeping and artisanal quality—and now seeks an online platform to extend its reach beyond local markets while preserving its personal touch.",
-    tags: [
-      {
-        id: 3.98,
-        tag: "Ecommerce",
-      },
-      {
-        id: 3.99,
-        tag: "Artisanal Food",
-      },
-    ],
-    h1: "Crafting a luxurious digital storefront for Golden Drips' premium honey collection",
-    year: 2025,
-    platform: "WooCommerce",
-    tech: "Next.js",
-    href: "https://golden-tau-ten.vercel.app/",
-    challenge: [
-      {
-        id: 3.1,
-        challengeDetail:
-          "Golden Drips' existing online presence consisted of a basic informational website and third-party marketplace listings that failed to communicate the premium nature of their products or the story behind their sustainable beekeeping practices. The brand struggled to differentiate themselves in the growing artisanal honey market and lacked the digital infrastructure to handle direct-to-consumer sales efficiently, especially for their subscription offerings and gift packages.",
-      },
-      {
-        id: 3.2,
-        challengeDetail:
-          "We developed a richly textured digital experience that captures the sensory aspects of Golden Drips' honey varieties through high-definition macro photography, color profiles, and detailed tasting notes. The custom-designed product pages highlight the specific floral sources, harvesting locations, and seasonal characteristics that make each honey variety unique. An interactive flavor wheel helps customers discover products based on their taste preferences, while the sustainable practices section immerses visitors in the brand's environmental commitments through video documentaries and illustrated guides.",
-      },
-      {
-        id: 3.3,
-        challengeDetail:
-          "To enhance the gifting experience, we created a custom gift builder that allows customers to create personalized honey collections with custom labels and packaging options. The subscription management system provides flexible delivery schedules and seasonal product rotations based on customer preferences. Behind the scenes, the platform integrates with their inventory and production systems to manage the seasonality of their products and ensure availability aligns with harvesting cycles.",
-      },
-    ],
-    results: [
-      {
-        id: 3.4,
-        resultDetail:
-          "Golden Drips has successfully transitioned from a primarily wholesale business model to a thriving direct-to-consumer brand. Online sales now account for 65% of total revenue, with a 173% increase in year-over-year growth. The average order value has increased by 89% compared to their previous marketplace listings, and the subscription program now has over 5,000 active members with a remarkable 92% retention rate after six months.",
-      },
-      {
-        id: 3.5,
-        resultDetail:
-          "The brand storytelling elements have significantly strengthened Golden Drips' market positioning, with engagement metrics showing that 78% of first-time visitors explore the sustainability content before making a purchase. Their educational content on bee conservation has generated substantial media coverage and partnership opportunities with environmental organizations. The platform's scalability has enabled Golden Drips to expand their product line to include limited edition seasonal releases and collaborations with other artisanal food producers, further cementing their reputation as leaders in the premium honey market.",
-      },
-    ],
-    stats: [
-      { id: 1, title: "Year‑over‑year online growth", desc: "+173%" },
-      { id: 2, title: "Revenue now DTC (direct‑to‑consumer)", desc: "65%" },
-      { id: 3, title: "Increase in average order value", desc: "+89%" },
-      { id: 4, title: "Subscription program retention", desc: "92%" },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "Golden Drips",
+  //   slug: "golden-drips",
+  //   src: Honey,
+  //   icon: "Bee",
+  //   video: "/videos/honey.mp4",
+  //   description:
+  //     "Founded in 2018 as a family-owned apiary crafting small-batch, unprocessed honey from select floral sources, Golden Drips built a devoted following through sustainable beekeeping and artisanal quality—and now seeks an online platform to extend its reach beyond local markets while preserving its personal touch.",
+  //   tags: [
+  //     {
+  //       id: 3.98,
+  //       tag: "Ecommerce",
+  //     },
+  //     {
+  //       id: 3.99,
+  //       tag: "Artisanal Food",
+  //     },
+  //   ],
+  //   h1: "Crafting a luxurious digital storefront for Golden Drips' premium honey collection",
+  //   year: 2025,
+  //   platform: "WooCommerce",
+  //   tech: "Next.js",
+  //   href: "https://golden-tau-ten.vercel.app/",
+  //   challenge: [
+  //     {
+  //       id: 3.1,
+  //       challengeDetail:
+  //         "Golden Drips' existing online presence consisted of a basic informational website and third-party marketplace listings that failed to communicate the premium nature of their products or the story behind their sustainable beekeeping practices. The brand struggled to differentiate themselves in the growing artisanal honey market and lacked the digital infrastructure to handle direct-to-consumer sales efficiently, especially for their subscription offerings and gift packages.",
+  //     },
+  //     {
+  //       id: 3.2,
+  //       challengeDetail:
+  //         "We developed a richly textured digital experience that captures the sensory aspects of Golden Drips' honey varieties through high-definition macro photography, color profiles, and detailed tasting notes. The custom-designed product pages highlight the specific floral sources, harvesting locations, and seasonal characteristics that make each honey variety unique. An interactive flavor wheel helps customers discover products based on their taste preferences, while the sustainable practices section immerses visitors in the brand's environmental commitments through video documentaries and illustrated guides.",
+  //     },
+  //     {
+  //       id: 3.3,
+  //       challengeDetail:
+  //         "To enhance the gifting experience, we created a custom gift builder that allows customers to create personalized honey collections with custom labels and packaging options. The subscription management system provides flexible delivery schedules and seasonal product rotations based on customer preferences. Behind the scenes, the platform integrates with their inventory and production systems to manage the seasonality of their products and ensure availability aligns with harvesting cycles.",
+  //     },
+  //   ],
+  //   results: [
+  //     {
+  //       id: 3.4,
+  //       resultDetail:
+  //         "Golden Drips has successfully transitioned from a primarily wholesale business model to a thriving direct-to-consumer brand. Online sales now account for 65% of total revenue, with a 173% increase in year-over-year growth. The average order value has increased by 89% compared to their previous marketplace listings, and the subscription program now has over 5,000 active members with a remarkable 92% retention rate after six months.",
+  //     },
+  //     {
+  //       id: 3.5,
+  //       resultDetail:
+  //         "The brand storytelling elements have significantly strengthened Golden Drips' market positioning, with engagement metrics showing that 78% of first-time visitors explore the sustainability content before making a purchase. Their educational content on bee conservation has generated substantial media coverage and partnership opportunities with environmental organizations. The platform's scalability has enabled Golden Drips to expand their product line to include limited edition seasonal releases and collaborations with other artisanal food producers, further cementing their reputation as leaders in the premium honey market.",
+  //     },
+  //   ],
+  //   stats: [
+  //     { id: 1, title: "Year‑over‑year online growth", desc: "+173%" },
+  //     { id: 2, title: "Revenue now DTC (direct‑to‑consumer)", desc: "65%" },
+  //     { id: 3, title: "Increase in average order value", desc: "+89%" },
+  //     { id: 4, title: "Subscription program retention", desc: "92%" },
+  //   ],
+  // },
   {
     id: 4,
     title: "Elite Retreat Rentals",

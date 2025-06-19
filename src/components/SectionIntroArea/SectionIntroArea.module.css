@@ -8,6 +8,13 @@
   width: 100%;
 }
 
+.height100 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .tanBorder {
   border: 1px solid var(--tanii);
 }
@@ -22,6 +29,11 @@
 
 .taniiBorder {
   background-color: var(--tanii);
+  border: none;
+}
+
+.blackBorder {
+  background-color: var(--black);
   border: none;
 }
 
@@ -40,6 +52,11 @@
 
 .heading {
   width: 90%;
+}
+
+.smallHeading {
+  font-size: 5rem;
+  letter-spacing: -1px;
 }
 
 .tan {

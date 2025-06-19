@@ -113,6 +113,7 @@ export default function ListOfServices() {
         <div className={styles.top}>
           <div className={styles.sectionHeadingContainer}>
             <SectionHeading2 title='Services + Pricing' color='tan' />
+            
           </div>
           <div className={styles.sectionIntroAreaBox}></div>
         </div>
@@ -125,6 +126,7 @@ export default function ListOfServices() {
                 heading={a.service}
                 border='tanBorder'
                 borderBottom='borderBottom'
+                smallHeading='smallHeading'
               />
               {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>
@@ -149,9 +151,18 @@ export default function ListOfServices() {
                     </div>
                   </div>
                 ))}
-                <div className={styles.priceContainer}>
-                  <h4 className={styles.price}>{a.price}</h4>
+                {/* <div className={styles.priceContainer}> */}
+                {/* <h4 className={styles.price}>{a.price}</h4> */}
+                <div className={styles.sectionIntroAreaBox}>
+                  <SectionIntroArea
+                    sectionTitle='Price:'
+                    heading={a.price}
+                    border='taniiiBorder'
+                    height='height100'
+                    smallHeading='smallHeading'
+                  />
                 </div>
+                {/* </div> */}
               </div>
               {/* <div className={styles.btnContainer}>
                 <Button

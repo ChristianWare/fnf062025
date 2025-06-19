@@ -1,7 +1,7 @@
 .content {
   border-radius: 500px;
   padding: 4rem 0rem;
-  /* border: 1px solid var(--tanii); */
+  border: 1px solid var(--tanii);
   background-color: var(--yellow);
   display: flex;
   align-items: center;

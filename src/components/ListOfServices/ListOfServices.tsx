@@ -23,7 +23,7 @@ export default function ListOfServices() {
                     heading={a.service}
                     border='taniiiBorder'
                     smallHeading='smallHeading'
-                    copy='Custom built website, with up to 25 live SKUs, single language, single currency, Stripe or Shopify Payments. Timeline: four weeks.'
+                    copy={a.desc}
                     height='height100'
                     copyColor='grayiiCopyColor'
                     paddingRight='paddingRight'

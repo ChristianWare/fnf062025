@@ -141,7 +141,9 @@
 
 .title {
   color: var(--black);
-  font-size: 3.4rem;
+  font-size: 2.5rem;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: none;
   /* font-family: var(--SuisseIntlMedium); */
   /* text-transform: none; */
 }

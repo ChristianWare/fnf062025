@@ -21,9 +21,9 @@
   z-index: 2;
   line-height: 1.4;
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--tan);
-  width: 40%;
+  width: 50%;
 }
 
 .falseBtnContainerii {
@@ -73,12 +73,14 @@
 .title {
   margin-bottom: 1rem;
   color: var(--tan);
-  font-size: 3.4rem;
+  font-size: 2.5rem;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: none;
 }
 
 .description {
   color: var(--tan);
-  font-size: 1.4rem;
+  /* font-size: 1.6rem; */
   width: 80%;
   opacity: 0.7;
 }
@@ -132,7 +134,6 @@
 
   .heading,
   .copy {
-    text-align: center;
     width: 100%;
   }
 

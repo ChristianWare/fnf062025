@@ -86,7 +86,8 @@
 
 .serviceName {
   font-size: 2.5rem;
-  width: 90%;
+  text-transform: none;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .description {
@@ -96,10 +97,7 @@
 
 .priceContainer {
   grid-column: span 2;
-  /* background-color: var(--white); */
   border-radius: 10px;
-  /* border: 1px solid var(--gray); */
-  /* padding: 1rem; */
   height: 100%;
 }
 

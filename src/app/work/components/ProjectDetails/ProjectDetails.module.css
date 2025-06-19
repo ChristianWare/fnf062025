@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
   background-color: var(--tan);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 3rem;
 }
 

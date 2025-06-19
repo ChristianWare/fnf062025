@@ -4,7 +4,9 @@ import styles from "./SectionIntroArea.module.css";
 interface Props {
   sectionTitle: string;
   heading: string;
+  color?: string;
   copy?: string;
+  dotColor?: string;
   border?: string;
   borderBottom?: string;
 }
@@ -13,6 +15,8 @@ export default function SectionIntroArea({
   sectionTitle,
   heading,
   copy,
+  color = "",
+  dotColor = "",
   border = "",
   borderBottom = "",
 }: Props) {
@@ -21,11 +25,11 @@ export default function SectionIntroArea({
       className={`${styles.container} ${styles[border]} ${styles[borderBottom]}`}
     >
       <div className={styles.sectionHeadingContainer}>
-        <SectionIntro title={sectionTitle} />
+        <SectionIntro title={sectionTitle} color={color} dotColor={dotColor} />
       </div>
       <div className={styles.headingClip}>
-        <h2 className={styles.heading}>{heading}</h2>
-        {copy && <p className={styles.copy}>{copy}</p>}
+        <h2 className={`${styles.heading} ${styles[color]}`}>{heading}</h2>
+        {copy && <p className={`${styles.copy} ${styles[color]}`}>{copy}</p>}
       </div>
     </div>
   );

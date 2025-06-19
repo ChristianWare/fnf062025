@@ -1,3 +1,4 @@
+import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 import styles from "./Problem.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
@@ -35,14 +36,26 @@ const Problem = () => {
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.problemContainer}>
-            <h2 className={styles.heading}>Problems we solve</h2>
+            {/* <h2 className={styles.heading}>Problems we solve</h2>
             <p className={styles.copy}>
               Shoppers leave slow, cluttered storefronts in seconds. Generic
               templates and bloated plugins cripple performance, frustrate
               visitors, and drain ad budgets. You deserve a store engineered for
               speed, stability, and storytelling—without hiring an in-house tech
               team or wading through freelance uncertainty.
-            </p>
+            </p> */}
+            <SectionIntroArea
+              sectionTitle='Our Solutions'
+              heading='Problems we solve'
+              copy='hoppers leave slow, cluttered storefronts in seconds. Generic
+              templates and bloated plugins cripple performance, frustrate
+              visitors, and drain ad budgets. You deserve a store engineered for
+              speed, stability, and storytelling—without hiring an in-house tech
+              team or wading through freelance uncertainty.'
+              border='tanBorder'
+              color='tan'
+              dotColor='tanDot'
+            />
           </div>
         </div>
         <div className={styles.bottom}>

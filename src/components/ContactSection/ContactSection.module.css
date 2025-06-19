@@ -2,8 +2,7 @@
   background-color: var(--tan);
   padding-top: 15rem;
   padding-bottom: 15rem;
-    min-height: 100vh;
-
+  min-height: 100vh;
 }
 
 .top {
@@ -43,7 +42,7 @@
 .letsTalkContainer {
   width: fit-content;
   padding: 3rem;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -81,7 +80,7 @@
 
 .form {
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid var(--border);
   width: 100%;
 }

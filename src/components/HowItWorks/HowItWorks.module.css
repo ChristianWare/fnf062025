@@ -29,9 +29,8 @@
 }
 
 .card {
-  border: 1px solid var(--taniii);
-  background-color: var(--tan);
-  border-radius: 10px;
+  background-color: var(--tanii);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,7 +78,7 @@
 
 .img {
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1068px) {

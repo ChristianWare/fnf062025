@@ -76,7 +76,7 @@
 
 .card {
   border: 5px solid var(--tan);
-  border-radius: 10px;
+  border-radius: 15px;
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
   background-color: var(--tanii);

@@ -4,12 +4,16 @@
   gap: 2rem;
   border: 1px solid var(--taniii);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 100%;
 }
 
 .tanBorder {
   border: 1px solid var(--tanii);
+}
+
+.yellowBorder {
+  border: 1px solid var(--yellow);
 }
 
 .noBorder {
@@ -27,6 +31,10 @@
 
 .heading {
   width: 90%;
+}
+
+.tan {
+  color: var(--tan);
 }
 
 .copy {

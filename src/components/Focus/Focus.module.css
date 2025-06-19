@@ -110,13 +110,14 @@
     font-size: 2rem;
   }
 
-  .bottom, .imgContainer {
+  .bottom,
+  .imgContainer {
     margin-top: 3rem;
   }
 
   .card {
     border: 1px solid var(--taniii);
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: var(--tan);
     padding: 3rem;
   }

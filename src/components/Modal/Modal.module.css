@@ -20,7 +20,7 @@
 /* Dialog box */
 .dialog {
   background: var(--white);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 2rem;
   width: 700px;
   max-height: 95vh;

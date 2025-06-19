@@ -12,6 +12,7 @@ interface Props {
   borderBottom?: string;
   height?: string;
   smallHeading?: string;
+  paddingRight?: string;
 }
 
 export default function SectionIntroArea({
@@ -25,16 +26,21 @@ export default function SectionIntroArea({
   borderBottom = "",
   height = "",
   smallHeading = "",
+  paddingRight = "",
 }: Props) {
   return (
     <div
-      className={`${styles.container} ${styles[border]} ${styles[borderBottom]} ${styles[height]}`}
+      className={`${styles.container} ${styles[border]} ${styles[borderBottom]} ${styles[height]} ${styles[paddingRight]}`}
     >
       <div className={styles.sectionHeadingContainer}>
         <SectionIntro title={sectionTitle} color={color} dotColor={dotColor} />
       </div>
       <div className={styles.headingClip}>
-        <h2 className={`${styles.heading} ${styles[color]} ${styles[smallHeading]}`}>{heading}</h2>
+        <h2
+          className={`${styles.heading} ${styles[color]} ${styles[smallHeading]}`}
+        >
+          {heading}
+        </h2>
         {copy && (
           <p className={`${styles.copy} ${styles[copyColor]}`}>{copy}</p>
         )}

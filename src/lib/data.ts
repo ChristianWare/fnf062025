@@ -554,3 +554,75 @@ export const reviews = [
     person: Adam,
   },
 ] as const;
+
+
+export const pricingData = [
+  {
+    id: 1,
+    service: "E-commerce Development",
+    headline: "Building robust, scalable online stores",
+    desc: "Our development team brings your e-commerce vision to life with clean, efficient code and seamless integrations. We build on industry-leading platforms while customizing the functionality to meet your specific business requirements.",
+    // src: Devlopment,
+    price: "$5,900",
+    servicesInclude: [
+      {
+        id: 3.1,
+        serviceName: "Custom e-commerce development",
+        description:
+          "We build tailored e-commerce solutions that address your unique business requirements and customer needs.",
+      },
+      {
+        id: 3.2,
+        serviceName: "Platform migration (Shopify, WooCommerce, etc.)",
+        description:
+          "We seamlessly transition your existing store to a new platform while preserving your data, SEO, and customer experience.",
+      },
+      {
+        id: 3.3,
+        serviceName: "Payment gateway integration",
+        description:
+          "We implement secure, reliable payment processing options that support your customers' preferred payment methods.",
+      },
+      {
+        id: 3.4,
+        serviceName: "Shipping and tax configuration",
+        description:
+          "We set up accurate shipping calculations and tax applications to prevent checkout surprises and abandoned carts.",
+      },
+    ],
+  },
+  // {
+  //   id: 2,
+  //   service: "Booking‑Site Development",
+  //   headline: "Fast, friction‑free scheduling & reservations",
+  //   desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
+  //   src: Booking,
+  //   price: "$4,500",
+  //   servicesInclude: [
+  //     {
+  //       id: 4.1,
+  //       serviceName: "Custom booking‑flow design",
+  //       description:
+  //         "We map and code a user journey that matches your service logic—single appointments, multi‑step rentals, or group sessions—so guests book in under 60 seconds.",
+  //     },
+  //     {
+  //       id: 4.2,
+  //       serviceName: "Real‑time calendar & resource sync",
+  //       description:
+  //         "Your online availability pulls live data from Google Calendar, Microsoft 365, or PMS (Property‑Management System) APIs, eliminating double‑bookings.",
+  //     },
+  //     {
+  //       id: 4.3,
+  //       serviceName: "Integrated payments & deposits",
+  //       description:
+  //         "Stripe and Square gateways handle deposits, full charges, or split payments while keeping you PCI compliant.",
+  //     },
+  //     {
+  //       id: 4.4,
+  //       serviceName: "Automated reminders & no‑show protection",
+  //       description:
+  //         "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
+  //     },
+  //   ],
+  // },
+] as const;

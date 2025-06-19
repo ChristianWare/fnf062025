@@ -1,108 +1,34 @@
 import styles from "./ListOfServices.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-import Image from "next/image";
-import Devlopment from "../../../public/images/servicesHero.jpg";
-import Booking from "../../../public/images/bookingii.jpg";
-// import Button from "@/components/Button/Button";
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
+import { pricingData } from "@/lib/data";
 
-const data = [
+const addonSectionData = [
   {
     id: 1,
-    service: "E-commerce Development",
-    headline: "Building robust, scalable online stores",
-    desc: "Our development team brings your e-commerce vision to life with clean, efficient code and seamless integrations. We build on industry-leading platforms while customizing the functionality to meet your specific business requirements.",
-    src: Devlopment,
-    price: "$5,900",
-    servicesInclude: [
-      {
-        id: 3.1,
-        serviceName: "Custom e-commerce development",
-        description:
-          "We build tailored e-commerce solutions that address your unique business requirements and customer needs.",
-      },
-      {
-        id: 3.2,
-        serviceName: "Platform migration (Shopify, WooCommerce, etc.)",
-        description:
-          "We seamlessly transition your existing store to a new platform while preserving your data, SEO, and customer experience.",
-      },
-      {
-        id: 3.3,
-        serviceName: "Payment gateway integration",
-        description:
-          "We implement secure, reliable payment processing options that support your customers' preferred payment methods.",
-      },
-      {
-        id: 3.4,
-        serviceName: "Shipping and tax configuration",
-        description:
-          "We set up accurate shipping calculations and tax applications to prevent checkout surprises and abandoned carts.",
-      },
-      // {
-      //   id: 3.5,
-      //   serviceName: "Inventory management",
-      //   description:
-      //     "We implement systems to track and display product availability in real-time across all your sales channels.",
-      // },
-      // {
-      //   id: 3.6,
-      //   serviceName: "Product data import and setup",
-      //   description:
-      //     "We efficiently organize and import your product catalog with all necessary attributes, variations, and media.",
-      // },
-    ],
+    expansionblock: "Catelog Tier",
+    details: "Every additional band of 75 SKUs (26-100, 101-175, etc.)",
+    price: "$1,200",
   },
   {
     id: 2,
-    service: "Booking‑Site Development",
-    headline: "Fast, friction‑free scheduling & reservations",
-    desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
-    src: Booking,
-    price: "$4,500",
-    servicesInclude: [
-      {
-        id: 4.1,
-        serviceName: "Custom booking‑flow design",
-        description:
-          "We map and code a user journey that matches your service logic—single appointments, multi‑step rentals, or group sessions—so guests book in under 60 seconds.",
-      },
-      {
-        id: 4.2,
-        serviceName: "Real‑time calendar & resource sync",
-        description:
-          "Your online availability pulls live data from Google Calendar, Microsoft 365, or PMS (Property‑Management System) APIs, eliminating double‑bookings.",
-      },
-      {
-        id: 4.3,
-        serviceName: "Integrated payments & deposits",
-        description:
-          "Stripe and Square gateways handle deposits, full charges, or split payments while keeping you PCI compliant.",
-      },
-      {
-        id: 4.4,
-        serviceName: "Automated reminders & no‑show protection",
-        description:
-          "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
-      },
-      // {
-      //   id: 4.5,
-      //   serviceName: "Multi‑location & staff management",
-      //   description:
-      //     "We build admin dashboards where you assign services, set staff hours, and manage pricing per location—all in one place.",
-      // },
-      // {
-      //   id: 4.6,
-      //   serviceName: "Analytics & occupancy reporting",
-      //   description:
-      //     "Custom dashboards surface key KPIs like utilisation rate, average booking value, and repeat‑guest percentage so you can optimise pricing and staffing.",
-      // },
-      // {
-      //   id: 4.7,
-      //   price: "$5,900",
-      // },
-    ],
+    expansionblock: "Channel Tier",
+    details: "Each additional language or currency beyond the first",
+    price: "$1,000",
+  },
+  {
+    id: 3,
+    expansionblock: "Feature Tier",
+    details:
+      "Any bespoke module—subscription engine, product customiser, B2B pricing",
+    price: "Starting at $1,500 per module",
+  },
+  {
+    id: 4,
+    expansionblock: "Integration Tier",
+    details: "ERP, CRM, or fulfilment API beyond the native Shopify connectors",
+    price: "$2,000 per integration",
   },
 ];
 
@@ -113,30 +39,23 @@ export default function ListOfServices() {
         <div className={styles.top}>
           <div className={styles.sectionHeadingContainer}>
             <SectionHeading2 title='Services + Pricing' color='tan' />
-            
           </div>
           <div className={styles.sectionIntroAreaBox}></div>
         </div>
         <div className={styles.content}>
-          {data.map((a) => (
+          {pricingData.map((a) => (
             <div key={a.id} className={styles.section}>
-              {/* <h3 className={styles.title}>{a.service}</h3> */}
-              <SectionIntroArea
-                sectionTitle={`service ${a.id}`}
-                heading={a.service}
-                border='tanBorder'
-                borderBottom='borderBottom'
-                smallHeading='smallHeading'
-              />
-              {/* <p className={styles.desc}>{a.desc}</p> */}
               <div className={styles.bottom}>
                 <div className={styles.imgContainer}>
-                  <Image
-                    src={a.src}
-                    alt=''
-                    title=''
-                    fill
-                    className={styles.img}
+                  <SectionIntroArea
+                    sectionTitle={`service ${a.id}`}
+                    heading={a.service}
+                    border='taniiiBorder'
+                    smallHeading='smallHeading'
+                    copy='Custom built website, with up to 25 live SKUs, single language, single currency, Stripe or Shopify Payments. Timeline: four weeks.'
+                    height='height100'
+                    copyColor='grayiiCopyColor'
+                    paddingRight='paddingRight'
                   />
                 </div>
                 {a.servicesInclude.map((b) => (
@@ -151,26 +70,58 @@ export default function ListOfServices() {
                     </div>
                   </div>
                 ))}
-                {/* <div className={styles.priceContainer}> */}
-                {/* <h4 className={styles.price}>{a.price}</h4> */}
                 <div className={styles.sectionIntroAreaBox}>
                   <SectionIntroArea
-                    sectionTitle='Price:'
+                    sectionTitle='Core Build:'
                     heading={a.price}
                     border='taniiiBorder'
                     height='height100'
                     smallHeading='smallHeading'
                   />
                 </div>
-                {/* </div> */}
               </div>
-              {/* <div className={styles.btnContainer}>
-                <Button
-                  text='Start My Project'
-                  btnType='primary'
-                  href='/contact'
-                />
-              </div> */}
+              <div className={styles.addonSection}>
+                <div className={styles.addonSectionTop}>
+                  <h3 className={styles.addonsHeading}>
+                    Expansion blocks and price add-ons
+                  </h3>
+                </div>
+                <div className={styles.addonSectionBottom}>
+                  <div className={styles.addonSectionTableHeadings}>
+                    <h4 className={styles.title}>Expansion Block</h4>
+                    <h4 className={styles.title}>When it Triggers</h4>
+                    <h4 className={styles.title}>Add-on fee (USD)</h4>
+                  </div>
+                  <div className={styles.mapData}>
+                    {addonSectionData.map((x) => (
+                      <div
+                        key={x.id}
+                        className={styles.addonSectionBottomContainer}
+                      >
+                        {" "}
+                        <div>
+                          <h4 className={styles.titleMobile}>
+                            Expansion Block:
+                          </h4>
+                          <h5 className={styles.titleii}>{x.expansionblock}</h5>
+                        </div>
+                        <div>
+                          <h4 className={styles.titleMobile}>
+                            When it Triggers:
+                          </h4>
+                          <p className={styles.info}>{x.details}</p>
+                        </div>
+                        <div>
+                          <h4 className={styles.titleMobile}>
+                            Add-on fee (USD):
+                          </h4>
+                          <p className={styles.info}>{x.price}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

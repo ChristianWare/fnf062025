@@ -47,10 +47,6 @@
 }
 
 .imgContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
   grid-column: span 2;
 }
 
@@ -96,7 +92,6 @@
 
 .sectionIntroAreaBox {
   grid-column: span 2;
-  /* border-radius: 15px; */
   height: 100%;
 }
 
@@ -113,8 +108,57 @@
   justify-content: center;
 }
 
-.btnContainer {
-  margin-top: 3rem;
+.addonSection {
+  margin-top: 15rem;
+}
+
+.addonSectionTop {
+  margin-bottom: 3rem;
+}
+
+.addonsHeading {
+  font-size: 3rem;
+  /* text-transform: none; */
+  /* font-family: var(--SuisseIntlMedium); */
+}
+
+.addonSectionBottom {
+  padding-top: 2rem;
+}
+
+.addonSectionTableHeadings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  border-bottom: 2px solid var(--tanii);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title,
+.titleMobile {
+  font-size: 2rem;
+  text-transform: none;
+  font-family: var(--SuisseIntlMedium);
+}
+
+.titleMobile {
+  display: none;
+}
+
+.mapData {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+}
+
+.addonSectionBottomContainer {
+  background-color: var(--tan);
+  padding: 2rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
 }
 
 @media screen and (max-width: 1268px) {
@@ -132,7 +176,8 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .sectionIntroAreaBox {
+  .sectionIntroAreaBox,
+  .sectionHeadingContainer {
     width: 100%;
   }
 
@@ -168,7 +213,6 @@
 
   .imgContainer {
     grid-column: span 1;
-    height: 250px;
   }
 }
 
@@ -188,10 +232,10 @@
     grid-column: span 2;
   }
 
-  .title {
+  /* .title {
     text-align: center;
     margin-bottom: 2rem;
-  }
+  } */
 
   .serviceName {
     width: 100%;
@@ -204,5 +248,49 @@
     justify-self: center;
 
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  /* .addonSectionBottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3rem;
+  } */
+
+  .addonSectionTop {
+    margin-bottom: 1rem;
+  }
+
+  .addonsHeading {
+    text-align: center;
+  }
+
+  .addonSectionTableHeadings {
+    display: none;
+  }
+
+  .addonSectionBottomContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .titleMobile {
+    display: block;
+    /* font-family: var(--SuisseIntlCondensed); */
+    /* text-transform: uppercase; */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+
+  .info,
+  .titleii {
+    font-family: var(--SuisseIntlMedium);
+    text-transform: none;
+  }
+
+  .titleii {
+    margin-bottom: 1rem;
   }
 }

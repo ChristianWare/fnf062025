@@ -82,6 +82,7 @@
   font-size: 2.5rem;
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
+  width: 90%;
 }
 
 .cardRight {

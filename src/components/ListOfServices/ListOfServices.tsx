@@ -4,34 +4,6 @@ import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
 import { pricingData } from "@/lib/data";
 
-const addonSectionData = [
-  {
-    id: 1,
-    expansionblock: "Catelog Tier",
-    details: "Every additional band of 75 SKUs (26-100, 101-175, etc.)",
-    price: "$1,200",
-  },
-  {
-    id: 2,
-    expansionblock: "Channel Tier",
-    details: "Each additional language or currency beyond the first",
-    price: "$1,000",
-  },
-  {
-    id: 3,
-    expansionblock: "Feature Tier",
-    details:
-      "Any bespoke module—subscription engine, product customiser, B2B pricing",
-    price: "Starting at $1,500 per module",
-  },
-  {
-    id: 4,
-    expansionblock: "Integration Tier",
-    details: "ERP, CRM, or fulfilment API beyond the native Shopify connectors",
-    price: "$2,000 per integration",
-  },
-];
-
 export default function ListOfServices() {
   return (
     <section className={styles.container}>
@@ -40,7 +12,6 @@ export default function ListOfServices() {
           <div className={styles.sectionHeadingContainer}>
             <SectionHeading2 title='Services + Pricing' color='tan' />
           </div>
-          <div className={styles.sectionIntroAreaBox}></div>
         </div>
         <div className={styles.content}>
           {pricingData.map((a) => (
@@ -93,7 +64,7 @@ export default function ListOfServices() {
                     <h4 className={styles.title}>Add-on fee (USD)</h4>
                   </div>
                   <div className={styles.mapData}>
-                    {addonSectionData.map((x) => (
+                    {a.addonSectionData.map((x) => (
                       <div
                         key={x.id}
                         className={styles.addonSectionBottomContainer}

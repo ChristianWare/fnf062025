@@ -559,7 +559,7 @@ export const reviews = [
 export const pricingData = [
   {
     id: 1,
-    service: "E-commerce Development",
+    service: "E-commerce Shop",
     headline: "Building robust, scalable online stores",
     desc: "Our development team brings your e-commerce vision to life with clean, efficient code and seamless integrations. We build on industry-leading platforms while customizing the functionality to meet your specific business requirements.",
     // src: Devlopment,
@@ -590,39 +590,96 @@ export const pricingData = [
           "We set up accurate shipping calculations and tax applications to prevent checkout surprises and abandoned carts.",
       },
     ],
+    addonSectionData: [
+      {
+        id: 1,
+        expansionblock: "Catelog Tier",
+        details: "Every additional band of 75 SKUs (26-100, 101-175, etc.)",
+        price: "$1,200",
+      },
+      {
+        id: 2,
+        expansionblock: "Channel Tier",
+        details: "Each additional language or currency beyond the first",
+        price: "$1,000",
+      },
+      {
+        id: 3,
+        expansionblock: "Feature Tier",
+        details:
+          "Any bespoke module—subscription engine, product customiser, B2B pricing",
+        price: "Starting at $1,500 per module",
+      },
+      {
+        id: 4,
+        expansionblock: "Integration Tier",
+        details:
+          "ERP, CRM, or fulfilment API beyond the native Shopify connectors",
+        price: "$2,000 per integration",
+      },
+    ],
   },
-  // {
-  //   id: 2,
-  //   service: "Booking‑Site Development",
-  //   headline: "Fast, friction‑free scheduling & reservations",
-  //   desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
-  //   src: Booking,
-  //   price: "$4,500",
-  //   servicesInclude: [
-  //     {
-  //       id: 4.1,
-  //       serviceName: "Custom booking‑flow design",
-  //       description:
-  //         "We map and code a user journey that matches your service logic—single appointments, multi‑step rentals, or group sessions—so guests book in under 60 seconds.",
-  //     },
-  //     {
-  //       id: 4.2,
-  //       serviceName: "Real‑time calendar & resource sync",
-  //       description:
-  //         "Your online availability pulls live data from Google Calendar, Microsoft 365, or PMS (Property‑Management System) APIs, eliminating double‑bookings.",
-  //     },
-  //     {
-  //       id: 4.3,
-  //       serviceName: "Integrated payments & deposits",
-  //       description:
-  //         "Stripe and Square gateways handle deposits, full charges, or split payments while keeping you PCI compliant.",
-  //     },
-  //     {
-  //       id: 4.4,
-  //       serviceName: "Automated reminders & no‑show protection",
-  //       description:
-  //         "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
-  //     },
-  //   ],
-  // },
+  {
+    id: 2,
+    service: "Booking Platform",
+    headline: "Fast, friction‑free scheduling & reservations",
+    desc: "We build conversion‑focused booking platforms for service brands—salons, luxury car services, vacation rentals, clinics, and more. Each site delivers a seamless, mobile‑first flow from availability search to paid confirmation, fully integrated with your back‑office tools.",
+    price: "$4,500",
+    servicesInclude: [
+      {
+        id: 4.1,
+        serviceName: "Custom booking‑flow design",
+        description:
+          "We map and code a user journey that matches your service logic—single appointments, multi‑step rentals, or group sessions—so guests book in under 60 seconds.",
+      },
+      {
+        id: 4.2,
+        serviceName: "Real‑time calendar & resource sync",
+        description:
+          "Your online availability pulls live data from Google Calendar, Microsoft 365, or PMS (Property‑Management System) APIs, eliminating double‑bookings.",
+      },
+      {
+        id: 4.3,
+        serviceName: "Integrated payments & deposits",
+        description:
+          "Stripe and Square gateways handle deposits, full charges, or split payments while keeping you PCI compliant.",
+      },
+      {
+        id: 4.4,
+        serviceName: "Automated reminders & no‑show protection",
+        description:
+          "SMS and email reminders reduce no‑shows by up to 40 %. Optional card‑on‑file or late‑cancel fees protect revenue.",
+      },
+    ],
+    addonSectionData: [
+      {
+        id: 1,
+        expansionblock: "Resource Tier",
+        details:
+          "Every additional bundle of 5 staff calendars or rental units beyond the first 3 that are included in the core build",
+        price: "$600",
+      },
+      {
+        id: 2,
+        expansionblock: "Location Tier",
+        details:
+          "Each extra physical branch, villa, or property added to the same booking backend",
+        price: "$800",
+      },
+      {
+        id: 3,
+        expansionblock: "Feature Tier",
+        details:
+          "Custom add-ons such as dynamic pricing, membership programmes, gift-card store, or upsell package builder",
+        price: "Starting at $1,200 per module",
+      },
+      {
+        id: 4,
+        expansionblock: "Integration Tier",
+        details:
+          "External Property-Management System (PMS), CRM, or accounting API beyond default Stripe export and Google Calendar sync",
+        price: "$1,800 per integration",
+      },
+    ],
+  },
 ] as const;

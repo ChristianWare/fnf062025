@@ -5,40 +5,41 @@ import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 const data = [
   {
     id: 1,
-    feature: "B2C storefronts",
-    desc: "→ Direct-to-consumer online shops ideal for retail brands, specialty goods, and independent artisans looking to sell products directly to end consumers.",
+    feature: "Mobile-first responsive design",
+    desc: "→ Every page adapts fluidly to phones, tablets, and desktops, ensuring faster mobile checkout and higher Google ranking.",
   },
   {
     id: 2,
-    feature: "B2B portals",
-    desc: "→ Business-focused platforms perfect for wholesalers, manufacturers, industrial suppliers, and service providers who primarily sell to other businesses rather than consumers.",
+    feature: "Performance & Core Web Vitals",
+    desc: "→ Code and image pipelines tuned for sub-1.5 s Largest Contentful Paint and >90 Lighthouse scores out of the box.",
   },
   {
     id: 3,
-    feature: "Subscription services",
-    desc: "→ Recurring billing platforms ideal for software companies (SaaS), content creators, box subscription services, and membership organizations requiring regular payment processing.",
+    feature: "SEO & schema foundations",
+    desc: "→ Clean URL structure, JSON-LD product or service schema, and meta-tag automation so search engines understand and index your site from day one.",
   },
   {
     id: 4,
-    feature: "Digital product delivery",
-    desc: "→ Platforms for selling and distributing non-physical goods, perfect for educational content creators, software developers, digital artists, and e-book publishers.",
+    feature: "Accessible UI components",
+    desc: "→ WCAG-compliant colour contrast, keyboard navigation, and ARIA labels so every customer can shop or book with ease.",
   },
   {
     id: 5,
-    feature: "Service booking platforms",
-    desc: "→ Appointment and reservation systems ideal for consultants, healthcare providers, beauty professionals, fitness instructors, and event venues needing to manage client scheduling.",
+    feature: "Secure payment & data hygiene",
+    desc: "→ PCI-compliant Stripe or Shopify Payments integration, HTTPS everywhere, and GDPR-ready consent banners.",
   },
   {
     id: 6,
-    feature: "Rental platforms",
-    desc: "→ Temporary-use item booking systems ideal for equipment rental businesses, property managers, vehicle rentals, and peer-to-peer sharing economy ventures.",
+    feature: "Self-serve content manager",
+    desc: "→ Headless CMS or Shopify metafields that let your team edit copy, images, and pricing without touching code.",
   },
   {
     id: 7,
-    feature: "Multi-vendor marketplaces",
-    desc: "→ Platforms hosting multiple sellers, perfect for community marketplaces, industry-specific exchanges, and businesses looking to create their own Amazon or Etsy-like ecosystem.",
+    feature: "Launch training & 14-day support",
+    desc: "→ Recorded walk-through, step-by-step manuals, and two weeks of bug-fix coverage to keep your go-live stress-free.",
   },
 ];
+
 
 export default function Process() {
   return (
@@ -50,20 +51,13 @@ export default function Process() {
               <div className={styles.sectionHeadingContainer}>
                 <div className={styles.sectionIntroAreaBox}>
                   <SectionIntroArea
-                    sectionTitle='Why Fonts & Footers?'
-                    heading='What we build'
+                    sectionTitle="What's included"
+                    heading='Everything we build comes with...'
                     border='tanBorder'
-                    copy="Whether you're selling directly to consumers, building a
-                B2B portal, or creating a multi-vendor marketplace, we have the
-                expertise to build the perfect solution for your business model:"
+                    copy='Every Fonts & Footers build—whether it’s an online store, a booking portal, or a rental platform—ships with this same quality baseline. That means clients don’t pay extra for fundamentals like mobile speed, security, accessibility, or search visibility; they’re woven into the code from the first commit, letting you focus your proposal on the strategic add-ons that truly differentiate each project.'
                   />
                 </div>
               </div>
-              {/* <p className={styles.heading}>
-                Whether you&apos;re selling directly to consumers, building a
-                B2B portal, or creating a multi-vendor marketplace, we have the
-                expertise to build the perfect solution for your business model:
-              </p> */}
             </div>
           </div>
           <div className={styles.right}>

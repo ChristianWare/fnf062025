@@ -20,7 +20,7 @@
 .content {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 15rem;
+  grid-gap:30rem;
   margin-top: 5rem;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .addonSection {
-  margin-top: 15rem;
+  margin-top:7rem;
 }
 
 .addonSectionTop {

@@ -52,6 +52,7 @@ export default function Process() {
                   <SectionIntroArea
                     sectionTitle='Why Fonts & Footers?'
                     heading='What we build'
+                    border='tanBorder'
                     copy="Whether you're selling directly to consumers, building a
                 B2B portal, or creating a multi-vendor marketplace, we have the
                 expertise to build the perfect solution for your business model:"

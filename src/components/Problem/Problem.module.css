@@ -45,13 +45,25 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
-  border-bottom: 1px solid var(--gray);
-  /* border-radius: 15px; */
+  border: 1px solid var(--gray);
+  border-radius: 15px;
   background-color: var(--black);
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
   top: 90px;
+}
+
+.blackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--tan);
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .index {
@@ -160,6 +172,8 @@
   .card {
     gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
+    border-radius: 15px;
+    border: 1px solid var(--gray);
   }
 
   .btnContainer {

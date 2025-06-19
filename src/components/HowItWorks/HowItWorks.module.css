@@ -40,7 +40,19 @@
   position: relative;
 }
 
-.indexContainer {
+.blackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* .indexContainer {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -48,11 +60,13 @@
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--black);
-}
+} */
 
 .index {
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 8rem;
+  color: var(--yellow);
+  -webkit-text-stroke: 1px var(--black);
+  /* -webkit-text-fill-color: transparent; */
 }
 
 .feature {
@@ -133,6 +147,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 90px;
+    border: 1px solid var(--taniii);
   }
 
   .desc {

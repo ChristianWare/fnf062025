@@ -107,10 +107,10 @@
 .card {
   /* border-top-right-radius: 500px; */
   /* border-bottom-right-radius: 500px; */
-  border-bottom: 1px solid var(--taniii);
-  /* border-radius: 15px; */
+  border: 1px solid var(--taniii);
+  border-radius: 15px;
   background-color: var(--tan);
-  padding: 3rem 0rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

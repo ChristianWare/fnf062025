@@ -47,20 +47,22 @@ const Problem = () => {
             <SectionIntroArea
               sectionTitle='Our Solutions'
               heading='Problems we solve'
-              copy='hoppers leave slow, cluttered storefronts in seconds. Generic
+              copy='Shoppers leave slow, cluttered storefronts in seconds. Generic
               templates and bloated plugins cripple performance, frustrate
               visitors, and drain ad budgets. You deserve a store engineered for
               speed, stability, and storytelling—without hiring an in-house tech
               team or wading through freelance uncertainty.'
-              border='tanBorder'
+              border='grayBorder'
               color='tan'
               dotColor='tanDot'
+              copyColor='tanCopy'
             />
           </div>
         </div>
         <div className={styles.bottom}>
           {data.map((x, index) => (
             <div key={index} className={styles.card}>
+              <span className={styles.blackDot} />
               <span className={styles.index}>0{index + 1}</span>
               <div className={styles.cardRight}>
                 <h3 className={styles.title}>{x.title}</h3>

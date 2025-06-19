@@ -47,6 +47,7 @@ const HowItWorks = () => {
             <div className={styles.bottom}>
               {data.map((x) => (
                 <div key={x.id} className={styles.card}>
+                  <span className={styles.blackDot} />
                   <div className={styles.indexContainer}>
                     <span className={styles.index}>{x.id}</span>
                   </div>

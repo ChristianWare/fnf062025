@@ -16,6 +16,15 @@
   border: 1px solid var(--yellow);
 }
 
+.grayBorder {
+  border: 1px solid var(--gray);
+}
+
+.taniiBorder {
+  background-color: var(--tanii);
+  border: none;
+}
+
 .noBorder {
   border: none;
   padding: 0rem;
@@ -37,11 +46,21 @@
   color: var(--tan);
 }
 
+.yellow {
+  color: var(--yellow);
+  -webkit-text-stroke: 1px var(--black);
+}
+
 .copy {
   font-size: 2.5rem;
   letter-spacing: -0.5px;
   z-index: 2;
   margin-top: 2rem;
+  /* color: var(--black) */
+}
+
+.tanCopy {
+  color: var(--tan);
 }
 
 @media screen and (max-width: 1068px) {

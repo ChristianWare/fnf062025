@@ -6,6 +6,7 @@ interface Props {
   heading: string;
   color?: string;
   copy?: string;
+  copyColor?: string;
   dotColor?: string;
   border?: string;
   borderBottom?: string;
@@ -16,6 +17,7 @@ export default function SectionIntroArea({
   heading,
   copy,
   color = "",
+  copyColor = "",
   dotColor = "",
   border = "",
   borderBottom = "",
@@ -29,7 +31,9 @@ export default function SectionIntroArea({
       </div>
       <div className={styles.headingClip}>
         <h2 className={`${styles.heading} ${styles[color]}`}>{heading}</h2>
-        {copy && <p className={`${styles.copy} ${styles[color]}`}>{copy}</p>}
+        {copy && (
+          <p className={`${styles.copy} ${styles[copyColor]}`}>{copy}</p>
+        )}
       </div>
     </div>
   );

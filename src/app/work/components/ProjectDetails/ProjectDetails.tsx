@@ -14,7 +14,12 @@ interface Props {
 export default function ProjectDetails({ project }: Props) {
   return (
     <div className={styles.container}>
-      <SectionIntroArea sectionTitle='E-commerce' heading={project.title} />
+      <SectionIntroArea
+        sectionTitle='E-commerce'
+        heading={project.title}
+        color='yellow'
+        border='taniiBorder'
+      />
       <div>
         <p className={styles.desc}>{project.description}</p>
         <div className={styles.btnContainer}>

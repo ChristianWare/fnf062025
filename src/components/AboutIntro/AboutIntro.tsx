@@ -31,6 +31,8 @@ export default function AboutIntro() {
                 both design and development, Fonts &amp; Footers was born from
                 the recognition that successful online stores require both
                 beautiful aesthetics and robust functionality.'
+                color='yellow'
+                border='taniiBorder'
               />
               <p className={styles.copy}>
                 We exist exclusively for small to mid-sized businesses that sell

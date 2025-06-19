@@ -4,6 +4,7 @@ import Img1 from "../../../public/images/serviceii.jpg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
+
 const data = [
   {
     id: 1,
@@ -58,6 +59,7 @@ export default function Why() {
             <div className={styles.bottomRight}>
               {data.map((item) => (
                 <div className={styles.card} key={item.id}>
+                  {/* <span className={styles.blackDot} /> */}
                   <h3 className={styles.title}>{item.title}</h3>
                   <p className={styles.desc}>{item.desc}</p>
                 </div>

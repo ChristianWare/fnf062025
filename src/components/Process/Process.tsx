@@ -53,7 +53,7 @@ export default function Process() {
                   <SectionIntroArea
                     sectionTitle="What's included"
                     heading='Everything we build comes with...'
-                    border='tanBorder'
+                    border='taniiiBorder'
                     copy='Every Fonts & Footers build—whether it’s an online store, a booking portal, or a rental platform—ships with this same quality baseline. That means clients don’t pay extra for fundamentals like mobile speed, security, accessibility, or search visibility; they’re woven into the code from the first commit, letting you focus your proposal on the strategic add-ons that truly differentiate each project.'
                   />
                 </div>

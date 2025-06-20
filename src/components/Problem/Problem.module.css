@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--black);
+  background-color: var(--tan);
   padding: 15rem 0rem;
   padding-bottom: 20rem;
   position: relative;
@@ -35,9 +35,9 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5rem;
+  grid-gap: 2rem;
   margin-top: 5rem;
-  width: 60%;
+  width: 50%;
   margin-left: auto;
 }
 
@@ -45,20 +45,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
-  border: 1px solid var(--gray);
   border-radius: 15px;
-  background-color: var(--black);
-  align-self: flex-start;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 90px;
+  background-color: var(--tanii);
+  position: relative;
 }
 
 .blackDot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--tan);
+  background-color: var(--black);
   display: block;
   margin-left: auto;
   position: absolute;
@@ -67,8 +63,9 @@
 }
 
 .index {
-  font-size: 8rem;
   color: var(--yellow);
+  -webkit-text-stroke: 1px var(--black);
+  font-size: 8rem;
 }
 
 .cardRight {
@@ -81,17 +78,17 @@
 
 .title {
   margin-bottom: 1rem;
-  color: var(--tan);
+  color: var(--black);
+  width: 90%;
   font-size: 2.5rem;
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
 }
 
 .description {
-  color: var(--tan);
+  color: var(--text);
   /* font-size: 1.6rem; */
   width: 80%;
-  opacity: 0.7;
 }
 
 .icon {
@@ -173,7 +170,7 @@
     gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
     border-radius: 15px;
-    border: 1px solid var(--gray);
+    /* border: 1px solid var(--gray); */
   }
 
   .btnContainer {

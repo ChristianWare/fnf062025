@@ -62,15 +62,18 @@ h5,
 h6,
 span {
   color: var(--black);
-  font-family: var(--SuisseIntlCondensed);
+  font-family: var(--DoumbarPlateMedium);
   hyphens: auto;
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: 8rem;
-  line-height: 1;
-  letter-spacing: -2px;
+  font-size: 12rem;
+  line-height: .9;
+  letter-spacing: -5.3px;
+  font-weight: 500;
+  /* transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d; */
 }
 
 h2 {

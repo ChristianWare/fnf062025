@@ -98,7 +98,7 @@ export default function Hero() {
             </div>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
-                We Build <br />
+                {/* We Build <br /> */}
                 Blazing fast <br />
                 Online Stores
               </h1>

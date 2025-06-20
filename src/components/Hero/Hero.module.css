@@ -41,7 +41,7 @@
 
 .headingClip {
   line-height: 0.95;
-  font-family: var(--SuisseIntlCondensed);
+  font-family: var(--DoumbarPlateMedium);
 }
 
 .headingClip * {
@@ -54,7 +54,7 @@
   overflow: hidden;
   will-change: transform, opacity, filter;
   backface-visibility: hidden;
-  font-family: var(--SuisseIntlCondensed);
+  font-family: var(--DoumbarPlateMedium);
   color: var(--tan);
 }
 

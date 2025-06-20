@@ -16,8 +16,8 @@
   text-align: center;
   color: var(--yellow);
   margin-bottom: 3rem;
+  font-weight: 500;
 }
-
 
 .content {
   border: 1px solid var(--yellow);
@@ -69,6 +69,7 @@
 .privacy {
   font-size: 1.1rem;
   text-transform: uppercase;
+  color: var(--yellow);
 }
 
 .right {
@@ -145,7 +146,7 @@
 
   .left {
     border-right: none;
-    border-bottom: 2px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow);
   }
 }
 

@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
-  /* border: 1px solid var(--taniii); */
+  border: 1px solid var(--tanii);
   background-color: var(--tan);
   border-radius: 15px;
   align-self: flex-start;

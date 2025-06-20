@@ -1,5 +1,5 @@
-import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 import styles from "./Problem.module.css";
+import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 const Problem = () => {
@@ -52,10 +52,6 @@ const Problem = () => {
               visitors, and drain ad budgets. You deserve a store engineered for
               speed, stability, and storytelling—without hiring an in-house tech
               team or wading through freelance uncertainty.'
-              border='grayBorder'
-              color='tan'
-              dotColor='tanDot'
-              copyColor='tanCopy'
             />
           </div>
         </div>
@@ -63,7 +59,7 @@ const Problem = () => {
           {data.map((x, index) => (
             <div key={index} className={styles.card}>
               <span className={styles.blackDot} />
-              <span className={styles.index}>0{index + 1}</span>
+              <span className={styles.index}>{index + 1}</span>
               <div className={styles.cardRight}>
                 <h3 className={styles.title}>{x.title}</h3>
                 <p className={styles.description}>{x.description}</p>

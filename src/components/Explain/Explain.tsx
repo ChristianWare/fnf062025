@@ -28,7 +28,7 @@ export default function Explain() {
       scrollTrigger: {
         trigger: triggerRef.current,
         scrub: 0.5,
-        start: "top center",
+        start: "center center",
         end: "bottom center",
         markers: false,
       },

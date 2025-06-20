@@ -165,12 +165,6 @@
     width: 100%;
   }
 
-  .faslBtnContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .bottomLeft {
     position: static;
   }
@@ -185,6 +179,20 @@
     width: 300px;
     min-height: 300px;
     padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottomRight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .card {
+    position: -webkit-static;
+  position: static;
+  height: 100%;
   }
 }
 

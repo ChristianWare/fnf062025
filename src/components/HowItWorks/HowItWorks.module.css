@@ -142,27 +142,6 @@
   }
 
   .card {
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 90px;
-    border: 1px solid var(--taniii);
-  }
-
-  .desc {
-    text-align: center;
-  }
-
-  .feature {
-    text-align: center;
-    width: 100%;
-  }
-
-  .imgContainer {
-    height: 300px;
+    padding: 2rem;
   }
 }

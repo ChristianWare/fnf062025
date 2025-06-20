@@ -42,10 +42,11 @@
 }
 
 .span {
+  font-weight:400;
   display: block;
   line-height: 1;
-  -webkit-text-stroke: 2px var(--white);
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-stroke: 2px var(--white);
+  -webkit-text-fill-color: transparent; */
 }
 
 .bottom {
@@ -107,19 +108,20 @@
     width: 100%;
   }
 
-  .copy {
+  .heading {
+    text-align: left;
+  }
+
+  /* .copy {
     text-align: center;
     max-width: none;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
-  .span {
-    -webkit-text-stroke: 2px var(--white);
-  }
 
   .heading {
-    font-size: 11vw;
+    font-size: 15vw;
   }
 }

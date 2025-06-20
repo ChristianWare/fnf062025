@@ -4,7 +4,6 @@ import Img1 from "../../../public/images/serviceii.jpg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 
-
 const data = [
   {
     id: 1,
@@ -12,22 +11,22 @@ const data = [
     desc: "Every pixel is crafted around your brand and products, not crammed into a generic theme, so shoppers feel they’re on a store made just for them.",
   },
   {
-    id: 3,
+    id: 2,
     title: "Smooth Interactions",
     desc: "Subtle animations and intuitive transitions guide visitors naturally from discovery to checkout, boosting engagement and sales.",
   },
   {
-    id: 4,
+    id: 3,
     title: "Future-Proof Flexibility",
     desc: "A clean, modular architecture lets you add features or integrations later without costly rebuilds or platform limitations.",
   },
   {
-    id: 5,
+    id: 4,
     title: "True Ownership",
     desc: "You control every line of code—no monthly template fees, no lock-in—so scaling or moving platforms is always your choice.",
   },
   {
-    id: 2,
+    id: 5,
     title: "Lightning-Fast Performance",
     desc: "Hand-written code removes unnecessary bloat, letting pages load in under a second and keeping potential buyers from bouncing away.",
   },
@@ -59,9 +58,14 @@ export default function Why() {
             <div className={styles.bottomRight}>
               {data.map((item) => (
                 <div className={styles.card} key={item.id}>
-                  {/* <span className={styles.blackDot} /> */}
-                  <h3 className={styles.title}>{item.title}</h3>
-                  <p className={styles.desc}>{item.desc}</p>
+                  <span className={styles.blackDot} />
+                  <div className={styles.indexContainer}>
+                    <span className={styles.index}>{item.id}</span>
+                  </div>
+                  <div>
+                    <h3 className={styles.title}>{item.title}</h3>
+                    <p className={styles.desc}>{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

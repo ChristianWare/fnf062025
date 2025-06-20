@@ -251,6 +251,12 @@
     grid-gap: 1rem;
   }
 
+  .mapData {
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
   .addonSectionTop {
     margin-bottom: 1rem;
   }

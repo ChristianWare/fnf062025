@@ -183,16 +183,22 @@
 }
 
 @media screen and (max-width: 568px) {
+  .bottom {
+    grid-gap: 1rem;
+  }
+  
   .bottomRight {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
+    margin-top: 0rem;
   }
 
   .card {
     position: -webkit-static;
   position: static;
   height: 100%;
+  padding: 2rem;
   }
 }
 

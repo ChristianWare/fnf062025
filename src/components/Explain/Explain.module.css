@@ -1,6 +1,7 @@
 .container {
   padding-top: 20rem;
   background-color: var(--white);
+  min-height: 75vh;
   /* padding-bottom: 17rem; */
 }
 

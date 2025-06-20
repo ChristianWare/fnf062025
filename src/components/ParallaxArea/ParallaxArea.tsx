@@ -3,7 +3,7 @@
 // import { ReactLenis } from "@studio-freight/react-lenis";
 import styles from "./ParallaxArea.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Img1 from "../../../public/images/aboutIntro.jpg";
+import Img1 from "../../../public/images/speed.jpg";
 import ParallaxImageLarge from "@/components/ParallaxImageLarge/ParallaxImageLarge";
 
 const data = [
@@ -38,7 +38,7 @@ export default function ParallaxArea() {
         <div className={styles.content}>
           <div className={styles.contentChildren}>
             <h2 className={styles.heading}>
-              Your <span className={styles.span}>thunder trail</span>
+              Your <span className={styles.span}>Fonts & Footers</span>
               experience
             </h2>
             <div className={styles.bottom}>

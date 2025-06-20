@@ -1,7 +1,7 @@
 import styles from "./HowItWorks.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
-import Img1 from "../../../public/images/how.jpg";
+import Img1 from "../../../public/images/howItWorks.jpg";
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
 
 const data = [

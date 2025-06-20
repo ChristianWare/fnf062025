@@ -1,6 +1,6 @@
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Img1 from "../../../public/images/aboutIntro.jpg";
+import Img1 from "../../../public/images/speed.jpg";
 import Image from "next/image";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
 

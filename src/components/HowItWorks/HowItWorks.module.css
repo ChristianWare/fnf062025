@@ -85,7 +85,6 @@
 .imgContainer {
   position: relative;
   width: 100%;
-
   grid-column: span 3;
   height: 100%;
 }
@@ -157,5 +156,9 @@
   .feature {
     text-align: center;
     width: 100%;
+  }
+
+  .imgContainer {
+    height: 300px;
   }
 }

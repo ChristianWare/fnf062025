@@ -14,6 +14,7 @@ import ContactSection from "@/components/ContactSection/ContactSection";
 import Footer from "@/components/Footer/Footer";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
 import ProjectPreview from "./work/components/ProjectPreview/ProjectPreview";
+import ParallaxArea from "@/components/ParallaxArea/ParallaxArea";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <ListOfServices />
         <Process />
         <ReviewSection />
+        <ParallaxArea />
         <Faq />
         <ContactHero />
         <ContactSection />

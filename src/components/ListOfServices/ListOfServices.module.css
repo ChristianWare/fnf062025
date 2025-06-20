@@ -247,12 +247,9 @@
 }
 
 @media screen and (max-width: 568px) {
-  /* .addonSectionBottom {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 3rem;
-  } */
+  .bottom {
+    grid-gap: 1rem;
+  }
 
   .addonSectionTop {
     margin-bottom: 1rem;

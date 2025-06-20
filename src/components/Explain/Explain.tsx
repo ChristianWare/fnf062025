@@ -4,6 +4,7 @@ import styles from "./Explain.module.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+// import LayoutWrapper from "../LayoutWrapper";
 
 export default function Explain() {
   const [lettersRef, setLettersRef] = useArrayRef();
@@ -20,7 +21,7 @@ export default function Explain() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const text = "Why Work with Fonts & Footers?";
+  const text = "CUSTOMER SERVICE SOLUTIONS FOR TOP MANAGEMENT";
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -51,22 +52,24 @@ export default function Explain() {
 
   return (
     <section className={styles.container} ref={triggerRef}>
-      <div className={styles.content}>
-        <div className={styles.left}>
-          <h2 className={styles.heading}>
-            {text.split("").map((letter, index) => (
-              <span
-                key={index}
-                className={styles.revealText}
-                ref={setLettersRef}
-              >
-                {letter}
-              </span>
-            ))}
-          </h2>
+      {/* <LayoutWrapper> */}
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <h2 className={styles.heading}>
+              {text.split("").map((letter, index) => (
+                <span
+                  key={index}
+                  className={styles.revealText}
+                  ref={setLettersRef}
+                >
+                  {letter}
+                </span>
+              ))}
+            </h2>
+          </div>
+          <div className={styles.right}></div>
         </div>
-        <div className={styles.right}></div>
-      </div>
+      {/* </LayoutWrapper> */}
     </section>
   );
 }

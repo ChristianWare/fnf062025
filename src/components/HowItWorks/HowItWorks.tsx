@@ -3,6 +3,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../public/images/howItWorks.jpg";
 import SectionIntroArea from "@/components/SectionIntroArea/SectionIntroArea";
+import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
 
 const data = [
   {
@@ -35,6 +36,10 @@ const data = [
 const HowItWorks = () => {
   return (
     <section className={styles.container}>
+      <ScrollVelocity
+        texts={["End to end support •", "End to end support •"]}
+        className='End to end support •'
+      />
       <div className={styles.parent}>
         <LayoutWrapper>
           <div className={styles.box}>

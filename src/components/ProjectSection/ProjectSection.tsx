@@ -12,6 +12,7 @@ import Img3 from "../../../public/images/heroiii.jpeg";
 import Arrow from "@/icons/Arrow/Arrow";
 import gsap from "gsap";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
+import Explain from "../Explain/Explain";
 
 const projectData = [
   {
@@ -137,6 +138,7 @@ export default function ProjectSection() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <Explain />
         <div className={styles.content}>
           <div
             className={styles.projectDataContainer}
@@ -148,6 +150,7 @@ export default function ProjectSection() {
               <SectionIntroArea
                 sectionTitle='Our Portfolio'
                 heading='Featured Projects'
+                border="greyBorder"
               />
             </div>
             {projectData.map((project, index) => (
@@ -200,6 +203,7 @@ export default function ProjectSection() {
                 alt={projectData[activeIndex].title}
                 title='Project preview:'
                 border='taniiiBorder'
+                color="white"
               />
             </div>
           </div>

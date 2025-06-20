@@ -3,7 +3,6 @@
 import styles from "./Support.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
-import Plus from "@/icons/Plus/Plus";
 import { useState } from "react";
 import Image from "next/image";
 import Img1 from "../../../public/images/aboutIntro.jpg";
@@ -54,7 +53,6 @@ export default function Support() {
       />
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.left}></div>
           <div className={styles.right}>
             <h2 className={styles.heading}>
               From discovery to launch.
@@ -76,18 +74,8 @@ export default function Support() {
                   onClick={() => toggle(i)}
                 >
                   <div className={styles.cardTop}>
-                    <div className={styles.title}>
-                      <span className={styles.index}>{i + 1}.</span>
-                      {item.feature}
-                    </div>
-                    {selected === i ? (
-                      <Plus className={styles.iconFlip} />
-                    ) : (
-                      <Plus className={styles.icon} />
-                    )}
+                    <div className={styles.title}>{item.feature}</div>
                   </div>
-
-                  {/* Answer block */}
                   <div
                     className={
                       selected === i

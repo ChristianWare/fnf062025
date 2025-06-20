@@ -2,7 +2,7 @@ import FontsandFooters from "@/components/FontsandFooters/FontsandFooters";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import Why from "@/components/Why/Why";
-import Support from "@/components/Support/Support";
+// import Support from "@/components/Support/Support";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import Process from "@/components/Process/Process";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
@@ -13,8 +13,10 @@ import Faq from "@/components/Faq/Faq";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import Footer from "@/components/Footer/Footer";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
-import ProjectPreview from "./work/components/ProjectPreview/ProjectPreview";
+// import ProjectPreview from "./work/components/ProjectPreview/ProjectPreview";
 import ParallaxArea from "@/components/ParallaxArea/ParallaxArea";
+// import Explain from "@/components/Explain/Explain";
+import ProjectSection from "@/components/ProjectSection/ProjectSection";
 
 export default function Home() {
   return (
@@ -24,9 +26,11 @@ export default function Home() {
         <FontsandFooters />
         <AboutIntro />
         {/* <Problem /> */}
-        <ProjectPreview />
+        {/* <ProjectPreview /> */}
+        {/* <Explain /> */}
+        <ProjectSection />
         <ParallaxArea />
-        <Support />
+        {/* <Support /> */}
         <HowItWorks />
         <Why />
         <ListOfServices />

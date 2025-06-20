@@ -20,15 +20,13 @@ export default function ProjectDetails({ project }: Props) {
         border='greyBorder'
         smallHeading='smallHeading'
       />
-      <div>
-        {/* <p className={styles.desc}>{project.description}</p> */}
-        <div className={styles.btnContainer}>
-          <Button href='/' btnType='outline' text='Live Site' />
-        </div>
-      </div>
+      
       <div className={styles.video}>
         {project.video && <VideoSection video={project.video} />}
       </div>
+        <div className={styles.btnContainer}>
+          <Button href='/' btnType='black' text='Live Site' />
+        </div>
     </div>
   );
 }

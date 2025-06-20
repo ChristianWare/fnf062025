@@ -21,7 +21,7 @@ export default function ProjectDetails({ project }: Props) {
         smallHeading='smallHeading'
       />
       <div>
-        <p className={styles.desc}>{project.description}</p>
+        {/* <p className={styles.desc}>{project.description}</p> */}
         <div className={styles.btnContainer}>
           <Button href='/' btnType='outline' text='Live Site' />
         </div>

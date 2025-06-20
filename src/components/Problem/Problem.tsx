@@ -52,6 +52,7 @@ const Problem = () => {
               visitors, and drain ad budgets. You deserve a store engineered for
               speed, stability, and storytelling—without hiring an in-house tech
               team or wading through freelance uncertainty.'
+              border="greyBorder"
             />
           </div>
         </div>

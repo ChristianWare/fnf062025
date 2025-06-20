@@ -47,9 +47,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
-  border: 1px solid var(--tanii);
-  background-color: var(--tan);
-  border-radius: 15px;
+  border: 1px solid var(--greyii);
+  background-color: var(--grey);
+  border-radius: 10px;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;

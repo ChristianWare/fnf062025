@@ -5,8 +5,13 @@ import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 import { ModalProvider } from "@/context/ModalContext";
+import { Inter } from "next/font/google";
 
-// import CustomCursor from "@/components/CustomCursor/CustomCursor";
+const inter = Inter({
+  variable: "--inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "800", "900"],
+});
 
 const SuisseIntlCondensed = localFont({
   src: "../../public/fonts/SuisseIntlCondBold.woff2",
@@ -45,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={` ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${DoumbarPlateMedium.variable} `}
+        className={` ${SuisseIntlCondensed.variable} ${SuisseIntlMedium.variable} ${SuisseIntlMonoRegular.variable} ${DoumbarPlateMedium.variable} ${inter.variable}`}
       >
         <SmoothScroll>
           <Toaster

@@ -89,7 +89,7 @@ export const pricingii = [
 export const projects = [
   {
     id: 1,
-    title: "Thundertrails",
+    title: "Thunder trails",
     slug: "thundertrails",
     src: Thundertrails,
     icon: Thunder,

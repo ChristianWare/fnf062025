@@ -117,7 +117,7 @@
 
   .card {
     border: 1px solid var(--taniii);
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--tan);
     padding: 3rem;
   }

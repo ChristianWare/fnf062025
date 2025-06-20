@@ -2,7 +2,7 @@
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  background-color: var(--tan);
+  background-color: var(--white);
 }
 
 .content {
@@ -12,7 +12,7 @@
 }
 
 .left {
-  border-right: 1px solid var(--gray);
+  /* border-right: 1px solid var(--gray); */
   display: flex;
   align-items: center;
 }
@@ -47,9 +47,7 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--taniii);
   padding: 1rem 0rem;
-
   width: 100%;
-  /* color: var(--orange); */
 }
 
 .service:nth-child(1) {
@@ -69,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--black);
+  background-color: var(--grey);
 }
 
 .imgContainer {
@@ -102,14 +100,6 @@
   .right {
     padding: 5rem;
   }
-
-  /* .imgContainer {
-    height: 500px;
-  } */
-
-  /* .right {
-    display: none;
-  } */
 }
 
 @media screen and (max-width: 768px) {

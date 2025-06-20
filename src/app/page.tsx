@@ -1,4 +1,4 @@
-import FontsandFooters from "@/components/FontsandFooters/FontsandFooters";
+// import FontsandFooters from "@/components/FontsandFooters/FontsandFooters";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import Why from "@/components/Why/Why";
@@ -21,7 +21,7 @@ export default function Home() {
     <main>
       <div className={styles.scrollContainer}>
         <Hero />
-        <FontsandFooters />
+        {/* <FontsandFooters /> */}
         <AboutIntro />
         <Problem />
         <ProjectPreview />

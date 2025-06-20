@@ -59,8 +59,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
   min-height: 650px;
-  background-color: var(--tan);
-  border-radius: 15px;
+  background-color: var(--grey);
+  border-radius: 10px;
   padding: 5rem;
 }
 
@@ -169,8 +169,7 @@
 }
 
 .arrowBox {
-  /* border: 2px solid var(--black); */
-  background-color: var(--tanii);
+  background-color: var(--greyii);
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -295,7 +294,7 @@
     -webkit-box-orient: vertical;
     box-orient: vertical;
     -webkit-line-clamp: 4;
-    line-clamp:4;
+    line-clamp: 4;
   }
 
   .starContainer {

@@ -31,9 +31,9 @@ export default function AboutIntro() {
                 both design and development, Fonts &amp; Footers was born from
                 the recognition that successful online stores require both
                 beautiful aesthetics and robust functionality.'
-                border='taniiiBorder'
+                border='greyBorder'
               />
-              <p className={styles.copy}>
+              {/* <p className={styles.copy}>
                 We exist exclusively for small to mid-sized businesses that sell
                 physical products online. Whether you move five SKUs or five
                 thousand, we concentrate on headless Shopify and custom Next.js
@@ -41,7 +41,7 @@ export default function AboutIntro() {
                 razor-sharp on e-commerce trends, checkout psychology, and
                 back-office integrations that matter most to merchants—not
                 generic “all-in-one” web services.
-              </p>
+              </p> */}
               <span className={styles.servicesHeading}>We Specialize in:</span>
               <ul className={styles.servicesContainer}>
                 {services.map((x) => (

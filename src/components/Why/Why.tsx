@@ -51,7 +51,7 @@ export default function Why() {
                   src={Img1}
                   alt='Fonts & Footers office'
                   title='Fonts & Footers'
-                  color='tan'
+                  color='white'
                   border='taniiiBorder'
                 />
               </div>

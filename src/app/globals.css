@@ -4,6 +4,8 @@
   --gray: #818588;
   --grayii: #6e7072;
   --lightGray: #dedcdc;
+  --grey: #E4E4E4;
+  --greyii: #C8C8C8;
   /* --yellow: #e7f255; */
   --yellow: #d9fb06;
   --yellow2: #eff77e;
@@ -15,7 +17,7 @@
   --tan: #e9e4dd;
   --tanii: #d5d1b9;
   --taniii: #a39f88;
-  --white: #ffffff;
+  --white: #F5F5F5;
   --text: #625f5f;
   --blue: #2563eb;
 }

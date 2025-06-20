@@ -17,7 +17,8 @@ export default function ProjectDetails({ project }: Props) {
       <SectionIntroArea
         sectionTitle='E-commerce'
         heading={project.title}
-        border='taniiiBorder'
+        border='greyBorder'
+        smallHeading='smallHeading'
       />
       <div>
         <p className={styles.desc}>{project.description}</p>

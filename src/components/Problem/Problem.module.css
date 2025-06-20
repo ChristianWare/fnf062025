@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--tan);
+  background-color: var(--white);
   padding: 15rem 0rem;
   padding-bottom: 20rem;
   position: relative;
@@ -45,8 +45,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
-  border-radius: 15px;
-  background-color: var(--tanii);
+  border-radius: 10px;
+  background-color: var(--grey);
   position: relative;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .index {
-  color: var(--yellow);
+  color: var(--white);
   -webkit-text-stroke: 1px var(--black);
   font-size: 8rem;
 }
@@ -169,7 +169,7 @@
   .card {
     gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
-    border-radius: 15px;
+    border-radius: 10px;
     /* border: 1px solid var(--gray); */
   }
 

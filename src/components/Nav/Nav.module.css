@@ -42,6 +42,7 @@
   padding: 1.3rem 4rem;
   border-radius: 50px;
   border: 1px solid var(--gray);
+  display: none;
 }
 
 .navItemsMobile {

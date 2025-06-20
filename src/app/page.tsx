@@ -9,7 +9,7 @@ import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import ListOfServices from "@/components/ListOfServices/ListOfServices";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Faq from "@/components/Faq/Faq";
-import Problem from "@/components/Problem/Problem";
+// import Problem from "@/components/Problem/Problem";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import Footer from "@/components/Footer/Footer";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
@@ -23,7 +23,7 @@ export default function Home() {
         <Hero />
         {/* <FontsandFooters /> */}
         <AboutIntro />
-        <Problem />
+        {/* <Problem /> */}
         <ProjectPreview />
         <Support />
         <HowItWorks />

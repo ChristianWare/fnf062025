@@ -6,7 +6,7 @@ import Arrow from "@/icons/Plus/Plus";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Img1 from "../../../public/images/faqii.jpg";
+import Img1 from "../../../public/images/faqiii.jpg";
 import { questions } from "@/lib/data";
 
 const cardsData = [

@@ -10,7 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 import LayoutWrapper from "../LayoutWrapper";
-import FalseButton from "../FalseButton/FalseButton";
 import ContactForm from "../ContactForm/ContactForm";
 import Modal from "../Modal/Modal";
 import SectionIntro from "../SectionIntro/SectionIntro";
@@ -73,7 +72,6 @@ export default function Hero() {
   });
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const openModal = useCallback(() => setModalOpen(true), []);
   const closeModal = useCallback(() => setModalOpen(false), []);
 
   return (
@@ -111,32 +109,11 @@ export default function Hero() {
               buyers.
             </p>
 
-            <div className={styles.btnContainer}>
-              <FalseButton
-                text='Get Started'
-                btnType='primary'
-                marquee
-                onClick={openModal}
-              />
-              <FalseButton
-                text='Book A Call'
-                btnType='tanOutline'
-                onClick={openModal}
-              />
-            </div>
+           
           </div>
 
           <div className={styles.right}>
-            {/* <div className={styles.imgContainer}>
-              <Image
-                src={Img1}
-                fill
-                alt=''
-                title=''
-                className={styles.img}
-                placeholder='blur'
-              />
-            </div> */}
+            
           </div>
         </div>
       </LayoutWrapper>

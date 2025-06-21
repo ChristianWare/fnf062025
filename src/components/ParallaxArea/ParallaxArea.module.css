@@ -113,16 +113,15 @@
     text-align: left;
     width: 100%;
   }
-
-  /* .copy {
-    text-align: center;
-    max-width: none;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
   .heading {
     font-size: 15vw;
+  }
+}
+
+@media screen and (max-width: 568px) {
+
+
+  .copy {
+    max-width: fit-content;
   }
 }

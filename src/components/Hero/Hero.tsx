@@ -12,13 +12,14 @@ import SplitType from "split-type";
 import LayoutWrapper from "../LayoutWrapper";
 import ContactForm from "../ContactForm/ContactForm";
 import Modal from "../Modal/Modal";
-import SectionIntro from "../SectionIntro/SectionIntro";
+import Nav from "../Nav/Nav";
+// import SectionIntro from "../SectionIntro/SectionIntro";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Silk = dynamic(() => import("../Silk/Silk"), {
   ssr: false,
-  loading: () => null, 
+  loading: () => null,
 });
 
 export default function Hero() {
@@ -77,6 +78,9 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <div className={styles.silkBg}>
+        <div className={styles.navContainer}>
+          <Nav />
+        </div>
         <Silk
           speed={5}
           scale={1.2}
@@ -91,9 +95,9 @@ export default function Hero() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.sectionHeadingContainer}>
+            {/* <div className={styles.sectionHeadingContainer}>
               <SectionIntro title='FONTS & FOOTERS' color='tan' dotColor='tanDot' />
-            </div>
+            </div> */}
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 We Build <br />
@@ -108,13 +112,9 @@ export default function Hero() {
               written with one purpose: turning casual browsers into loyal
               buyers.
             </p>
-
-           
           </div>
 
-          <div className={styles.right}>
-            
-          </div>
+          <div className={styles.right}></div>
         </div>
       </LayoutWrapper>
       <Modal isOpen={isModalOpen} onClose={closeModal}>

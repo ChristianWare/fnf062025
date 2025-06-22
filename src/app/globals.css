@@ -4,8 +4,8 @@
   --gray: #818588;
   --grayii: #6e7072;
   --lightGray: #dedcdc;
-  --grey: #E4E4E4;
-  --greyii: #C8C8C8;
+  --grey: #e4e4e4;
+  --greyii: #c8c8c8;
   /* --yellow: #e7f255; */
   --yellow: #d9fb06;
   --yellow2: #eff77e;
@@ -17,7 +17,7 @@
   --tan: #e9e4dd;
   --tanii: #d5d1b9;
   --taniii: #a39f88;
-  --white: #F5F5F5;
+  --white: #f5f5f5;
   --text: #625f5f;
   --blue: #2563eb;
 }
@@ -70,18 +70,16 @@ span {
 }
 
 h1 {
-  font-size: 12rem;
-  line-height: .9;
-  letter-spacing: -5.3px;
-  font-weight: 500;
-  /* transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d; */
+  font-size: 10rem;
+  line-height: 0.9;
+  letter-spacing: -4px;
 }
 
 h2 {
   font-size: 7rem;
   line-height: 1;
   letter-spacing: -2px;
+  font-weight: 500;
 }
 
 h3,

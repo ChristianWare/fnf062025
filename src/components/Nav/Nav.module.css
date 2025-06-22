@@ -1,51 +1,35 @@
 .header {
-  padding: 0.7rem;
-  transition: all 0.3s ease-in-out;
-  position: fixed;
-  top: 50px;
-  left: 50%;
-  z-index: 9998;
-  max-width: 1500px;
-  padding-right: 30px;
-  padding-left: 30px;
+  position: relative;          
   width: 100%;
-}
-
-.header.hide {
-  transform: translate(-50%, -150%);
-  opacity: 0;
-}
-
-.header.show {
-  transform: translate(-50%, -50%);
-  opacity: 1;
+  /* padding: 0.7rem 30px; */
+  z-index: 1;                  
 }
 
 .navbar {
-  margin-right: auto;
-  margin-left: auto;
+  /* max-width: 1400px;           */
+  margin: 0 auto; 
+  padding-right: 3rem;            
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  z-index: 1000;
+  
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
 }
 
 .navItems {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
   list-style: none;
-  width: fit-content;
   background-color: var(--black);
   padding: 1.3rem 4rem;
   border-radius: 50px;
   border: 1px solid var(--gray);
-  display: none;
-}
-
-.navItemsMobile {
   display: none;
 }
 
@@ -56,68 +40,48 @@
   line-height: 1;
   color: var(--tan);
   user-select: none;
-  z-index: 998;
 }
 
 .btnContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
+.navItemsMobile,
 .btnContainerMobile {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
   .navItems {
     position: absolute;
     bottom: -90vh;
-    width: 90%;
     left: 50%;
     transform: translateX(-50%);
+    width: 90%;
     justify-content: space-between;
     border-color: var(--yellow);
-  }
-
-  .btnContainerMobile,
-  .navItemsMobile {
-    display: block;
   }
 
   .navItemsMobile {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
     gap: 3rem;
+  }
+
+  .btnContainerMobile {
+    display: block;
   }
 
   .navItem {
     font-size: 3vw;
     color: var(--yellow);
-    transition: all 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
   }
 
   .navItem:hover {
     opacity: 0.5;
   }
-
-  /* .header {
-    top: 0px;
-    padding-top: 8rem;
-    padding-bottom: 1rem;
-    padding-right: 15px;
-    padding-left: 15px;
-    backdrop-filter: blur(90px);
-  } */
 }
 
 @media screen and (max-width: 568px) {

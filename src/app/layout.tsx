@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
+// import Nav from "@/components/Nav/Nav";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
@@ -60,7 +60,7 @@ export default function RootLayout({
             }}
           />
           <ModalProvider>
-            <Nav />
+            {/* <Nav /> */}
 
             {children}
           </ModalProvider>

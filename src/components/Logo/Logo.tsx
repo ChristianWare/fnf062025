@@ -10,11 +10,21 @@ interface Props {
 const Logo = ({ size = "", color = "" }: Props) => {
   return (
     <Link
-      href={"/"}
+      href='/'
       className={`${styles.logo} ${styles[size]} ${styles[color]}`}
     >
-      <Thunder />
+      <div className={styles.svgContainer}>
+        <svg
+          viewBox='0 0 16 16'
+          preserveAspectRatio='none'
+          className={styles.svgNotch}
+        >
+          <use href='#svg-815591482_180' />
+        </svg>
+      </div>
+      <Thunder /> Fonts & Footers
     </Link>
   );
 };
+
 export default Logo;

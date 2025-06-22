@@ -107,7 +107,6 @@
   margin-top: 1rem;
 }
 
-
 /* @media (max-width: 1268px) {
   .container {
     height: auto;
@@ -124,8 +123,20 @@
   }
 } */
 
+@media (max-width: 1068px) {
+  .heading {
+    width: 100%;
+  }
+  .copy {
+    width: 60%;
+  }
+}
 @media (max-width: 768px) {
-  .copy, .heading {
+  .heading {
+    width: 100%;
+  }
+
+  .copy {
     width: 80%;
   }
 }
@@ -151,7 +162,8 @@
     justify-content: flex-start;
   }
 
-  .heading, .copy {
+  .heading,
+  .copy {
     text-align: left;
     width: 100%;
   }

@@ -1,19 +1,18 @@
 .header {
-  position: relative;          
+  position: relative;
   width: 100%;
   /* padding: 0.7rem 30px; */
-  z-index: 1;                  
+  z-index: 1;
 }
 
 .navbar {
   /* max-width: 1400px;           */
-  margin: 0 auto; 
-  padding-right: 3rem;            
+  margin: 0 auto;
+  padding-right: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  
 }
 
 .logoContainer {
@@ -87,5 +86,9 @@
 @media screen and (max-width: 568px) {
   .navItems {
     bottom: -89vh;
+  }
+
+  .btnContainer {
+    display: none;
   }
 }

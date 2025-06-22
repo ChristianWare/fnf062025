@@ -98,7 +98,7 @@ export default function Hero() {
           <div className={styles.left}>
             <div className={styles.sectionHeadingContainer}>
               <SectionIntro
-                title='FONTS & FOOTERS'
+                title='Web Development Agency'
                 color='tan'
                 dotColor='tanDot'
               />

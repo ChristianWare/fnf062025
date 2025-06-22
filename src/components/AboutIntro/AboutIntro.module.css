@@ -5,6 +5,23 @@
   background-color: var(--white);
 }
 
+/* NEW container that replaces .imgContainer */
+.silkContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* keeps the square shape */
+  background-color: var(--grey);
+  overflow: hidden;         /* hides anything outside the mask */
+  pointer-events: none;     /* keeps the shader non-interactive */
+}
+
+.silkContainer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
 .content {
   min-height: 100vh;
   display: grid;
@@ -67,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 .imgContainer {

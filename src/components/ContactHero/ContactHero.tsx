@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 import LayoutWrapper from "@/components/LayoutWrapper";
 // import Contact2 from "../Contact2/Contact2";
 import SectionIntro from "../SectionIntro/SectionIntro";
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 // import ContactForm from "@/components/ContactForm/ContactForm";
 // import { InlineWidget } from "react-calendly";
 // import SectionIntro from "@/components/SectionIntro/SectionIntro";
@@ -28,7 +28,7 @@ export default function ContactHero() {
 
       <LayoutWrapper>
         <div className={styles.top}>
-          <Logo size='large' />
+          {/* <Logo size='large' /> */}
           <SectionIntro title='FONTS & FOOTERS' color='tan' dotColor='tanDot' />
 
           <h2 className={styles.heading}>

@@ -70,9 +70,9 @@ span {
 }
 
 h1 {
-  font-size: 8rem;
-  line-height: 115%;
-  letter-spacing: -2px;
+  font-size: 8vw;
+  line-height: .9;
+  letter-spacing: -4.8px;
   font-weight: 500;
 }
 

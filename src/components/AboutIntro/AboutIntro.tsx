@@ -3,9 +3,8 @@
 import styles from "./AboutIntro.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
-import dynamic from "next/dynamic"; // ➊ NEW
+import dynamic from "next/dynamic"; 
 
-// ➋ Dynamically load Silk (avoids SSR issues)
 const Silk = dynamic(() => import("../Silk/Silk"), {
   ssr: false,
   loading: () => null,
@@ -18,7 +17,6 @@ const services = [
   { id: 4, name: "Maintenance & Growth Partnership" },
 ];
 
-// Same lightning-bolt mask you used before
 const lightningMaskURI =
   "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2027.793%2027.793'%3E%3Cpolygon%20fill='white'%20points='20.972%200%205.076%2015.803%2010.972%2015.803%206.44%2027.793%2022.716%2011.989%2016.819%2011.989'/%3E%3C/svg%3E\")";
 
@@ -26,7 +24,6 @@ export default function AboutIntro() {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        {/* ───────────────────────────── LEFT SIDE ─────────────────────────── */}
         <div className={styles.left}>
           <LayoutWrapper>
             <div className={styles.leftContent}>
@@ -50,10 +47,9 @@ export default function AboutIntro() {
           </LayoutWrapper>
         </div>
 
-        {/* ───────────────────────────── RIGHT SIDE ────────────────────────── */}
         <div className={styles.right}>
           <div
-            className={styles.silkContainer} /* ➌ NEW class */
+            className={styles.silkContainer}
             style={{
               WebkitMaskImage: lightningMaskURI,
               WebkitMaskPosition: "center",
@@ -65,7 +61,6 @@ export default function AboutIntro() {
               maskRepeat: "no-repeat",
             }}
           >
-            {/* ➍ The shader now fills the masked area */}
             <Silk
               speed={5}
               scale={1.2}

@@ -38,15 +38,8 @@
   font-size: clamp(3rem, 10vw, 8rem);
   font-size: 10vw;
   line-height: 1;
+  letter-spacing: -3px;
   font-weight: 500;
-}
-
-.span {
-  font-weight: 400;
-  display: block;
-  line-height: 1;
-  /* -webkit-text-stroke: 2px var(--white);
-  -webkit-text-fill-color: transparent; */
 }
 
 .bottom {
@@ -66,7 +59,7 @@
 
 .title {
   color: var(--white);
-  font-size: 2.4rem;
+  font-size: 2rem;
   border-bottom: 1px solid var(--white);
   display: flex;
   align-items: center;
@@ -119,8 +112,6 @@
 }
 
 @media screen and (max-width: 568px) {
-
-
   .copy {
     max-width: fit-content;
   }

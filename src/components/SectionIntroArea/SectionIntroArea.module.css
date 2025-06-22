@@ -47,6 +47,11 @@
   border: none;
 }
 
+.grayBorder {
+  /* background-color: var(--grey); */
+  border: 1px solid var(--gray);
+}
+
 .noBorder {
   border: none;
   padding: 0rem;
@@ -72,6 +77,10 @@
 
 .tan {
   color: var(--tan);
+}
+
+.white {
+  color: var(--white);
 }
 
 .yellow {

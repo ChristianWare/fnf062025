@@ -2,14 +2,32 @@
   position: relative;
   width: 100%;
   background-color: var(--white);
-  padding-bottom: 20rem;
   min-height: 100vh;
+  padding-bottom: 20rem;
+}
+
+.parent {
+  margin: 1rem;
+  margin-top: 0rem;
+  background-color: var(--black);
+  border-radius: 15px;
+  position: relative;
+  padding: 2rem;
+}
+
+.navContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
+  grid-gap: 2rem;
   margin-top: 15rem;
 }
 
@@ -25,7 +43,7 @@
 }
 
 .card {
-  background-color: var(--grey);
+  background-color: var(--grey400);
   padding: 3rem;
   border-radius: 10px;
   display: flex;
@@ -37,23 +55,26 @@
 }
 
 .card:hover {
-  background-color: var(--greyii);
+  background-color: var(--grey);
 }
 
 .title {
   font-size: 2rem;
+  color: var(--white);
   font-family: var(--SuisseIntlMedium);
   text-transform: none;
+  transition: all 0.2s ease-in;
 }
 
 .arrow {
   transform: rotate(45deg);
   font-size: 3rem;
-  color: var(--greyii);
+  color: var(--white);
   transition: all 0.2s ease-in;
 }
 
-.card:hover .arrow {
+.card:hover .arrow,
+.card:hover .title {
   color: var(--black);
 }
 

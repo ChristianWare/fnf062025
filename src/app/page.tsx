@@ -15,7 +15,7 @@ import Footer from "@/components/Footer/Footer";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
 // import ProjectPreview from "./work/components/ProjectPreview/ProjectPreview";
 import ParallaxArea from "@/components/ParallaxArea/ParallaxArea";
-// import Explain from "@/components/Explain/Explain";
+import Explain from "@/components/Explain/Explain";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
         <AboutIntro />
         {/* <Problem /> */}
         {/* <ProjectPreview /> */}
-        {/* <Explain /> */}
+        <Explain />
         <ProjectSection />
         <ParallaxArea />
         {/* <Support /> */}

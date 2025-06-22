@@ -28,7 +28,10 @@ export default function Nav() {
       <header className={styles.header}>
         <nav className={styles.navbar}>
           <div className={styles.logoContainer}>
-            <Logo />
+            <Logo
+              title='Fonts & Footers'
+              backgroundColor='backgroundColorWhite'
+            />
           </div>
 
           <div className={styles.navItems}>

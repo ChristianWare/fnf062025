@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 0;
   overflow: hidden;
-  background-color: var(--tan);
+  background-color: var(--white);
   padding: 1rem;
 }
 
@@ -13,21 +13,19 @@
   position: absolute;
   inset: 1rem;
   border-radius: 15px;
-  border-top: 1px solid var(--tan);
+  border-top: 1px solid var(--white);
   overflow: hidden;
-  pointer-events: none; /* keeps Silk non-interactive */
+  pointer-events: none;
   z-index: 1;
 }
 
-/* position the Nav over top of the Silk, full width */
 .navContainer {
-  position: absolute; /* relative to .silkBg */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* span the full silkBg width */
-  /* if you really need full height: add height:100%; */
-  z-index: 2; /* sits above the canvas (z-1) but below overlay/content (z-3+) */
-  pointer-events: auto; /* re-enable clicks inside silkBg for the Nav */
+  width: 100%;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .silkBg canvas {
@@ -80,11 +78,7 @@
   will-change: transform, opacity, filter;
   backface-visibility: hidden;
   font-family: var(--DoumbarPlateMedium);
-  color: var(--tan);
-  /* width: 60%; */
-  /* text-align: center; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
+  color: var(--white);
 }
 
 .heading :global(.word),
@@ -95,33 +89,17 @@
 .copy {
   font-size: 2rem;
   letter-spacing: -0.5px;
-  /* text-align: center; */
   width: 50%;
-  color: var(--tan);
+  color: var(--lightGray);
+  /* opacity: 0.7; */
   z-index: 2;
 }
 
 .btnContainer {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  width: 25%;
   margin-top: 1rem;
 }
-
-/* @media (max-width: 1268px) {
-  .container {
-    height: auto;
-    padding-bottom: 10rem;
-  }
-
-  .content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    min-height: auto;
-  }
-  .copy {
-    width: 70%;
-  }
-} */
 
 @media screen and (max-width: 1268px) {
   .heading {
@@ -162,7 +140,6 @@
   }
   .btnContainer {
     display: grid;
-    /* grid-template-columns: repeat(1, 1fr); */
     width: 50%;
   }
 
@@ -182,4 +159,3 @@
     letter-spacing: -2px;
   }
 }
-

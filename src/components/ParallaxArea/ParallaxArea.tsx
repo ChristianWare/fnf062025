@@ -38,8 +38,7 @@ export default function ParallaxArea() {
         <div className={styles.content}>
           <div className={styles.contentChildren}>
             <h2 className={styles.heading}>
-              Your Fonts & Footers
-              experience
+              Blazing fast <br /> online stores
             </h2>
             <div className={styles.bottom}>
               <div className={styles.left}>

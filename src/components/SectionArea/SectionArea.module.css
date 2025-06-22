@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  width: 100%;
+  background-color: var(--white);
+  padding-bottom: 20rem;
+  min-height: 100vh;
+}
+
+.parent {
+  margin: 1rem;
+  background-color: var(--black);
+  border-radius: 15px;
+}

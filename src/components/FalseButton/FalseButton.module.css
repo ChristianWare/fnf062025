@@ -87,3 +87,52 @@
   border: 1px solid var(--yellow);
   color: var(--yellow)
 }
+
+.sectionIntroWhite {
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  z-index: 999;
+  /* user-select: none; */
+  font-family: var(--DoumbarPlateMedium);
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: -.5px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 2rem 3rem;
+  padding-left: 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  /* left: -2px; */
+  z-index: 1;
+}
+
+.sectionIntroWhite:after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  top: 0px;
+  right: -40px;
+  border-top-left-radius: 15px;
+  box-shadow: -1em -1rem var(--white);
+}
+
+.sectionIntroWhite::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  bottom: -40px;
+  left: 0px;
+  background-color: transparent;
+  border-top-left-radius: 15px;
+  box-shadow: -1em -1rem var(--white);
+}

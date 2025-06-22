@@ -3,18 +3,16 @@
 
 import { useState, useEffect } from "react";
 import styles from "./ProjectSection.module.css";
-import LayoutWrapper from "../LayoutWrapper";
 import Thunder from "../../../public/images/thunder.jpg";
 import Chuxly from "../../../public/images/chuxly.png";
 import Honey from "../../../public/images/honey.jpg";
 import Rentals from "../../../public/images/erRentals.png";
 import Img3 from "../../../public/images/heroiii.jpeg";
 import DefaultImg from "../../../public/images/about.jpeg";
-import SectionIntroArea from "../SectionIntroArea/SectionIntroArea";
-import Explain from "../Explain/Explain";
 import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Arrow from "@/icons/Arrow/Arrow";
 import { StaticImageData } from "next/image";
+import Logo from "../Logo/Logo";
 
 const data = [
   { id: 1, title: "Thundertrails", src: Thunder },
@@ -51,16 +49,21 @@ export default function ProjectSection() {
 
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <Explain />
+      <div className={styles.parent}>
+        <div className={styles.navContainer}>
+          <Logo title='Projects' backgroundColor='backgroundColorWhite' />
+        </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.sectionIntroAreaBox}>
-              <SectionIntroArea
-                sectionTitle='Our Portfolio'
-                heading='Featured Projects'
-              />
-            </div>
+            {/* <div className={styles.sectionIntroAreaBox}>
+                <SectionIntroArea
+                  sectionTitle='Our Portfolio'
+                  heading='Featured Projects'
+                  color='white'
+                  dotColor='whiteDot'
+                  border='grayBorder'
+                />
+              </div> */}
 
             {data.map((item) => (
               <div
@@ -98,7 +101,7 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
-      </LayoutWrapper>
+      </div>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import Arrow from "@/icons/Arrow/Arrow";
 import LayoutWrapper from "../LayoutWrapper";
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 // import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 const data = [
@@ -104,14 +104,7 @@ export default function Footer() {
           {/* <div className={styles.logoContainer}>
             <Logo size='large' />
           </div> */}
-          <h2 className={styles.headingOne}>
-            Fonts{" "}
-            <span className={styles.logo}>
-              {" "}
-              <Logo size='footerLarge' />
-            </span>{" "}
-            Footers
-          </h2>
+          <h2 className={styles.headingOne}>Fonts Footers</h2>
           <div className={styles.content}>
             <div className={styles.left}>
               <h3 className={styles.heading}>

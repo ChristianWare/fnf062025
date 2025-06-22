@@ -126,7 +126,7 @@
 @media screen and (max-width: 1268px) {
   .heading {
     width: 100%;
-    font-size: 11vw;
+    font-size: 10vw;
   }
 }
 
@@ -162,8 +162,8 @@
   }
   .btnContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    /* grid-template-columns: repeat(1, 1fr); */
+    width: 50%;
   }
 
   .left {
@@ -178,7 +178,7 @@
   }
 
   .heading {
-    font-size: 15vw;
+    font-size: 14vw;
     letter-spacing: -2px;
   }
 }

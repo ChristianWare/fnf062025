@@ -116,7 +116,7 @@ export default function Hero() {
               stores for small and medium-sized brands.
             </p>
             <div className={styles.btnContainer}>
-              <Button href={"/"} btnType='tanOutline' text='view Projects' />
+              {/* <Button href={"/"} btnType='tanOutline' text='view Projects' /> */}
               <Button href={"/"} btnType='primary' text='Get Started' />
             </div>
           </div>

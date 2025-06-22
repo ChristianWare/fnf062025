@@ -13,7 +13,8 @@ import LayoutWrapper from "../LayoutWrapper";
 import ContactForm from "../ContactForm/ContactForm";
 import Modal from "../Modal/Modal";
 import Nav from "../Nav/Nav";
-// import SectionIntro from "../SectionIntro/SectionIntro";
+import SectionIntro from "../SectionIntro/SectionIntro";
+import Button from "../Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,9 +96,13 @@ export default function Hero() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            {/* <div className={styles.sectionHeadingContainer}>
-              <SectionIntro title='FONTS & FOOTERS' color='tan' dotColor='tanDot' />
-            </div> */}
+            <div className={styles.sectionHeadingContainer}>
+              <SectionIntro
+                title='FONTS & FOOTERS'
+                color='tan'
+                dotColor='tanDot'
+              />
+            </div>
             <div className={styles.headingClip}>
               <h1 ref={refs.heading} className={styles.heading}>
                 We Build <br />
@@ -108,13 +113,15 @@ export default function Hero() {
 
             <p className={styles.copy}>
               Fonts &amp; Footers builds lightning-fast, revenue-driven online
-              stores for small and medium-sized brands. Every line of code is
-              written with one purpose: turning casual browsers into loyal
-              buyers.
+              stores for small and medium-sized brands.
             </p>
+            <div className={styles.btnContainer}>
+              <Button href={"/"} btnType='tanOutline' text='view Projects' />
+              <Button href={"/"} btnType='primary' text='Get Started' />
+            </div>
           </div>
 
-          <div className={styles.right}></div>
+          {/* <div className={styles.right}></div> */}
         </div>
       </LayoutWrapper>
       <Modal isOpen={isModalOpen} onClose={closeModal}>

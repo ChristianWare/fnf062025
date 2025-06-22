@@ -42,7 +42,7 @@ export default function Nav() {
           <div className={styles.btnContainer}>
             <FalseButton
               text='Get Started'
-              btnType='primary'
+              btnType='tanOutline'
               onClick={openModal}
             />
           </div>

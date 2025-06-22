@@ -48,16 +48,19 @@
 .content {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5rem;
   min-height: 90vh;
-  margin-top: 10rem;
 }
 
 .left {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -78,6 +81,7 @@
   backface-visibility: hidden;
   font-family: var(--DoumbarPlateMedium);
   color: var(--tan);
+  text-align: center;
 }
 
 .heading :global(.word),
@@ -88,7 +92,8 @@
 .copy {
   font-size: 2rem;
   letter-spacing: -0.5px;
-  /* width: 90%; */
+  text-align: center;
+  width: 60%;
   color: var(--tan);
   z-index: 2;
 }
@@ -98,21 +103,8 @@
   gap: 3rem;
 }
 
-.imgContainer {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  mask-image: url(/icons/lightning.svg);
-  mask-position: 50% center;
-  mask-size: auto 100%;
-  mask-repeat: no-repeat;
-}
 
-.img {
-  object-fit: cover;
-}
-
-@media (max-width: 1268px) {
+/* @media (max-width: 1268px) {
   .container {
     height: auto;
     padding-bottom: 10rem;
@@ -126,7 +118,7 @@
   .copy {
     width: 70%;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .copy {

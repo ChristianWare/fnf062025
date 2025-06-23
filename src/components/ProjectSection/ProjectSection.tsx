@@ -13,6 +13,7 @@ import ParallaxImage from "../ParallaxImage/ParallaxImage";
 import Arrow from "@/icons/Arrow/Arrow";
 import { StaticImageData } from "next/image";
 import Logo from "../Logo/Logo";
+import Focus from "../Focus/Focus";
 
 const data = [
   { id: 1, title: "Thundertrails", src: Thunder },
@@ -55,16 +56,6 @@ export default function ProjectSection() {
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            {/* <div className={styles.sectionIntroAreaBox}>
-                <SectionIntroArea
-                  sectionTitle='Our Portfolio'
-                  heading='Featured Projects'
-                  color='white'
-                  dotColor='whiteDot'
-                  border='grayBorder'
-                />
-              </div> */}
-
             {data.map((item) => (
               <div
                 key={item.id}
@@ -101,6 +92,7 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
+        <Focus />
       </div>
     </section>
   );

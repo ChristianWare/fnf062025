@@ -79,3 +79,16 @@
 .logo.backgroundColorWhite::before {
   box-shadow: -1em -1rem var(--white);
 }
+
+.backgroundColorBlack {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.logo.backgroundColorBlack::after {
+  box-shadow: -1em -1rem var(--black);
+}
+
+.logo.backgroundColorBlack::before {
+  box-shadow: -1em -1rem var(--black);
+}

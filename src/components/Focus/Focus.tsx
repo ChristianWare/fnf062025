@@ -63,7 +63,8 @@ export default function Focus() {
             src={Img1}
             alt='Fonts & Footers office'
             title='Fonts & Footers'
-            border='taniiiBorder'
+            color="white"
+            // border='taniiiBorder'
           />
         </div>
       </LayoutWrapper>

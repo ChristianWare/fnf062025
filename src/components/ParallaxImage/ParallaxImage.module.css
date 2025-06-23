@@ -77,6 +77,11 @@
   background-color: var(--tanii);
 }
 
+.none,
+.none::after {
+  background-color: transparent;
+}
+
 .grayBorder {
   border: 1px solid var(--gray);
 }

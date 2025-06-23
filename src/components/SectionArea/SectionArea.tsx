@@ -10,6 +10,7 @@ export default function SectionArea({ sectionTitle, children }: Props) {
   return (
     <section className={styles.container}>
       <div className={styles.parent}>
+        <h2>{sectionTitle}</h2>
         {children}
       </div>
     </section>
